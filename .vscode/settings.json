@@ -1,0 +1,20 @@
+{
+    "grammarly.overrides": [
+        {
+            "files": [
+                "**/_posts/2021-09-30-Next-month-list.markdown"
+            ],
+            "config": {
+                "audience": "expert",
+                "dialect": "american",
+                "domain": "technical",
+                "emotions": [
+                    "analytical"
+                ],
+                "goals": [
+                    "tellStory"
+                ]
+            }
+        }
+    ]
+}
