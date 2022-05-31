@@ -1,0 +1,128 @@
+<h1>Spring Framework</h1>
+<p>
+    Based on two key principles dependency injection and inversion of control.
+    The meaning of which is you have to specify the object spring has to create via annotations, 
+    and spring will create it for you and inject in your program. 
+    
+    Hence this responsibility for populating the dependency is referred to as IOC. 
+</p>
+
+<p class="terminology">
+    <div>
+        <h2>Beans</h2>
+        Class managed by spring.<br>
+        Annotation -> @Component
+    </div>
+    
+    <div>
+        <h2>Autowiring</h2>
+        The process of identifying a match, and injecting it is autowiring.
+        If more than one bean of the same type is availble -> error thrown. <br>
+        Annotation -> @Autowired
+    </div>
+    
+    <div>
+        <h2>Dependency Injection</h2>
+        Looking out for appropriate classes(bean) and injecting them as a dependency.<br>
+        It performs dependency injection using a setter or a contructor.
+    </div>
+    
+    <div>
+        <h2>Inversion of control</h2>
+        The responsibility of making dependency injection happen for all components/beans is IOC.<br>
+    </div>
+    
+    <div>
+        <h2>IOC Container</h2>
+        Framework which provides IOC functionality. Spring provides two implementations,<br>
+        application context and bean factory. Application context is recommended unless a memory concern.
+    </div>
+</p>
+
+<p class="modules">
+    <div>
+        <h2>Core Container</h2>
+        <p>
+            Contains core, bean, context and expression language.
+            Fundamental functionality ioc, dependency injection, internationalization. 
+        </p>
+    </div>
+    
+    <div>
+        <h2>Data access / integration </h2>
+        <p>
+            JDBC - db connectivity <br>
+            ORM - integration with ORM frameworks, hibernate, jpa <br>
+            JMS - module talks to other applications through queue, to produce and consume messages.<br>
+            Transaction module - successful rollback in case of failure.<br>
+        </p>   
+    </div>
+    
+    <div>
+        <h2>Web MVC remoting</h2>
+        <p>
+            modules for creation of web application. spring offers a framework of it's own, spring mvc.
+        </p>
+    </div>
+    
+    <div>
+        <h2>AOP</h2>
+        <p>?</p>
+    </div>
+</p>
+
+<p div="projects">
+    <h2>Projects</h2>
+
+    <p>Spring boot - is used to develop micro services.</p>
+
+    <p>
+        Spring Cloud allows the development of cloud native applications that can be dynamically configured and deployed.
+        It provides functionality for handling common patterns in distributed systems.
+    </p>
+
+
+    <p>
+        Spring Data provides consistent access to SQL and NoSQL databases.
+    </p>
+
+    <p>
+        Spring Integration implements the patterns outlined by the book Enterprise Application Integration Patterns.
+        It allows enterprise applications to be connected easily through messaging and declarative adapters.
+    </p>
+
+    <p>
+        Spring Batch provides functionality to handle large volumes of data like ability to restart, ability to read from and write to different systems, chunk processing, parallel processing, and transaction management.
+    </p>
+
+    <p>
+        Spring Security provides security solutions for different applications be it a web application or a REST service. It also provides authentication and authorization features.
+    </p>
+
+    <p>
+        Spring Session manages session information and makes it easier to share session data between services in the cloud regardless of the platform/container. It also supports multiple sessions in a single browser instance.
+    </p>
+
+    <p>
+        Spring Mobile offers device detection and progressive rendering options that make mobile web application development easy.
+    </p>
+
+    <p>
+        Spring Android facilitates the development of Android applications.
+    </p>
+
+</p>
+
+<div class="scope">
+    <p>Bean scope</p>
+    <p>Singleton - default</p>
+    <p>Prototype - specified by @Scope("Prototype")</p>
+</div>
+
+@SpringBootApplication 
+is in built configured with three annotations
+
+@Configuration 
+@EnableAutoConfiguration 
+@ComponentScan - scans components in it's package and subpackage.
+
