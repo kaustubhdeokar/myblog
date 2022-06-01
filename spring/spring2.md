@@ -1,0 +1,13 @@
+## Spring Boot vs Spring MVC
+
+> Spring MVC and Spring Boot are components of spring framework. Spring offers features that are easy to integrate with other frameworks.
+
+### Spring MVC
+    is a http oriented spring framework, concerned with developing web applications. 
+    dispatcher servlet is the front controller, handles all the request
+    view resolver view names to physical views.
+    there is a decoupling of all these different things. 
+
+### Spring boot
+    It internally uses spring mvc, it solves the auto configuration part for us. 
+    There is no need to clarify the dispatcher servlet, view resolver and transaction manager and stuff. 
