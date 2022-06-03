@@ -1,7 +1,7 @@
 <nav>
     <ul class="nav {{include.navclass}}">
         <li>
-            <a class="{% if page.url == '/news.html' %}current{% endif %}" href="{{site.baseurl}}/news.html">News</a>
+            <a class="{% if page.url == '/news.html' or page.url == '/recently-discovered.html' %}current{% endif %}" href="{{site.baseurl}}/news.html">News</a>
         </li> 
         <li>
             <a class="{% if page.url == '/spring.html' %}current{% endif %}" href="{{site.baseurl}}/spring.html">Spring</a>
