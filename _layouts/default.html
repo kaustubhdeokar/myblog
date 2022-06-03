@@ -8,13 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Common header</h1>
-    
     {% include nav.html navclass='nav-top' %}
 
+    <div id="content">
     {{content}}
+    </div>
 
-    {% include nav.html navclass='nav-bottom' %}
-
+    {% include bottom.html navclass='nav-bottom' %}
 </body>
 </html>

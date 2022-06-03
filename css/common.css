@@ -1,11 +1,12 @@
-html{
-    margin:0;
-    padding:0;
+body{
+    margin:10;
+    padding:10;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 .current{
-    background-color:brown;
-    color:white;
+    color:brown;
 }
 .nav{
     margin:0;
@@ -17,4 +18,7 @@ html{
 }
 .nav-top{
     font-size: larger;
+}
+#content{
+    margin:10px;
 }
