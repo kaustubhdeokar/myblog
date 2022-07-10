@@ -50,14 +50,8 @@ tags: [java]
 ```
 > To create a pattern as [one], [two], [three]
 
-
 ```
-    /**
-     * To create a pattern as [one], [two], [three]
-     * So [ would be the starting symbol.
-     * ] would be the ending symbol.
-     * ], [ would be the delimiter.
-     */
+
     @Test
     public void testStringJoinerCreatingSquareBracketPattern() {
         StringJoiner stringJoiner = new StringJoiner("], [","[","]");

@@ -4,7 +4,7 @@
  <title>Kaustubh Deokar</title>
  <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
  <link href="http://localhost:4000/myblog/"/>
- <updated>2022-07-10T23:07:52+05:30</updated>
+ <updated>2022-07-10T23:10:43+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -64,21 +64,16 @@
   &lt;p&gt;To create a pattern as [one], [two], [three]&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;```
-    /**
-     * To create a pattern as [one], [two], [three]
-     * So [ would be the starting symbol.
-     * ] would be the ending symbol.
-     * ], [ would be the delimiter.
-     */
-    @Test
-    public void testStringJoinerCreatingSquareBracketPattern() {
-        StringJoiner stringJoiner = new StringJoiner(“], [”,”[”,”]”);
-        stringJoiner.add(“one”);
-        stringJoiner.add(“two”);
-        stringJoiner.add(“three”);&lt;/p&gt;
+&lt;p&gt;```&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;    Assert.assertEquals(stringJoiner.toString(), &quot;[one], [two], [three]&quot;);
+&lt;pre&gt;&lt;code&gt;@Test
+public void testStringJoinerCreatingSquareBracketPattern() {
+    StringJoiner stringJoiner = new StringJoiner(&quot;], [&quot;,&quot;[&quot;,&quot;]&quot;);
+    stringJoiner.add(&quot;one&quot;);
+    stringJoiner.add(&quot;two&quot;);
+    stringJoiner.add(&quot;three&quot;);
+
+    Assert.assertEquals(stringJoiner.toString(), &quot;[one], [two], [three]&quot;);
 } }
 &lt;/code&gt;&lt;/pre&gt;
 </content>
