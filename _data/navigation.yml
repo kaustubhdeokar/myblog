@@ -1,9 +1,7 @@
 links:
-- title: About
-  url: /
+- title: Summary
+  url: /myblog/
 - title: Blog
-  url: /about
+  url: /myblog/blog/
 - title: Project
-  url: /project
-- title: Rss
-  url: /atom.xml
+  url: /myblog/project/

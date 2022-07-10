@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Sidey</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2022-07-10T22:45:55+05:30</updated>
+ <title>Kaustubh Deokar</title>
+ <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/myblog/"/>
+ <updated>2022-07-10T23:07:52+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>String Joiner</title>
-   <link href="http://localhost:4000/2021/06/07/stringjoiner"/>
+   <link href="http://localhost:4000/myblog/2021/06/07/stringjoiner"/>
    <updated>2021-06-07T00:00:00+05:30</updated>
    <id>http://localhost:4000/2021/06/07/StringJoiner</id>
    <content type="html">&lt;blockquote&gt;
