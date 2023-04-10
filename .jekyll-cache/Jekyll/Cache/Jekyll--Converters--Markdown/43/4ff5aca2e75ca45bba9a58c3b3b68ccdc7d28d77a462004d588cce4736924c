@@ -1,0 +1,7 @@
+I"¨<pre><code>&gt; to open `files` in the current path from terminal
+	&gt;&gt;	xdg-open .
+
+&gt; View entire contents of file
+	&gt;&gt; cat &lt;filename&gt; 
+</code></pre>
+:ET

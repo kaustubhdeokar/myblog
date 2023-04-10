@@ -13,9 +13,156 @@
 "items": [
     
         {
+            "id": "http://localhost:4000/myblog/2023/03/27/linux-commands",
+            "title": "Linux Commands",
+            "summary": null,
+            "content_text": "&gt; to open `files` in the current path from terminal\t&gt;&gt;\txdg-open .&gt; View entire contents of file\t&gt;&gt; cat &lt;filename&gt; &gt; View line count for file\t&gt;&gt; cat &lt;filename&gt; | wc -lFind&gt; Find file recursively in directories\t&gt;&gt; find . -name \".gitignore\"Grep&gt; To search for a word in a text document &amp; and print EVERY line containing the word.\t\tCommand 1:\t&gt;\tgrep &lt;text&gt; &lt;filepath/filename&gt;\t&gt;\tgrep for ./Trie.java\t\tCommand 2:\t&gt; cat &lt;filename&gt; | grep &lt;text&gt;\t&gt; cat Trie.java | grep for\t\tOutput:\t\tfor (int i = 0; i &lt; word.length(); i++) {\t    for (int i = 0; i &lt; word.length(); i++) {    \tfor (int i = 0; i &lt; word.length(); i++) {        for (char c : set) {    \tfor (int i = 0; i &lt; prefix.length(); i++) {&gt; To search for a word in a text document &amp; and print EVERY line NOT containing the word.\t&gt; cat &lt;filename&gt; | grep -v &lt;text&gt;\t&gt; cat Trie.java | grep -v for&gt; Print line numbers along with output (-n)\tgrep -n &lt;text&gt; &lt;filepath/filename&gt;&gt; Count (-c)\tgrep -c &lt;text&gt; &lt;filepath/filename&gt;&gt; Case insensitive (-i)\tgrep -i &lt;text&gt; &lt;filepath/filename&gt;",
+            "content_html": "<pre><code>&gt; to open `files` in the current path from terminal\t&gt;&gt;\txdg-open .&gt; View entire contents of file\t&gt;&gt; cat &lt;filename&gt; &gt; View line count for file\t&gt;&gt; cat &lt;filename&gt; | wc -l</code></pre><p>Find</p><pre><code>&gt; Find file recursively in directories\t&gt;&gt; find . -name \".gitignore\"</code></pre><p>Grep</p><pre><code>&gt; To search for a word in a text document &amp; and print EVERY line containing the word.\t\tCommand 1:\t&gt;\tgrep &lt;text&gt; &lt;filepath/filename&gt;\t&gt;\tgrep for ./Trie.java\t\tCommand 2:\t&gt; cat &lt;filename&gt; | grep &lt;text&gt;\t&gt; cat Trie.java | grep for\t\tOutput:\t\tfor (int i = 0; i &lt; word.length(); i++) {\t    for (int i = 0; i &lt; word.length(); i++) {    \tfor (int i = 0; i &lt; word.length(); i++) {        for (char c : set) {    \tfor (int i = 0; i &lt; prefix.length(); i++) {&gt; To search for a word in a text document &amp; and print EVERY line NOT containing the word.\t&gt; cat &lt;filename&gt; | grep -v &lt;text&gt;\t&gt; cat Trie.java | grep -v for&gt; Print line numbers along with output (-n)\tgrep -n &lt;text&gt; &lt;filepath/filename&gt;&gt; Count (-c)\tgrep -c &lt;text&gt; &lt;filepath/filename&gt;&gt; Case insensitive (-i)\tgrep -i &lt;text&gt; &lt;filepath/filename&gt;</code></pre>",
+            "url": "http://localhost:4000/myblog/2023/03/27/linux-commands",
+            
+            
+            
+            
+            
+            "date_published": "2023-03-27T00:00:00+05:30",
+            "date_modified": "2023-03-27T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/02/26/nth-node-from-end-linkedlist",
+            "title": "Delete Nth Node From End Linkedlist",
+            "summary": null,
+            "content_text": "IntuitionMaintain a pointer to the previous node of the node we want to  replace.Approach  If we have the pointer to the prev node of the target node we want to replace: than simple prev.next = target.next;    example: n = 21   -&gt;  2 -&gt;    3 -&gt;    4   -&gt;  5           prev    target        When n = size of the list, the previous pointer will be null, hence in that case answer will be target.next    example: n = 51     -&gt;   2  -&gt;    3 -&gt;    4   -&gt;  5target         prev=null;       Complexity      Time complexity:  O(n) one pass solution.        Space complexity:O(1) constant extra space for some pointers.  Code/** * Definition for singly-linked list. * public class ListNode { *     int val; *     ListNode next; *     ListNode() {} *     ListNode(int val) { this.val = val; } *     ListNode(int val, ListNode next) { this.val = val; this.next = next; } * } */class Solution {    public ListNode removeNthFromEnd(ListNode head, int n) {                ListNode resultPtr = head;        ListNode prev = head;        ListNode nthNode = head;        ListNode nthNodePrev = null;        int i=0;        while(prev!=null){            prev = prev.next;            if(i&gt;=n){                nthNodePrev = nthNode;                nthNode = nthNode.next;            }             i+=1;        }        if(nthNodePrev != null) {            nthNodePrev.next = nthNode.next;            //System.out.println(\"nthnodeprev:\"+nthNodePrev.val);        }                else if(nthNodePrev == null &amp;&amp; nthNode!=null) {            //System.out.println(\"nthNode:\"+nthNode.val);            return nthNode.next;        }        //System.out.println(nthNode.val);        return resultPtr;    }}",
+            "content_html": "<h1 id=\"intuition\">Intuition</h1><p>Maintain a pointer to the previous node of the node we want to  replace.</p><h1 id=\"approach\">Approach</h1><ol>  <li>If we have the pointer to the prev node of the target node we want to replace: than simple prev.next = target.next;    <pre><code>example: n = 21   -&gt;  2 -&gt;    3 -&gt;    4   -&gt;  5           prev    target    </code></pre>  </li>  <li>When n = size of the list, the previous pointer will be null, hence in that case answer will be <b>target.next</b>    <pre><code>example: n = 51     -&gt;   2  -&gt;    3 -&gt;    4   -&gt;  5target         prev=null;     </code></pre>  </li></ol><h1 id=\"complexity\">Complexity</h1><ul>  <li>    <p>Time complexity:  O(n) one pass solution.</p>  </li>  <li>    <p>Space complexity:O(1) constant extra space for some pointers.</p>  </li></ul><h1 id=\"code\">Code</h1><pre><code>/** * Definition for singly-linked list. * public class ListNode { *     int val; *     ListNode next; *     ListNode() {} *     ListNode(int val) { this.val = val; } *     ListNode(int val, ListNode next) { this.val = val; this.next = next; } * } */class Solution {    public ListNode removeNthFromEnd(ListNode head, int n) {                ListNode resultPtr = head;        ListNode prev = head;        ListNode nthNode = head;        ListNode nthNodePrev = null;        int i=0;        while(prev!=null){            prev = prev.next;            if(i&gt;=n){                nthNodePrev = nthNode;                nthNode = nthNode.next;            }             i+=1;        }        if(nthNodePrev != null) {            nthNodePrev.next = nthNode.next;            //System.out.println(\"nthnodeprev:\"+nthNodePrev.val);        }                else if(nthNodePrev == null &amp;&amp; nthNode!=null) {            //System.out.println(\"nthNode:\"+nthNode.val);            return nthNode.next;        }        //System.out.println(nthNode.val);        return resultPtr;    }}</code></pre>",
+            "url": "http://localhost:4000/myblog/2023/02/26/nth-node-from-end-linkedlist",
+            
+            
+            
+            
+            
+            "date_published": "2023-02-26T00:00:00+05:30",
+            "date_modified": "2023-02-26T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/02/24/linux-setup",
+            "title": "Ubuntu Linux Setup",
+            "summary": null,
+            "content_text": "Installing Brave browser    1  sudo apt install curl    2  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg    3  echo “deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main”|sudo tee /etc/apt/sources.list.d/brave-browser-release.list    4  sudo apt update    5  sudo apt install brave-browser -yInstalling IntelliJInstalling javaDownloading the latest java linux x64 compressed archive. nano .profileJAVA_HOME=/home/kaustubh/Documents/Apps/jdk-17.0.6/export JAVA_HOMEPATH=$JAVA_HOME/bin:$PATHexport PATHInstalling vscode.python support:\thttps://code.visualstudio.com/docs/python/python-tutorial\tInstalling a .deb file\tsudo apt install ./.deb",
+            "content_html": "<p>Installing Brave browser    1  sudo apt install curl    2  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg    3  echo “deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main”|sudo tee /etc/apt/sources.list.d/brave-browser-release.list    4  sudo apt update    5  sudo apt install brave-browser -y</p><p>Installing IntelliJ</p><p>Installing java</p><pre><code>Downloading the latest java linux x64 compressed archive. nano .profileJAVA_HOME=/home/kaustubh/Documents/Apps/jdk-17.0.6/export JAVA_HOMEPATH=$JAVA_HOME/bin:$PATHexport PATH</code></pre><p>Installing vscode.</p><pre><code>python support:\thttps://code.visualstudio.com/docs/python/python-tutorial\t</code></pre><p>Installing a .deb file\tsudo apt install ./<file>.deb</file></p>",
+            "url": "http://localhost:4000/myblog/2023/02/24/linux-setup",
+            
+            
+            
+            
+            
+            "date_published": "2023-02-24T00:00:00+05:30",
+            "date_modified": "2023-02-24T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/02/13/top-k-frequent-elements",
+            "title": "Top K Frequent Elements",
+            "summary": null,
+            "content_text": "Link to problem : https://leetcode.com/problems/top-k-frequent-elements/description/Approach 1:  Hashmap to store count Priority Queue to maintain top k elements.public int[] topKFrequent(int[] arr, int k) {        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();        for (int i : arr) {            if (map.containsKey(i)) {                map.put(i, map.get(i) + 1);            } else {                map.put(i, 1);            }        }                Comparator&lt;Integer&gt; comparator = (i1, i2) -&gt; Integer.compare(map.get(i1), map.get(i2));        //A bit slow to add n element , with each insertion taking log n time.        PriorityQueue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;(comparator);        for (int i : map.keySet()) {            queue.add(i);            if(queue.size()&gt;k)                queue.poll();        }                int[] frequentKElems = new int[k];        int idx = 0;        while(!queue.isEmpty()){            frequentKElems[idx++] = queue.poll();        }        return frequentKElems;            }Approach 2  Step 1 remains the same.Creating a 2-d arraylist with length = (max count found in step 1).Inserting elements into 2-d arraylist according to their occurences. Using a reverse iterator to find the top k elements.    public int[] topKFrequent(int[] nums, int k) {        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();        int max = 1;        for(int i:nums){            if(map.get(i)==null){                map.put(i, 1);            }            else{                int val = map.get(i)+1;                map.put(i, val);                max = Integer.max(max, val);            }        }            //(1, 3) (2, 2) (3, 1)        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();        for(int i=0;i&lt;=max;i++){            list.add(new ArrayList&lt;&gt;());        }                //() , (3), (2), (1)        for(Map.Entry&lt;Integer, Integer&gt; entry: map.entrySet()){            int count = entry.getValue();            list.get(count).add(entry.getKey());        }        int[] result = new int[k];        while(k&gt;0){            for(int i=list.size()-1;i&gt;=0;i--){                ArrayList&lt;Integer&gt; innerList = list.get(i);                for(int j=0;j&lt;innerList.size();j++){                    if(k&gt;0) result[--k] = innerList.get(j);                    else break;                }                if(k==0) break;            }        }        return result;    }",
+            "content_html": "<p>Link to problem : https://leetcode.com/problems/top-k-frequent-elements/description/</p><p>Approach 1:</p><blockquote>  <p>Hashmap to store count <br />Priority Queue to maintain top k elements.</p></blockquote><pre><code>public int[] topKFrequent(int[] arr, int k) {        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();        for (int i : arr) {            if (map.containsKey(i)) {                map.put(i, map.get(i) + 1);            } else {                map.put(i, 1);            }        }                Comparator&lt;Integer&gt; comparator = (i1, i2) -&gt; Integer.compare(map.get(i1), map.get(i2));        //A bit slow to add n element , with each insertion taking log n time.        PriorityQueue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;(comparator);        for (int i : map.keySet()) {            queue.add(i);            if(queue.size()&gt;k)                queue.poll();        }                int[] frequentKElems = new int[k];        int idx = 0;        while(!queue.isEmpty()){            frequentKElems[idx++] = queue.poll();        }        return frequentKElems;            }</code></pre><p>Approach 2</p><blockquote>  <p>Step 1 remains the same.<br />Creating a 2-d arraylist with length = (max count found in step 1).<br />Inserting elements into 2-d arraylist according to their occurences. <br />Using a reverse iterator to find the top k elements.<br /></p></blockquote><pre><code>    public int[] topKFrequent(int[] nums, int k) {        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();        int max = 1;        for(int i:nums){            if(map.get(i)==null){                map.put(i, 1);            }            else{                int val = map.get(i)+1;                map.put(i, val);                max = Integer.max(max, val);            }        }            //(1, 3) (2, 2) (3, 1)        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();        for(int i=0;i&lt;=max;i++){            list.add(new ArrayList&lt;&gt;());        }                //() , (3), (2), (1)        for(Map.Entry&lt;Integer, Integer&gt; entry: map.entrySet()){            int count = entry.getValue();            list.get(count).add(entry.getKey());        }        int[] result = new int[k];        while(k&gt;0){            for(int i=list.size()-1;i&gt;=0;i--){                ArrayList&lt;Integer&gt; innerList = list.get(i);                for(int j=0;j&lt;innerList.size();j++){                    if(k&gt;0) result[--k] = innerList.get(j);                    else break;                }                if(k==0) break;            }        }        return result;    }</code></pre>",
+            "url": "http://localhost:4000/myblog/2023/02/13/top-k-frequent-elements",
+            
+            
+            
+            
+            
+            "date_published": "2023-02-13T00:00:00+05:30",
+            "date_modified": "2023-02-13T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2022/11/15/ubuntu-package-install",
+            "title": "Ubuntu package install",
+            "summary": null,
+            "content_text": "  Installing a deb package - ran into problems of missing dependencies for such cases we can use gdebi terminal guides us how to install gdebi after that simply install any deb package by sudo gdebi &lt;&gt;.deb ",
+            "content_html": "<blockquote>  <p>Installing a deb package - ran into problems of missing dependencies <br />for such cases we can use gdebi <br />terminal guides us how to install gdebi <br />after that simply install any deb package by sudo gdebi &lt;&gt;.deb <br /></p></blockquote>",
+            "url": "http://localhost:4000/myblog/2022/11/15/ubuntu-package-install",
+            
+            
+            
+            
+            
+            "date_published": "2022-11-15T00:00:00+05:30",
+            "date_modified": "2022-11-15T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2022/11/11/binaryindexedtree",
+            "title": "Range Sum Query - Mutable",
+            "summary": null,
+            "content_text": "To do range sum queries in a better time complexity than O(n^2), we use binary indexed tree. Comparing to the segment trees, this is faster, easier to implement. It can be used almost for all such range query problem except for some which we will see in the segment tree docLeetcode Problem:307. Range Sum Query - MutableQueries are divided into three types - (instantiation, sum &amp; update)[\"NumArray\", \"sumRange\", \"update\", \"sumRange\"][[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]Output[null, 9, null, 8]  Solution using binary indexed tree.The idea of binary indexed tree is that any number can be written as a sum of numbers in 2’s power.Supposed there are 8 elements in an array.We construct the binary indexed tree as [0,n+1] array not using the 0th element.Every index will add to the next i&amp;(-i) index, in range of array length.  i &amp; (-i) is the lowest set bit for the i. For powers of 2 it’s the max bit.[1,2,3,4,5,6,7,8]index 1: 1 -&gt; 2 -&gt; 4 -&gt; 8index 2: 2 -&gt; 4 -&gt; 8index 3: 3 -&gt; 4 -&gt; 8index 4: 4 -&gt; 8index 5: 5 -&gt; 6 -&gt; 8index 6: 6 -&gt; 8index 7: 7 -&gt; 8index 8: 8The code for construction goes as follows:def update_tree(index, limit, val, tree):    index += 1        while(index&lt;=limit):        tree[index] += val        index += index &amp; (-index)    def construct_binary_index_tree(arr):    tree = [0]*(len(arr)+1)    for i in range(0, len(arr)):        update_tree(i, len(arr), arr[i], tree)    self.tree = tree    return treeTo get the sum uptil i, using the same concept of getting the last set bit, (index &amp; (-index))we can find the numbers who have contributed to the ith position, then going down (index &amp; (-index)) until we reach 0.  public static int getSum(int[] bTree, int i){                int index = i+1;        int sum = 0;        while(index&gt;0){            sum+=bTree[index];            index-= (index &amp; (-index));        }        return sum;    }",
+            "content_html": "<pre><code>To do range sum queries in a better time complexity than O(n^2), we use binary indexed tree. Comparing to the segment trees, this is faster, easier to implement. It can be used almost for all such range query problem except for some which we will see in the segment tree doc</code></pre><h3 id=\"leetcode-problem307-range-sum-query---mutable\">Leetcode Problem:307. Range Sum Query - Mutable</h3><pre><code>Queries are divided into three types - (instantiation, sum &amp; update)[\"NumArray\", \"sumRange\", \"update\", \"sumRange\"][[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]Output[null, 9, null, 8]</code></pre><blockquote>  <p>Solution using binary indexed tree.</p></blockquote><p>The idea of binary indexed tree is that any number can be written as a sum of numbers in 2’s power.</p><p>Supposed there are 8 elements in an array.We construct the binary indexed tree as [0,n+1] array not using the 0th element.</p><p>Every index will add to the next i&amp;(-i) index, in range of array length.</p><blockquote>  <p>i &amp; (-i) is the lowest set bit for the i. For powers of 2 it’s the max bit.</p></blockquote><pre><code>[1,2,3,4,5,6,7,8]index 1: 1 -&gt; 2 -&gt; 4 -&gt; 8index 2: 2 -&gt; 4 -&gt; 8index 3: 3 -&gt; 4 -&gt; 8index 4: 4 -&gt; 8index 5: 5 -&gt; 6 -&gt; 8index 6: 6 -&gt; 8index 7: 7 -&gt; 8index 8: 8</code></pre><p>The code for construction goes as follows:</p><pre><code>def update_tree(index, limit, val, tree):    index += 1        while(index&lt;=limit):        tree[index] += val        index += index &amp; (-index)    def construct_binary_index_tree(arr):    tree = [0]*(len(arr)+1)    for i in range(0, len(arr)):        update_tree(i, len(arr), arr[i], tree)    self.tree = tree    return tree</code></pre><p>To get the sum uptil i, using the same concept of getting the last set bit, (index &amp; (-index))</p><p>we can find the numbers who have contributed to the ith position, then going down (index &amp; (-index)) until we reach 0.</p><pre><code>  public static int getSum(int[] bTree, int i){                int index = i+1;        int sum = 0;        while(index&gt;0){            sum+=bTree[index];            index-= (index &amp; (-index));        }        return sum;    }</code></pre>",
+            "url": "http://localhost:4000/myblog/2022/11/11/binaryindexedtree",
+            
+            
+            
+            
+            
+            "date_published": "2022-11-11T00:00:00+05:30",
+            "date_modified": "2022-11-11T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2022/07/13/job-sequencing",
+            "title": "Job Sequencing Problem",
+            "summary": null,
+            "content_text": "public int maxProfitByJobSequencing(Job arr[], int n) {        Comparator&lt;Job&gt; compareByDeadlineAndProfit = (Job j1, Job j2) -&gt;                Integer.compare(j2.profit, j1.profit);        //arrange the jobs in decreasing order of profit.        PriorityQueue&lt;Job&gt; heap = new PriorityQueue&lt;&gt;(compareByDeadlineAndProfit);        int maxDeadline = Integer.MIN_VALUE;        for(int i=0;i&lt;arr.length;i++){            maxDeadline = Integer.max(maxDeadline, arr[i].deadline);            heap.add(arr[i]);        }        int[] slots = new int[arr.length];        while (!heap.isEmpty()) {            Job job = heap.poll();            for (int i = job.deadline; i &gt;= 0; i--) {                if (slots[i] == 0) {                    slots[i] = job.profit;                    break;                }            }        }        return -1;    }    static class Job {        int id, profit, deadline;        Job(int x, int y, int z) {            this.id = x;            this.deadline = y;            this.profit = z;        }        @Override        public String toString() {            return \"Job{\" +                    \"id=\" + id +                    \", profit=\" + profit +                    \", deadline=\" + deadline +                    '}';        }    }    public static void main(String[] args) {        JobSequencing jobSequencing = new JobSequencing();        Job[] arr = {new Job(1, 4, 20), new Job(2, 1, 10), new Job(3, 1, 40), new Job(4, 1, 30)};        jobSequencing.maxProfitByJobSequencing(arr, 4);    }",
+            "content_html": "<pre><code>public int maxProfitByJobSequencing(Job arr[], int n) {        Comparator&lt;Job&gt; compareByDeadlineAndProfit = (Job j1, Job j2) -&gt;                Integer.compare(j2.profit, j1.profit);        //arrange the jobs in decreasing order of profit.        PriorityQueue&lt;Job&gt; heap = new PriorityQueue&lt;&gt;(compareByDeadlineAndProfit);        int maxDeadline = Integer.MIN_VALUE;        for(int i=0;i&lt;arr.length;i++){            maxDeadline = Integer.max(maxDeadline, arr[i].deadline);            heap.add(arr[i]);        }        int[] slots = new int[arr.length];        while (!heap.isEmpty()) {            Job job = heap.poll();            for (int i = job.deadline; i &gt;= 0; i--) {                if (slots[i] == 0) {                    slots[i] = job.profit;                    break;                }            }        }        return -1;    }    static class Job {        int id, profit, deadline;        Job(int x, int y, int z) {            this.id = x;            this.deadline = y;            this.profit = z;        }        @Override        public String toString() {            return \"Job{\" +                    \"id=\" + id +                    \", profit=\" + profit +                    \", deadline=\" + deadline +                    '}';        }    }    public static void main(String[] args) {        JobSequencing jobSequencing = new JobSequencing();        Job[] arr = {new Job(1, 4, 20), new Job(2, 1, 10), new Job(3, 1, 40), new Job(4, 1, 30)};        jobSequencing.maxProfitByJobSequencing(arr, 4);    }</code></pre>",
+            "url": "http://localhost:4000/myblog/2022/07/13/job-sequencing",
+            
+            
+            
+            
+            
+            "date_published": "2022-07-13T00:00:00+05:30",
+            "date_modified": "2022-07-13T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
             "id": "http://localhost:4000/myblog/2021/06/07/stringjoiner",
             "title": "String Joiner",
-            "summary": "Java String Joiner API",
+            "summary": null,
             "content_text": "  Using a delimiter of “, “, appending strings will produce the result  one, two, three.    @Test    public void testStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }  Can be done similar to a strinbuilder , as add returns the string joiner object.    @Test    public void testStringJoinerReturnsStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\").add(\"two\").add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }  Using starting and ending values.    @Test    public void testStringJoinerWithStartingAndEndingValues() {        StringJoiner stringJoiner = new StringJoiner(\", \",\"Start{\",\"}End\");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"Start{one, two, three}End\");    }  To create a pattern as [one], [two], [three]```@Testpublic void testStringJoinerCreatingSquareBracketPattern() {    StringJoiner stringJoiner = new StringJoiner(\"], [\",\"[\",\"]\");    stringJoiner.add(\"one\");    stringJoiner.add(\"two\");    stringJoiner.add(\"three\");    Assert.assertEquals(stringJoiner.toString(), \"[one], [two], [three]\");} }",
             "content_html": "<blockquote>  <p>Using a delimiter of “, “, appending strings will produce the result  one, two, three.</p></blockquote><pre><code>    @Test    public void testStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }</code></pre><blockquote>  <p>Can be done similar to a strinbuilder , as add returns the string joiner object.</p></blockquote><pre><code>    @Test    public void testStringJoinerReturnsStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\").add(\"two\").add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }</code></pre><blockquote>  <p>Using starting and ending values.</p></blockquote><pre><code>    @Test    public void testStringJoinerWithStartingAndEndingValues() {        StringJoiner stringJoiner = new StringJoiner(\", \",\"Start{\",\"}End\");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"Start{one, two, three}End\");    }</code></pre><blockquote>  <p>To create a pattern as [one], [two], [three]</p></blockquote><p>```</p><pre><code>@Testpublic void testStringJoinerCreatingSquareBracketPattern() {    StringJoiner stringJoiner = new StringJoiner(\"], [\",\"[\",\"]\");    stringJoiner.add(\"one\");    stringJoiner.add(\"two\");    stringJoiner.add(\"three\");    Assert.assertEquals(stringJoiner.toString(), \"[one], [two], [three]\");} }</code></pre>",
             "url": "http://localhost:4000/myblog/2021/06/07/stringjoiner",

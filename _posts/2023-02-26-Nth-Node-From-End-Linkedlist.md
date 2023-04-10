@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Delete Nth Node From End Linkedlist
-categories: ubuntu, linux, programming, setup
-description: Delete Nth Node From End Linkedlist
-summary: Delete Nth Node From End Linkedlist
-comments: true
-tags: [setup]
+categories: linkedlist
 ---
 # Intuition
 Maintain a pointer to the previous node of the node we want to  replace. 

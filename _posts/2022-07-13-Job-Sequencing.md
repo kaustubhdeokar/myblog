@@ -1,11 +1,8 @@
 ---
 layout: post
 title: Job Sequencing Problem
-categories: jekyll string
-description: Job Sequencing Problem
-summary: Job Sequencing Problem
-comments: true
-tags: [competitive coding]
+categories: 
+    - algorithm
 ---
 
 ```

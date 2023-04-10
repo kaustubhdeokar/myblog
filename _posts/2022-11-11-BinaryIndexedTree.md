@@ -1,11 +1,8 @@
 ---
 layout: post
 title: Range Sum Query - Mutable
-categories: competitive coding, binary indexed tree
-description: Range Sum Query - Mutable
-summary: Range Sum Query - Mutable
-comments: true
-tags: [competitive coding]
+categories: 
+    - tree
 ---
 
 ```

@@ -4,13 +4,460 @@
  <title>Kaustubh Deokar</title>
  <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
  <link href="http://localhost:4000/myblog/"/>
- <updated>2022-07-10T23:10:43+05:30</updated>
+ <updated>2023-04-10T22:37:51+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Linux Commands</title>
+   <link href="http://localhost:4000/myblog/2023/03/27/linux-commands"/>
+   <updated>2023-03-27T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/03/27/Linux-Commands</id>
+   <content type="html">&lt;pre&gt;&lt;code&gt;&amp;gt; to open `files` in the current path from terminal
+	&amp;gt;&amp;gt;	xdg-open .
+
+&amp;gt; View entire contents of file
+	&amp;gt;&amp;gt; cat &amp;lt;filename&amp;gt; 
+
+&amp;gt; View line count for file
+	&amp;gt;&amp;gt; cat &amp;lt;filename&amp;gt; | wc -l
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Find&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; Find file recursively in directories
+	&amp;gt;&amp;gt; find . -name &quot;.gitignore&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Grep&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; To search for a word in a text document &amp;amp; and print EVERY line containing the word.
+	
+	Command 1:
+	&amp;gt;	grep &amp;lt;text&amp;gt; &amp;lt;filepath/filename&amp;gt;
+	&amp;gt;	grep for ./Trie.java
+	
+	Command 2:
+	&amp;gt; cat &amp;lt;filename&amp;gt; | grep &amp;lt;text&amp;gt;
+	&amp;gt; cat Trie.java | grep for
+	
+	Output:
+		for (int i = 0; i &amp;lt; word.length(); i++) {
+	    for (int i = 0; i &amp;lt; word.length(); i++) {
+    	for (int i = 0; i &amp;lt; word.length(); i++) {
+        for (char c : set) {
+    	for (int i = 0; i &amp;lt; prefix.length(); i++) {
+
+&amp;gt; To search for a word in a text document &amp;amp; and print EVERY line NOT containing the word.
+	&amp;gt; cat &amp;lt;filename&amp;gt; | grep -v &amp;lt;text&amp;gt;
+	&amp;gt; cat Trie.java | grep -v for
+
+&amp;gt; Print line numbers along with output (-n)
+	grep -n &amp;lt;text&amp;gt; &amp;lt;filepath/filename&amp;gt;
+
+&amp;gt; Count (-c)
+	grep -c &amp;lt;text&amp;gt; &amp;lt;filepath/filename&amp;gt;
+
+&amp;gt; Case insensitive (-i)
+	grep -i &amp;lt;text&amp;gt; &amp;lt;filepath/filename&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Delete Nth Node From End Linkedlist</title>
+   <link href="http://localhost:4000/myblog/2023/02/26/nth-node-from-end-linkedlist"/>
+   <updated>2023-02-26T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/02/26/Nth-Node-From-End-Linkedlist</id>
+   <content type="html">&lt;h1 id=&quot;intuition&quot;&gt;Intuition&lt;/h1&gt;
+&lt;p&gt;Maintain a pointer to the previous node of the node we want to  replace.&lt;/p&gt;
+
+&lt;h1 id=&quot;approach&quot;&gt;Approach&lt;/h1&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;If we have the pointer to the prev node of the target node we want to replace: than simple prev.next = target.next;
+    &lt;pre&gt;&lt;code&gt;example: n = 2
+1   -&amp;gt;  2 -&amp;gt;    3 -&amp;gt;    4   -&amp;gt;  5
+           prev    target    
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+  &lt;li&gt;When n = size of the list, the previous pointer will be null, hence in that case answer will be &lt;b&gt;target.next&lt;/b&gt;
+    &lt;pre&gt;&lt;code&gt;example: n = 5
+1     -&amp;gt;   2  -&amp;gt;    3 -&amp;gt;    4   -&amp;gt;  5
+target         
+prev=null;     
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;complexity&quot;&gt;Complexity&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Time complexity:
+  O(n) one pass solution.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Space complexity:
+O(1) constant extra space for some pointers.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        
+        ListNode resultPtr = head;
+        ListNode prev = head;
+        ListNode nthNode = head;
+        ListNode nthNodePrev = null;
+        int i=0;
+
+        while(prev!=null){
+            prev = prev.next;
+            if(i&amp;gt;=n){
+                nthNodePrev = nthNode;
+                nthNode = nthNode.next;
+            } 
+            i+=1;
+        }
+        if(nthNodePrev != null) {
+            nthNodePrev.next = nthNode.next;
+            //System.out.println(&quot;nthnodeprev:&quot;+nthNodePrev.val);
+        }
+        
+        else if(nthNodePrev == null &amp;amp;&amp;amp; nthNode!=null) {
+            //System.out.println(&quot;nthNode:&quot;+nthNode.val);
+            return nthNode.next;
+        }
+
+        //System.out.println(nthNode.val);
+
+        return resultPtr;
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Ubuntu Linux Setup</title>
+   <link href="http://localhost:4000/myblog/2023/02/24/linux-setup"/>
+   <updated>2023-02-24T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/02/24/Linux-setup</id>
+   <content type="html">&lt;p&gt;Installing Brave browser
+    1  sudo apt install curl
+    2  sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+    3  echo “deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main”|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+    4  sudo apt update
+    5  sudo apt install brave-browser -y&lt;/p&gt;
+
+&lt;p&gt;Installing IntelliJ&lt;/p&gt;
+
+&lt;p&gt;Installing java&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Downloading the latest java linux x64 compressed archive. 
+nano .profile
+
+JAVA_HOME=/home/kaustubh/Documents/Apps/jdk-17.0.6/
+export JAVA_HOME
+PATH=$JAVA_HOME/bin:$PATH
+export PATH
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Installing vscode.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;python support:	https://code.visualstudio.com/docs/python/python-tutorial	
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Installing a .deb file
+	sudo apt install ./&lt;file&gt;.deb&lt;/file&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Top K Frequent Elements</title>
+   <link href="http://localhost:4000/myblog/2023/02/13/top-k-frequent-elements"/>
+   <updated>2023-02-13T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/02/13/Top-K-Frequent-Elements</id>
+   <content type="html">&lt;p&gt;Link to problem : https://leetcode.com/problems/top-k-frequent-elements/description/&lt;/p&gt;
+
+&lt;p&gt;Approach 1:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Hashmap to store count &lt;br /&gt;
+Priority Queue to maintain top k elements.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;public int[] topKFrequent(int[] arr, int k) {
+        HashMap&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
+
+        for (int i : arr) {
+            if (map.containsKey(i)) {
+                map.put(i, map.get(i) + 1);
+            } else {
+                map.put(i, 1);
+            }
+        }
+        
+        Comparator&amp;lt;Integer&amp;gt; comparator = (i1, i2) -&amp;gt; Integer.compare(map.get(i1), map.get(i2));
+        //A bit slow to add n element , with each insertion taking log n time.
+        PriorityQueue&amp;lt;Integer&amp;gt; queue = new PriorityQueue&amp;lt;&amp;gt;(comparator);
+        for (int i : map.keySet()) {
+            queue.add(i);
+            if(queue.size()&amp;gt;k)
+                queue.poll();
+        }
+        
+        int[] frequentKElems = new int[k];
+        int idx = 0;
+        while(!queue.isEmpty()){
+            frequentKElems[idx++] = queue.poll();
+        }
+        return frequentKElems;
+        
+    }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Approach 2&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Step 1 remains the same.&lt;br /&gt;
+Creating a 2-d arraylist with length = (max count found in step 1).&lt;br /&gt;
+Inserting elements into 2-d arraylist according to their occurences. &lt;br /&gt;
+Using a reverse iterator to find the top k elements.&lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;
+    public int[] topKFrequent(int[] nums, int k) {
+
+        HashMap&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
+        int max = 1;
+        for(int i:nums){
+            if(map.get(i)==null){
+                map.put(i, 1);
+            }
+            else{
+                int val = map.get(i)+1;
+                map.put(i, val);
+                max = Integer.max(max, val);
+            }
+        }
+    
+        //(1, 3) (2, 2) (3, 1)
+
+        ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
+        for(int i=0;i&amp;lt;=max;i++){
+            list.add(new ArrayList&amp;lt;&amp;gt;());
+        }
+        
+        //() , (3), (2), (1)
+
+        for(Map.Entry&amp;lt;Integer, Integer&amp;gt; entry: map.entrySet()){
+            int count = entry.getValue();
+            list.get(count).add(entry.getKey());
+        }
+
+        int[] result = new int[k];
+        while(k&amp;gt;0){
+            for(int i=list.size()-1;i&amp;gt;=0;i--){
+                ArrayList&amp;lt;Integer&amp;gt; innerList = list.get(i);
+                for(int j=0;j&amp;lt;innerList.size();j++){
+                    if(k&amp;gt;0) result[--k] = innerList.get(j);
+                    else break;
+                }
+                if(k==0) break;
+            }
+        }
+
+        return result;
+
+    }
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Ubuntu package install</title>
+   <link href="http://localhost:4000/myblog/2022/11/15/ubuntu-package-install"/>
+   <updated>2022-11-15T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2022/11/15/ubuntu-package-install</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;Installing a deb package - ran into problems of missing dependencies &lt;br /&gt;
+for such cases we can use gdebi &lt;br /&gt;
+terminal guides us how to install gdebi &lt;br /&gt;
+after that simply install any deb package by sudo gdebi &amp;lt;&amp;gt;.deb &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Range Sum Query - Mutable</title>
+   <link href="http://localhost:4000/myblog/2022/11/11/binaryindexedtree"/>
+   <updated>2022-11-11T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2022/11/11/BinaryIndexedTree</id>
+   <content type="html">&lt;pre&gt;&lt;code&gt;To do range sum queries in a better time complexity than O(n^2), we use binary indexed tree. 
+Comparing to the segment trees, this is faster, easier to implement. 
+It can be used almost for all such range query problem except for some which we will see in the segment tree doc
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;leetcode-problem307-range-sum-query---mutable&quot;&gt;Leetcode Problem:307. Range Sum Query - Mutable&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;Queries are divided into three types - (instantiation, sum &amp;amp; update)
+
+[&quot;NumArray&quot;, &quot;sumRange&quot;, &quot;update&quot;, &quot;sumRange&quot;]
+[[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]
+
+Output
+[null, 9, null, 8]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Solution using binary indexed tree.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The idea of binary indexed tree is that any number can be written as a sum of numbers in 2’s power.&lt;/p&gt;
+
+&lt;p&gt;Supposed there are 8 elements in an array.
+We construct the binary indexed tree as [0,n+1] array not using the 0th element.&lt;/p&gt;
+
+&lt;p&gt;Every index will add to the next i&amp;amp;(-i) index, in range of array length.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;i &amp;amp; (-i) is the lowest set bit for the i. For powers of 2 it’s the max bit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;pre&gt;&lt;code&gt;[1,2,3,4,5,6,7,8]
+
+index 1: 1 -&amp;gt; 2 -&amp;gt; 4 -&amp;gt; 8
+index 2: 2 -&amp;gt; 4 -&amp;gt; 8
+index 3: 3 -&amp;gt; 4 -&amp;gt; 8
+index 4: 4 -&amp;gt; 8
+index 5: 5 -&amp;gt; 6 -&amp;gt; 8
+index 6: 6 -&amp;gt; 8
+index 7: 7 -&amp;gt; 8
+index 8: 8
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The code for construction goes as follows:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+def update_tree(index, limit, val, tree):
+    index += 1
+    
+    while(index&amp;lt;=limit):
+        tree[index] += val
+        index += index &amp;amp; (-index)
+    
+
+def construct_binary_index_tree(arr):
+    tree = [0]*(len(arr)+1)
+    for i in range(0, len(arr)):
+        update_tree(i, len(arr), arr[i], tree)
+    self.tree = tree
+    return tree
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;To get the sum uptil i, using the same concept of getting the last set bit, (index &amp;amp; (-index))&lt;/p&gt;
+
+&lt;p&gt;we can find the numbers who have contributed to the ith position, then going down (index &amp;amp; (-index)) until we reach 0.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+  public static int getSum(int[] bTree, int i){
+        
+        int index = i+1;
+        int sum = 0;
+        while(index&amp;gt;0){
+            sum+=bTree[index];
+            index-= (index &amp;amp; (-index));
+        }
+        return sum;
+    }
+
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Job Sequencing Problem</title>
+   <link href="http://localhost:4000/myblog/2022/07/13/job-sequencing"/>
+   <updated>2022-07-13T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2022/07/13/Job-Sequencing</id>
+   <content type="html">&lt;pre&gt;&lt;code&gt;public int maxProfitByJobSequencing(Job arr[], int n) {
+
+        Comparator&amp;lt;Job&amp;gt; compareByDeadlineAndProfit = (Job j1, Job j2) -&amp;gt;
+                Integer.compare(j2.profit, j1.profit);
+        //arrange the jobs in decreasing order of profit.
+
+        PriorityQueue&amp;lt;Job&amp;gt; heap = new PriorityQueue&amp;lt;&amp;gt;(compareByDeadlineAndProfit);
+        int maxDeadline = Integer.MIN_VALUE;
+        for(int i=0;i&amp;lt;arr.length;i++){
+            maxDeadline = Integer.max(maxDeadline, arr[i].deadline);
+            heap.add(arr[i]);
+        }
+
+
+        int[] slots = new int[arr.length];
+
+        while (!heap.isEmpty()) {
+            Job job = heap.poll();
+
+            for (int i = job.deadline; i &amp;gt;= 0; i--) {
+                if (slots[i] == 0) {
+                    slots[i] = job.profit;
+                    break;
+                }
+            }
+
+        }
+
+        return -1;
+    }
+
+    static class Job {
+        int id, profit, deadline;
+
+        Job(int x, int y, int z) {
+            this.id = x;
+            this.deadline = y;
+            this.profit = z;
+        }
+
+        @Override
+        public String toString() {
+            return &quot;Job{&quot; +
+                    &quot;id=&quot; + id +
+                    &quot;, profit=&quot; + profit +
+                    &quot;, deadline=&quot; + deadline +
+                    &apos;}&apos;;
+        }
+    }
+
+    public static void main(String[] args) {
+        JobSequencing jobSequencing = new JobSequencing();
+        Job[] arr = {new Job(1, 4, 20), new Job(2, 1, 10), new Job(3, 1, 40), new Job(4, 1, 30)};
+        jobSequencing.maxProfitByJobSequencing(arr, 4);
+    }
+
+&lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
  
  <entry>
    <title>String Joiner</title>

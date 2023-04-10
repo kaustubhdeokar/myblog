@@ -1,11 +1,8 @@
 ---
 layout: post
 title: Ubuntu package install
-categories: linux, ubuntu
-description: Ubuntu package install
-summary: Ubuntu package install
-comments: true
-tags: [linux ubuntu]
+categories: 
+    - ubuntu
 ---
 
 > Installing a deb package - ran into problems of missing dependencies <br>

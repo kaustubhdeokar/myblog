@@ -1,0 +1,3 @@
+I"w<h1 id="intuition">Intuition</h1>
+<p>Maintain a pointer to the previous node of the node we want to  replace.</p>
+:ET

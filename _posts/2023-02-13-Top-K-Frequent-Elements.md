@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Top K Frequent Elements
-categories: leetcode, array, algorithm
-description: Top K Frequent Elements
-summary: Top K Frequent Elements
-comments: true
-tags: [leetcode]
+categories: priorityqueue
 ---
 
 Link to problem : https://leetcode.com/problems/top-k-frequent-elements/description/

@@ -3,5 +3,9 @@ links:
   url: /myblog/
 - title: Blog
   url: /myblog/blog/
+- title: Category
+  url: /myblog/category
+- title: Resume
+  url: /myblog/resume/
 - title: Project
   url: /myblog/project/

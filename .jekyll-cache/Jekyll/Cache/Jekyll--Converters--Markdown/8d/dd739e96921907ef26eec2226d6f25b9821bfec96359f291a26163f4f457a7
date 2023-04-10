@@ -1,0 +1,5 @@
+I".<pre><code>To do range sum queries in a better time complexity than O(n^2), we use binary indexed tree. 
+Comparing to the segment trees, this is faster, easier to implement. 
+It can be used almost for all such range query problem except for some which we will see in the segment tree doc
+</code></pre>
+:ET

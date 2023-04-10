@@ -1,0 +1,96 @@
+I"Æ
+<p>Link to problem : https://leetcode.com/problems/top-k-frequent-elements/description/</p>
+
+<p>Approach 1:</p>
+
+<blockquote>
+  <p>Hashmap to store count <br />
+Priority Queue to maintain top k elements.</p>
+</blockquote>
+
+<pre><code>public int[] topKFrequent(int[] arr, int k) {
+        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+
+        for (int i : arr) {
+            if (map.containsKey(i)) {
+                map.put(i, map.get(i) + 1);
+            } else {
+                map.put(i, 1);
+            }
+        }
+        
+        Comparator&lt;Integer&gt; comparator = (i1, i2) -&gt; Integer.compare(map.get(i1), map.get(i2));
+        //A bit slow to add n element , with each insertion taking log n time.
+        PriorityQueue&lt;Integer&gt; queue = new PriorityQueue&lt;&gt;(comparator);
+        for (int i : map.keySet()) {
+            queue.add(i);
+            if(queue.size()&gt;k)
+                queue.poll();
+        }
+        
+        int[] frequentKElems = new int[k];
+        int idx = 0;
+        while(!queue.isEmpty()){
+            frequentKElems[idx++] = queue.poll();
+        }
+        return frequentKElems;
+        
+    }
+
+</code></pre>
+
+<p>Approach 2</p>
+<blockquote>
+  <p>Step 1 remains the same.<br />
+Creating a 2-d arraylist with length = (max count found in step 1).<br />
+Inserting elements into 2-d arraylist according to their occurences. <br />
+Using a reverse iterator to find the top k elements.<br /></p>
+</blockquote>
+
+<pre><code>
+    public int[] topKFrequent(int[] nums, int k) {
+
+        HashMap&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+        int max = 1;
+        for(int i:nums){
+            if(map.get(i)==null){
+                map.put(i, 1);
+            }
+            else{
+                int val = map.get(i)+1;
+                map.put(i, val);
+                max = Integer.max(max, val);
+            }
+        }
+    
+        //(1, 3) (2, 2) (3, 1)
+
+        ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();
+        for(int i=0;i&lt;=max;i++){
+            list.add(new ArrayList&lt;&gt;());
+        }
+        
+        //() , (3), (2), (1)
+
+        for(Map.Entry&lt;Integer, Integer&gt; entry: map.entrySet()){
+            int count = entry.getValue();
+            list.get(count).add(entry.getKey());
+        }
+
+        int[] result = new int[k];
+        while(k&gt;0){
+            for(int i=list.size()-1;i&gt;=0;i--){
+                ArrayList&lt;Integer&gt; innerList = list.get(i);
+                for(int j=0;j&lt;innerList.size();j++){
+                    if(k&gt;0) result[--k] = innerList.get(j);
+                    else break;
+                }
+                if(k==0) break;
+            }
+        }
+
+        return result;
+
+    }
+</code></pre>
+:ET

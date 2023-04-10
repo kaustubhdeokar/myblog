@@ -1,11 +1,9 @@
 ---
 layout: post
 title: Linux Commands
-categories: ubuntu, linux
-description: Linux Commands
-summary: Linux Commands
-comments: true
-tags: [linux]
+categories: 
+- linux
+- grep
 ---
 
 	> to open `files` in the current path from terminal

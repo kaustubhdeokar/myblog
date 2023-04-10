@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Ubuntu Linux Setup
-categories: ubuntu, linux, programming, setup
-description: Ubuntu Linux Setup
-summary: Ubuntu Linux Setup
-comments: true
-tags: [setup]
+categories: setup
 ---
 
 Installing Brave browser

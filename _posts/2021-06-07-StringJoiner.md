@@ -1,11 +1,9 @@
 ---
 layout: post
 title: String Joiner
-categories: jekyll string
-description: Java String Joiner API
-summary: Java String Joiner API
-comments: true
-tags: [java]
+categories: 
+    - string
+    - java
 ---
 
 > Using a delimiter of ", ", appending strings will produce the result

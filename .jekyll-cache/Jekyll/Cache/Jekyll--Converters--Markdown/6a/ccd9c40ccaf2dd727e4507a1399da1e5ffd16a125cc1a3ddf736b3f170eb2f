@@ -1,0 +1,78 @@
+I"ð<h1 id="intuition">Intuition</h1>
+<p>Maintain a pointer to the previous node of the node we want to  replace.</p>
+
+<h1 id="approach">Approach</h1>
+
+<ol>
+  <li>If we have the pointer to the prev node of the target node we want to replace: than simple prev.next = target.next;
+    <pre><code>example: n = 2
+1   -&gt;  2 -&gt;    3 -&gt;    4   -&gt;  5
+           prev    target    
+</code></pre>
+  </li>
+  <li>When n = size of the list, the previous pointer will be null, hence in that case answer will be <b>target.next</b>
+    <pre><code>example: n = 5
+1     -&gt;   2  -&gt;    3 -&gt;    4   -&gt;  5
+target         
+prev=null;     
+</code></pre>
+  </li>
+</ol>
+
+<h1 id="complexity">Complexity</h1>
+<ul>
+  <li>
+    <p>Time complexity:
+  O(n) one pass solution.</p>
+  </li>
+  <li>
+    <p>Space complexity:
+O(1) constant extra space for some pointers.</p>
+  </li>
+</ul>
+
+<h1 id="code">Code</h1>
+<pre><code>/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        
+        ListNode resultPtr = head;
+        ListNode prev = head;
+        ListNode nthNode = head;
+        ListNode nthNodePrev = null;
+        int i=0;
+
+        while(prev!=null){
+            prev = prev.next;
+            if(i&gt;=n){
+                nthNodePrev = nthNode;
+                nthNode = nthNode.next;
+            } 
+            i+=1;
+        }
+        if(nthNodePrev != null) {
+            nthNodePrev.next = nthNode.next;
+            //System.out.println("nthnodeprev:"+nthNodePrev.val);
+        }
+        
+        else if(nthNodePrev == null &amp;&amp; nthNode!=null) {
+            //System.out.println("nthNode:"+nthNode.val);
+            return nthNode.next;
+        }
+
+        //System.out.println(nthNode.val);
+
+        return resultPtr;
+    }
+}
+</code></pre>
+:ET

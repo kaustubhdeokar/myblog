@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<section class="posts">
+{% for cat in site.categories %}
+
+    <p> 
+        <h3>{{cat[0]| capitalize }}</h3>
+        {% for post in cat[1] %} 
+            <li><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></li>
+        {% endfor %}
+    
+    </p>
+
+{% endfor %}
+   
+
+</section>

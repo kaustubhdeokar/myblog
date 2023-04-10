@@ -2,11 +2,88 @@
   
     {
 
+      "title"    : "Linux Commands",
+      "description" : "",
+      "url"      : "/myblog/2023/03/27/linux-commands",
+      "category" : "linux, grep",
+      "tags"     : "",
+      "date"     : "2023-03-27 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Delete Nth Node From End Linkedlist",
+      "description" : "",
+      "url"      : "/myblog/2023/02/26/nth-node-from-end-linkedlist",
+      "category" : "linkedlist",
+      "tags"     : "",
+      "date"     : "2023-02-26 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Ubuntu Linux Setup",
+      "description" : "",
+      "url"      : "/myblog/2023/02/24/linux-setup",
+      "category" : "setup",
+      "tags"     : "",
+      "date"     : "2023-02-24 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Top K Frequent Elements",
+      "description" : "",
+      "url"      : "/myblog/2023/02/13/top-k-frequent-elements",
+      "category" : "priorityqueue",
+      "tags"     : "",
+      "date"     : "2023-02-13 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Ubuntu package install",
+      "description" : "",
+      "url"      : "/myblog/2022/11/15/ubuntu-package-install",
+      "category" : "ubuntu",
+      "tags"     : "",
+      "date"     : "2022-11-15 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Range Sum Query - Mutable",
+      "description" : "",
+      "url"      : "/myblog/2022/11/11/binaryindexedtree",
+      "category" : "tree",
+      "tags"     : "",
+      "date"     : "2022-11-11 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Job Sequencing Problem",
+      "description" : "",
+      "url"      : "/myblog/2022/07/13/job-sequencing",
+      "category" : "algorithm",
+      "tags"     : "",
+      "date"     : "2022-07-13 00:00:00 +0530"
+
+    } ,
+  
+    {
+
       "title"    : "String Joiner",
-      "description" : "Java String Joiner API",
+      "description" : "",
       "url"      : "/myblog/2021/06/07/stringjoiner",
-      "category" : "jekyll, string",
-      "tags"     : "java",
+      "category" : "string, java",
+      "tags"     : "",
       "date"     : "2021-06-07 00:00:00 +0530"
 
     } 
