@@ -24,11 +24,11 @@ Grep
 
 	> To search for a word in a text document & and print EVERY line containing the word.
 		
-		Command 1:
+		Command:
 		>	grep <text> <filepath/filename>
 		>	grep for ./Trie.java
 		
-		Command 2:
+		Command:
 		> cat <filename> | grep <text>
 		> cat Trie.java | grep for
 		
@@ -52,4 +52,4 @@ Grep
 	> Case insensitive (-i)
 		grep -i <text> <filepath/filename>
 
-	
+		
