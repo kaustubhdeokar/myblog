@@ -2,10 +2,87 @@
   
     {
 
-      "title"    : "Linkedlist",
+      "title"    : "First Open Source Contribution",
       "description" : "",
-      "url"      : "/myblog/2023/05/08/linkedlist",
+      "url"      : "/myblog/2023/08/22/first-open-source-contribution",
       "category" : "",
+      "tags"     : "",
+      "date"     : "2023-08-22 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Exceptions in Java.",
+      "description" : "",
+      "url"      : "/myblog/2023/08/03/java-concepts",
+      "category" : "programming",
+      "tags"     : "",
+      "date"     : "2023-08-03 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Find Leaves of Trees - Google interview question.",
+      "description" : "",
+      "url"      : "/myblog/2023/07/26/find-leaves-of-tree",
+      "category" : "competitivecoding",
+      "tags"     : "",
+      "date"     : "2023-07-26 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Ubuntu package install",
+      "description" : "",
+      "url"      : "/myblog/2023/07/26/design-patterns",
+      "category" : "programming",
+      "tags"     : "",
+      "date"     : "2023-07-26 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Federer",
+      "description" : "",
+      "url"      : "/myblog/2023/07/22/federer",
+      "category" : "tennis",
+      "tags"     : "",
+      "date"     : "2023-07-22 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Useful Git Posts",
+      "description" : "",
+      "url"      : "/myblog/2023/07/21/useful-git-posts",
+      "category" : "programming",
+      "tags"     : "",
+      "date"     : "2023-07-21 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "System Design Posts",
+      "description" : "",
+      "url"      : "/myblog/2023/07/21/system-design-posts",
+      "category" : "systemdesign",
+      "tags"     : "",
+      "date"     : "2023-07-21 00:00:00 +0530"
+
+    } ,
+  
+    {
+
+      "title"    : "Linkedlist Primer",
+      "description" : "",
+      "url"      : "/myblog/2023/05/08/linkedlist-primer",
+      "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-05-08 00:00:00 +0530"
 
@@ -16,7 +93,7 @@
       "title"    : "523 Continuous Subarray Sum",
       "description" : "",
       "url"      : "/myblog/2023/04/17/523-continuous-subarray-sum",
-      "category" : "arrays",
+      "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-04-17 00:00:00 +0530"
 
@@ -27,7 +104,7 @@
       "title"    : "Linux Commands",
       "description" : "",
       "url"      : "/myblog/2023/03/27/linux-commands",
-      "category" : "linux, grep",
+      "category" : "linux",
       "tags"     : "",
       "date"     : "2023-03-27 00:00:00 +0530"
 
@@ -38,7 +115,7 @@
       "title"    : "Delete Nth Node From End Linkedlist",
       "description" : "",
       "url"      : "/myblog/2023/02/26/nth-node-from-end-linkedlist",
-      "category" : "linkedlist",
+      "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-02-26 00:00:00 +0530"
 
@@ -49,7 +126,7 @@
       "title"    : "Ubuntu Linux Setup",
       "description" : "",
       "url"      : "/myblog/2023/02/24/linux-setup",
-      "category" : "setup",
+      "category" : "linux",
       "tags"     : "",
       "date"     : "2023-02-24 00:00:00 +0530"
 
@@ -60,7 +137,7 @@
       "title"    : "Top K Frequent Elements",
       "description" : "",
       "url"      : "/myblog/2023/02/13/top-k-frequent-elements",
-      "category" : "priorityqueue",
+      "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-02-13 00:00:00 +0530"
 
@@ -71,7 +148,7 @@
       "title"    : "Ubuntu package install",
       "description" : "",
       "url"      : "/myblog/2022/11/15/ubuntu-package-install",
-      "category" : "ubuntu",
+      "category" : "linux",
       "tags"     : "",
       "date"     : "2022-11-15 00:00:00 +0530"
 
@@ -82,7 +159,7 @@
       "title"    : "Range Sum Query - Mutable",
       "description" : "",
       "url"      : "/myblog/2022/11/11/binaryindexedtree",
-      "category" : "tree",
+      "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2022-11-11 00:00:00 +0530"
 
@@ -93,7 +170,7 @@
       "title"    : "Job Sequencing Problem",
       "description" : "",
       "url"      : "/myblog/2022/07/13/job-sequencing",
-      "category" : "algorithm",
+      "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2022-07-13 00:00:00 +0530"
 
@@ -101,10 +178,10 @@
   
     {
 
-      "title"    : "String Joiner",
+      "title"    : "Java String Joiner",
       "description" : "",
       "url"      : "/myblog/2021/06/07/stringjoiner",
-      "category" : "string, java",
+      "category" : "programming",
       "tags"     : "",
       "date"     : "2021-06-07 00:00:00 +0530"
 

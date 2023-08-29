@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ubuntu Linux Setup
-categories: setup
+categories: linux
 ---
 
 Installing Brave browser

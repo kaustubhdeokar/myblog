@@ -1,0 +1,89 @@
+I"Ï	<h3 id="google-interview-question-lets-gooooo">Google interview question, letâ€™s gooooo</h3>
+
+<p>Problem Statement.
+So given a tree, continue the following process until tree is empty. Print out leaves for the wtree &amp; Remove the leaves.</p>
+
+<p>For example the given tree</p>
+
+<pre><code>        1
+     /     \
+    2       5
+  /  \
+ 3    4
+</code></pre>
+
+<p>So for the first level, nodes (3), (4) &amp; (5). Followed by (2). Then (1)</p>
+
+<p>Output: [[3,4,5],[2],[1]]</p>
+
+<pre><code>Approach - it's finding out the maximum height of a node.
+3,4,5 have height of 0.
+2 has height of 1.
+1 has height 2.
+</code></pre>
+
+<h3 id="code">Code</h3>
+
+<pre><code>public ArrayList&lt;ArrayList&lt;Integer&gt;&gt; findLeaves(@NotNull TreeNode node) {
+
+    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();
+    heightTraversal(node, list);
+    return list;
+}
+</code></pre>
+
+<p>//height traversal.</p>
+
+<pre><code>public int heightTraversal(@Nullable TreeNode node, ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list) {
+
+    if (node == null) {
+        return 0;
+    }
+
+    int left = heightTraversal(node.left, list);
+    int right = heightTraversal(node.right, list); //traversing to find the height.
+
+    int height = Integer.max(left, right);
+    insertIntoList(list, height, node.val);
+    return height + 1;
+}
+</code></pre>
+
+<p>//simple insert into a 2-d arraylist.</p>
+
+<pre><code>private void insertIntoList(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list, int height, int val) {
+    if (list.size() &lt;= height) {
+        for (int i = 0; i &lt;= (height - list.size()); i++) {
+            list.add(new ArrayList&lt;&gt;());
+        }
+    }
+    list.get(height).add(val);
+}
+
+
+public static void main(String[] args) {
+
+    SerializeDeserialize sd = new SerializeDeserialize();
+    Integer[] treeStructure = {1, 2, 3, 4, 5, -1, -1, -1, -1, -1, -1};
+    TreeNode root = sd.createTreeFromArray(treeStructure);
+    FindLeavesOfTree fl = new FindLeavesOfTree();
+    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+    treeStructure = new Integer[]{1, 2, 3, -1, -1, -1, -1};
+    root = sd.createTreeFromArray(treeStructure);
+    fl = new FindLeavesOfTree();
+    leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+    treeStructure = new Integer[]{1, -1, -1};
+    root = sd.createTreeFromArray(treeStructure);
+    fl = new FindLeavesOfTree();
+    leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+
+} ```
+</code></pre>
+
+:ET

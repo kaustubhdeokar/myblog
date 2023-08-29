@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Top K Frequent Elements
-categories: priorityqueue
+categories: competitivecoding
 ---
 
 Link to problem : https://leetcode.com/problems/top-k-frequent-elements/description/

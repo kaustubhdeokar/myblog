@@ -1,0 +1,12 @@
+I"z<h2 id="exceptions">Exceptions</h2>
+
+<blockquote>
+  <p>Checked - checked at compile time <br /> eg: filenotfound exception. <br />
+we need to handle them, the program will fail to compile otherwise.</p>
+</blockquote>
+
+<blockquote>
+  <p>Unchecked - checked at runtime.<br />
+eg:nullpointer exception, string.length() -&gt; throws nullpointer if string is null.</p>
+</blockquote>
+:ET

@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu package install
 categories: 
-    - ubuntu
+    - linux
 ---
 
 > Installing a deb package - ran into problems of missing dependencies <br>

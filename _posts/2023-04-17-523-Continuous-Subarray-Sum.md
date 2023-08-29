@@ -1,8 +1,10 @@
 ---
 layout: post
 title: 523 Continuous Subarray Sum
-categories: arrays
+categories: 
+    - competitivecoding
 ---
+
 
 Question:
 

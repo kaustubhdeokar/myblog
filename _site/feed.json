@@ -13,12 +13,159 @@
 "items": [
     
         {
-            "id": "http://localhost:4000/myblog/2023/05/08/linkedlist",
-            "title": "Linkedlist",
+            "id": "http://localhost:4000/myblog/2023/08/22/first-open-source-contribution",
+            "title": "First Open Source Contribution",
+            "summary": null,
+            "content_text": "https://github.com/in28minutes/spring-web-services/pull/8#event-10015014094",
+            "content_html": "<p>https://github.com/in28minutes/spring-web-services/pull/8#event-10015014094</p>",
+            "url": "http://localhost:4000/myblog/2023/08/22/first-open-source-contribution",
+            
+            
+            
+            
+            
+            "date_published": "2023-08-22T00:00:00+05:30",
+            "date_modified": "2023-08-22T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/08/03/java-concepts",
+            "title": "Exceptions in Java.",
+            "summary": null,
+            "content_text": "Exceptions  Checked - checked at compile time  eg: filenotfound exception. we need to handle them, the program will fail to compile otherwise.  Unchecked - checked at runtime.eg:nullpointer exception, string.length() -&gt; throws nullpointer if string is null.",
+            "content_html": "<h2 id=\"exceptions\">Exceptions</h2><blockquote>  <p>Checked - checked at compile time <br /> eg: filenotfound exception. <br />we need to handle them, the program will fail to compile otherwise.</p></blockquote><blockquote>  <p>Unchecked - checked at runtime.<br />eg:nullpointer exception, string.length() -&gt; throws nullpointer if string is null.</p></blockquote>",
+            "url": "http://localhost:4000/myblog/2023/08/03/java-concepts",
+            
+            
+            
+            
+            
+            "date_published": "2023-08-03T00:00:00+05:30",
+            "date_modified": "2023-08-03T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree",
+            "title": "Find Leaves of Trees - Google interview question.",
+            "summary": null,
+            "content_text": "Google interview question, let’s goooooProblem Statement.So given a tree, continue the following process until tree is empty. Print out leaves for the wtree &amp; Remove the leaves.For example the given tree        1     /     \\    2       5  /  \\ 3    4So for the first level, nodes (3), (4) &amp; (5). Followed by (2). Then (1)Output: [[3,4,5],[2],[1]]Approach - it's finding out the maximum height of a node.3,4,5 have height of 0.2 has height of 1.1 has height 2.Codepublic ArrayList&lt;ArrayList&lt;Integer&gt;&gt; findLeaves(@NotNull TreeNode node) {    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();    heightTraversal(node, list);    return list;}//height traversal.public int heightTraversal(@Nullable TreeNode node, ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list) {    if (node == null) {        return 0;    }    int left = heightTraversal(node.left, list);    int right = heightTraversal(node.right, list); //traversing to find the height.    int height = Integer.max(left, right);    insertIntoList(list, height, node.val);    return height + 1;}//simple insert into a 2-d arraylist.private void insertIntoList(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list, int height, int val) {    if (list.size() &lt;= height) {        for (int i = 0; i &lt;= (height - list.size()); i++) {            list.add(new ArrayList&lt;&gt;());        }    }    list.get(height).add(val);}public static void main(String[] args) {    SerializeDeserialize sd = new SerializeDeserialize();    Integer[] treeStructure = {1, 2, 3, 4, 5, -1, -1, -1, -1, -1, -1};    TreeNode root = sd.createTreeFromArray(treeStructure);    FindLeavesOfTree fl = new FindLeavesOfTree();    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; leaves = fl.findLeaves(root);    System.out.println(leaves);    treeStructure = new Integer[]{1, 2, 3, -1, -1, -1, -1};    root = sd.createTreeFromArray(treeStructure);    fl = new FindLeavesOfTree();    leaves = fl.findLeaves(root);    System.out.println(leaves);    treeStructure = new Integer[]{1, -1, -1};    root = sd.createTreeFromArray(treeStructure);    fl = new FindLeavesOfTree();    leaves = fl.findLeaves(root);    System.out.println(leaves);} ```",
+            "content_html": "<h3 id=\"google-interview-question-lets-gooooo\">Google interview question, let’s gooooo</h3><p>Problem Statement.So given a tree, continue the following process until tree is empty. Print out leaves for the wtree &amp; Remove the leaves.</p><p>For example the given tree</p><pre><code>        1     /     \\    2       5  /  \\ 3    4</code></pre><p>So for the first level, nodes (3), (4) &amp; (5). Followed by (2). Then (1)</p><p>Output: [[3,4,5],[2],[1]]</p><pre><code>Approach - it's finding out the maximum height of a node.3,4,5 have height of 0.2 has height of 1.1 has height 2.</code></pre><h3 id=\"code\">Code</h3><pre><code>public ArrayList&lt;ArrayList&lt;Integer&gt;&gt; findLeaves(@NotNull TreeNode node) {    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list = new ArrayList&lt;&gt;();    heightTraversal(node, list);    return list;}</code></pre><p>//height traversal.</p><pre><code>public int heightTraversal(@Nullable TreeNode node, ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list) {    if (node == null) {        return 0;    }    int left = heightTraversal(node.left, list);    int right = heightTraversal(node.right, list); //traversing to find the height.    int height = Integer.max(left, right);    insertIntoList(list, height, node.val);    return height + 1;}</code></pre><p>//simple insert into a 2-d arraylist.</p><pre><code>private void insertIntoList(ArrayList&lt;ArrayList&lt;Integer&gt;&gt; list, int height, int val) {    if (list.size() &lt;= height) {        for (int i = 0; i &lt;= (height - list.size()); i++) {            list.add(new ArrayList&lt;&gt;());        }    }    list.get(height).add(val);}public static void main(String[] args) {    SerializeDeserialize sd = new SerializeDeserialize();    Integer[] treeStructure = {1, 2, 3, 4, 5, -1, -1, -1, -1, -1, -1};    TreeNode root = sd.createTreeFromArray(treeStructure);    FindLeavesOfTree fl = new FindLeavesOfTree();    ArrayList&lt;ArrayList&lt;Integer&gt;&gt; leaves = fl.findLeaves(root);    System.out.println(leaves);    treeStructure = new Integer[]{1, 2, 3, -1, -1, -1, -1};    root = sd.createTreeFromArray(treeStructure);    fl = new FindLeavesOfTree();    leaves = fl.findLeaves(root);    System.out.println(leaves);    treeStructure = new Integer[]{1, -1, -1};    root = sd.createTreeFromArray(treeStructure);    fl = new FindLeavesOfTree();    leaves = fl.findLeaves(root);    System.out.println(leaves);} ```</code></pre>",
+            "url": "http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree",
+            
+            
+            
+            
+            
+            "date_published": "2023-07-26T00:00:00+05:30",
+            "date_modified": "2023-07-26T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/07/26/design-patterns",
+            "title": "Ubuntu package install",
+            "summary": null,
+            "content_text": "Observer    - Publisher/Subscriber or observer/client    - change pushed by one, observed by it’s clients/subscribers.Strategy     - different implementation of an interface.Singleton    - when only one implementation of anything is required. (logging, configuration).Template    - look into it.",
+            "content_html": "<p>Observer    - Publisher/Subscriber or observer/client    - change pushed by one, observed by it’s clients/subscribers.</p><p>Strategy     - different implementation of an interface.</p><p>Singleton    - when only one implementation of anything is required. (logging, configuration).</p><p>Template    - look into it.</p>",
+            "url": "http://localhost:4000/myblog/2023/07/26/design-patterns",
+            
+            
+            
+            
+            
+            "date_published": "2023-07-26T00:00:00+05:30",
+            "date_modified": "2023-07-26T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/07/22/federer",
+            "title": "Federer",
+            "summary": null,
+            "content_text": "Federer",
+            "content_html": "<p><a href=\"https://www.youtube.com/watch?v=cwnj6mCLv9I\">Federer</a></p>",
+            "url": "http://localhost:4000/myblog/2023/07/22/federer",
+            
+            
+            
+            
+            
+            "date_published": "2023-07-22T00:00:00+05:30",
+            "date_modified": "2023-07-22T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/07/21/useful-git-posts",
+            "title": "Useful Git Posts",
+            "summary": null,
+            "content_text": "Complete git guide:    Dev.to link",
+            "content_html": "<p>Complete git guide:    <a href=\"https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6\">Dev.to link</a></p>",
+            "url": "http://localhost:4000/myblog/2023/07/21/useful-git-posts",
+            
+            
+            
+            
+            
+            "date_published": "2023-07-21T00:00:00+05:30",
+            "date_modified": "2023-07-21T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/07/21/system-design-posts",
+            "title": "System Design Posts",
+            "summary": null,
+            "content_text": "DatabaseDatabase-101-Twitch example",
+            "content_html": "<h3 id=\"database\">Database</h3><p><a href=\"https://dev.to/danielhe4rt/database-101-twitch-bot-in-a-higher-level-for-beginners-i91\">Database-101-Twitch example</a></p>",
+            "url": "http://localhost:4000/myblog/2023/07/21/system-design-posts",
+            
+            
+            
+            
+            
+            "date_published": "2023-07-21T00:00:00+05:30",
+            "date_modified": "2023-07-21T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/05/08/linkedlist-primer",
+            "title": "Linkedlist Primer",
             "summary": null,
             "content_text": "Doubly Linked List.  Advantages over singly linked list -&gt; insert delete operations performed in O(1) time.Disadvantages: extra memory required for prev pointer.  Applications: LRU Cache.Refer for implementation of doubly linked list",
             "content_html": "<h2 id=\"doubly-linked-list\">Doubly Linked List.</h2><blockquote>  <p>Advantages over singly linked list -&gt; insert delete operations performed in O(1) time.Disadvantages: extra memory required for prev pointer.</p></blockquote><blockquote>  <p>Applications: LRU Cache.</p></blockquote><p><a href=\"https://github.com/kaustubhdeokar/interview-cake/blob/main/neetcode75/linkedlist/DoublyLinkedList.java\">Refer for implementation of doubly linked list</a></p>",
-            "url": "http://localhost:4000/myblog/2023/05/08/linkedlist",
+            "url": "http://localhost:4000/myblog/2023/05/08/linkedlist-primer",
             
             
             
@@ -203,7 +350,7 @@
     
         {
             "id": "http://localhost:4000/myblog/2021/06/07/stringjoiner",
-            "title": "String Joiner",
+            "title": "Java String Joiner",
             "summary": null,
             "content_text": "  Using a delimiter of “, “, appending strings will produce the result  one, two, three.    @Test    public void testStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }  Can be done similar to a strinbuilder , as add returns the string joiner object.    @Test    public void testStringJoinerReturnsStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\").add(\"two\").add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }  Using starting and ending values.    @Test    public void testStringJoinerWithStartingAndEndingValues() {        StringJoiner stringJoiner = new StringJoiner(\", \",\"Start{\",\"}End\");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"Start{one, two, three}End\");    }  To create a pattern as [one], [two], [three]```@Testpublic void testStringJoinerCreatingSquareBracketPattern() {    StringJoiner stringJoiner = new StringJoiner(\"], [\",\"[\",\"]\");    stringJoiner.add(\"one\");    stringJoiner.add(\"two\");    stringJoiner.add(\"three\");    Assert.assertEquals(stringJoiner.toString(), \"[one], [two], [three]\");} }",
             "content_html": "<blockquote>  <p>Using a delimiter of “, “, appending strings will produce the result  one, two, three.</p></blockquote><pre><code>    @Test    public void testStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }</code></pre><blockquote>  <p>Can be done similar to a strinbuilder , as add returns the string joiner object.</p></blockquote><pre><code>    @Test    public void testStringJoinerReturnsStringJoiner() {        StringJoiner stringJoiner = new StringJoiner(\", \");        stringJoiner.add(\"one\").add(\"two\").add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"one, two, three\");    }</code></pre><blockquote>  <p>Using starting and ending values.</p></blockquote><pre><code>    @Test    public void testStringJoinerWithStartingAndEndingValues() {        StringJoiner stringJoiner = new StringJoiner(\", \",\"Start{\",\"}End\");        stringJoiner.add(\"one\");        stringJoiner.add(\"two\");        stringJoiner.add(\"three\");        Assert.assertEquals(stringJoiner.toString(), \"Start{one, two, three}End\");    }</code></pre><blockquote>  <p>To create a pattern as [one], [two], [three]</p></blockquote><p>```</p><pre><code>@Testpublic void testStringJoinerCreatingSquareBracketPattern() {    StringJoiner stringJoiner = new StringJoiner(\"], [\",\"[\",\"]\");    stringJoiner.add(\"one\");    stringJoiner.add(\"two\");    stringJoiner.add(\"three\");    Assert.assertEquals(stringJoiner.toString(), \"[one], [two], [three]\");} }</code></pre>",

@@ -1,9 +1,8 @@
 ---
 layout: post
-title: String Joiner
+title: Java String Joiner
 categories: 
-    - string
-    - java
+    - programming
 ---
 
 > Using a delimiter of ", ", appending strings will produce the result

@@ -1,3 +1,10 @@
+---
+layout: post
+title: Linkedlist Primer
+categories: 
+    - competitivecoding
+---
+
 ## Doubly Linked List.
 
 > Advantages over singly linked list -> insert delete operations performed in O(1) time.

@@ -1,29 +1,25 @@
 ---
 layout: post
 title: Find Leaves of Trees - Google interview question.
-categories: trees
+categories: competitivecoding
 ---
+### Google interview question, let's gooooo
 
-> Google interview question, let's gooooo
-      
-        Problem Statement.
+Problem Statement.
+So given a tree, continue the following process until tree is empty. Print out leaves for the wtree & Remove the leaves.
+    
+For example the given tree
 
-        So given a tree,
-         - continue until tree is empty.
-             - print out leaves for the tree
-             - remove the leaves.
-
+    
             1
          /     \
         2       5
       /  \
      3    4
 
-     so first -> 3,4,5
-     then -> 2
-     then -> 1
-
-     output: {{3,4,5},{2},{1}}
+So for the first level, nodes (3), (4) & (5). Followed by (2). Then (1)
+    
+Output: [[3,4,5],[2],[1]]
 
 
     Approach - it's finding out the maximum height of a node.
@@ -33,7 +29,7 @@ categories: trees
 
 ### Code
 
-```
+
 
     public ArrayList<ArrayList<Integer>> findLeaves(@NotNull TreeNode node) {
 

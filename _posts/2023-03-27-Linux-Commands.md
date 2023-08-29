@@ -3,7 +3,6 @@ layout: post
 title: Linux Commands
 categories: 
 - linux
-- grep
 ---
 
 	> to open `files` in the current path from terminal

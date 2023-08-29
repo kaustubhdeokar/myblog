@@ -2,7 +2,7 @@
 layout: post
 title: Range Sum Query - Mutable
 categories: 
-    - tree
+    - competitivecoding
 ---
 
 ```

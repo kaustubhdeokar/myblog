@@ -2,7 +2,7 @@
 layout: post
 title: Useful Git Posts
 categories: 
-    - git
+    - programming
 ---
 
 Complete git guide:

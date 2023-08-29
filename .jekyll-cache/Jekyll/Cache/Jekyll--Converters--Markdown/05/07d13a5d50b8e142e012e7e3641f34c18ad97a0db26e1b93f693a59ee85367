@@ -1,0 +1,66 @@
+I"<hr />
+<p>layout: post
+title: Linux Commands
+categories:</p>
+<ul>
+  <li>linux</li>
+  <li>
+    <hr />
+
+    <blockquote>
+      <p>to open <code>files</code> in the current path from terminal
+      »	xdg-open .</p>
+    </blockquote>
+
+    <blockquote>
+      <p>View entire contents of file
+      » cat <filename></filename></p>
+    </blockquote>
+
+    <blockquote>
+      <p>View line count for file
+      » cat <filename> | wc -l</filename></p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>Find</p>
+
+<pre><code>&gt; Find file recursively in directories
+	&gt;&gt; find . -name ".gitignore"
+</code></pre>
+
+<p>Grep</p>
+
+<pre><code>&gt; To search for a word in a text document &amp; and print EVERY line containing the word.
+	
+	Command:
+	&gt;	grep &lt;text&gt; &lt;filepath/filename&gt;
+	&gt;	grep for ./Trie.java
+	
+	Command:
+	&gt; cat &lt;filename&gt; | grep &lt;text&gt;
+	&gt; cat Trie.java | grep for
+	
+	Output:
+		for (int i = 0; i &lt; word.length(); i++) {
+	    for (int i = 0; i &lt; word.length(); i++) {
+    	for (int i = 0; i &lt; word.length(); i++) {
+        for (char c : set) {
+    	for (int i = 0; i &lt; prefix.length(); i++) {
+
+&gt; To search for a word in a text document &amp; and print EVERY line NOT containing the word.
+	&gt; cat &lt;filename&gt; | grep -v &lt;text&gt;
+	&gt; cat Trie.java | grep -v for
+
+&gt; Print line numbers along with output (-n)
+	grep -n &lt;text&gt; &lt;filepath/filename&gt;
+
+&gt; Count (-c)
+	grep -c &lt;text&gt; &lt;filepath/filename&gt;
+
+&gt; Case insensitive (-i)
+	grep -i &lt;text&gt; &lt;filepath/filename&gt;
+</code></pre>
+
+:ET

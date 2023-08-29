@@ -1,0 +1,13 @@
+I"Q<p>Observer
+    - Publisher/Subscriber or observer/client
+    - change pushed by one, observed by it’s clients/subscribers.</p>
+
+<p>Strategy 
+    - different implementation of an interface.</p>
+
+<p>Singleton
+    - when only one implementation of anything is required. (logging, configuration).</p>
+
+<p>Template
+    - look into it.</p>
+:ET

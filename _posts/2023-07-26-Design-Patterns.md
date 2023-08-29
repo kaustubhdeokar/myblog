@@ -2,7 +2,7 @@
 layout: post
 title: Ubuntu package install
 categories: 
-    - designpattern
+    - programming
 ---
 
 Observer

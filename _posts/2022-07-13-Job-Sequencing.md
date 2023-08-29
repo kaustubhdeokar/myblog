@@ -2,7 +2,7 @@
 layout: post
 title: Job Sequencing Problem
 categories: 
-    - algorithm
+    - competitivecoding
 ---
 
 ```

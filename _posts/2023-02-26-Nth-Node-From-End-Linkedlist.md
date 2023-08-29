@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Delete Nth Node From End Linkedlist
-categories: linkedlist
+categories: competitivecoding
 ---
 # Intuition
 Maintain a pointer to the previous node of the node we want to  replace. 

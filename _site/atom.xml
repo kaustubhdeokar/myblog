@@ -4,7 +4,7 @@
  <title>Kaustubh Deokar</title>
  <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
  <link href="http://localhost:4000/myblog/"/>
- <updated>2023-05-12T01:01:39+05:30</updated>
+ <updated>2023-08-29T23:56:56+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -13,10 +13,185 @@
 
  
  <entry>
-   <title>Linkedlist</title>
-   <link href="http://localhost:4000/myblog/2023/05/08/linkedlist"/>
+   <title>First Open Source Contribution</title>
+   <link href="http://localhost:4000/myblog/2023/08/22/first-open-source-contribution"/>
+   <updated>2023-08-22T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/08/22/First-Open-Source-Contribution</id>
+   <content type="html">
+&lt;p&gt;https://github.com/in28minutes/spring-web-services/pull/8#event-10015014094&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Exceptions in Java.</title>
+   <link href="http://localhost:4000/myblog/2023/08/03/java-concepts"/>
+   <updated>2023-08-03T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/08/03/Java-Concepts</id>
+   <content type="html">&lt;h2 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Checked - checked at compile time &lt;br /&gt; eg: filenotfound exception. &lt;br /&gt;
+we need to handle them, the program will fail to compile otherwise.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Unchecked - checked at runtime.&lt;br /&gt;
+eg:nullpointer exception, string.length() -&amp;gt; throws nullpointer if string is null.&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Find Leaves of Trees - Google interview question.</title>
+   <link href="http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree"/>
+   <updated>2023-07-26T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/07/26/Find-Leaves-Of-Tree</id>
+   <content type="html">&lt;h3 id=&quot;google-interview-question-lets-gooooo&quot;&gt;Google interview question, let’s gooooo&lt;/h3&gt;
+
+&lt;p&gt;Problem Statement.
+So given a tree, continue the following process until tree is empty. Print out leaves for the wtree &amp;amp; Remove the leaves.&lt;/p&gt;
+
+&lt;p&gt;For example the given tree&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;        1
+     /     \
+    2       5
+  /  \
+ 3    4
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So for the first level, nodes (3), (4) &amp;amp; (5). Followed by (2). Then (1)&lt;/p&gt;
+
+&lt;p&gt;Output: [[3,4,5],[2],[1]]&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Approach - it&apos;s finding out the maximum height of a node.
+3,4,5 have height of 0.
+2 has height of 1.
+1 has height 2.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;public ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; findLeaves(@NotNull TreeNode node) {
+
+    ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
+    heightTraversal(node, list);
+    return list;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;//height traversal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;public int heightTraversal(@Nullable TreeNode node, ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list) {
+
+    if (node == null) {
+        return 0;
+    }
+
+    int left = heightTraversal(node.left, list);
+    int right = heightTraversal(node.right, list); //traversing to find the height.
+
+    int height = Integer.max(left, right);
+    insertIntoList(list, height, node.val);
+    return height + 1;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;//simple insert into a 2-d arraylist.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;private void insertIntoList(ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list, int height, int val) {
+    if (list.size() &amp;lt;= height) {
+        for (int i = 0; i &amp;lt;= (height - list.size()); i++) {
+            list.add(new ArrayList&amp;lt;&amp;gt;());
+        }
+    }
+    list.get(height).add(val);
+}
+
+
+public static void main(String[] args) {
+
+    SerializeDeserialize sd = new SerializeDeserialize();
+    Integer[] treeStructure = {1, 2, 3, 4, 5, -1, -1, -1, -1, -1, -1};
+    TreeNode root = sd.createTreeFromArray(treeStructure);
+    FindLeavesOfTree fl = new FindLeavesOfTree();
+    ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+    treeStructure = new Integer[]{1, 2, 3, -1, -1, -1, -1};
+    root = sd.createTreeFromArray(treeStructure);
+    fl = new FindLeavesOfTree();
+    leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+    treeStructure = new Integer[]{1, -1, -1};
+    root = sd.createTreeFromArray(treeStructure);
+    fl = new FindLeavesOfTree();
+    leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+
+} ```
+&lt;/code&gt;&lt;/pre&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Ubuntu package install</title>
+   <link href="http://localhost:4000/myblog/2023/07/26/design-patterns"/>
+   <updated>2023-07-26T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/07/26/Design-Patterns</id>
+   <content type="html">&lt;p&gt;Observer
+    - Publisher/Subscriber or observer/client
+    - change pushed by one, observed by it’s clients/subscribers.&lt;/p&gt;
+
+&lt;p&gt;Strategy 
+    - different implementation of an interface.&lt;/p&gt;
+
+&lt;p&gt;Singleton
+    - when only one implementation of anything is required. (logging, configuration).&lt;/p&gt;
+
+&lt;p&gt;Template
+    - look into it.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Federer</title>
+   <link href="http://localhost:4000/myblog/2023/07/22/federer"/>
+   <updated>2023-07-22T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/07/22/Federer</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=cwnj6mCLv9I&quot;&gt;Federer&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Useful Git Posts</title>
+   <link href="http://localhost:4000/myblog/2023/07/21/useful-git-posts"/>
+   <updated>2023-07-21T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/07/21/Useful-Git-Posts</id>
+   <content type="html">&lt;p&gt;Complete git guide:
+    &lt;a href=&quot;https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6&quot;&gt;Dev.to link&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>System Design Posts</title>
+   <link href="http://localhost:4000/myblog/2023/07/21/system-design-posts"/>
+   <updated>2023-07-21T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/07/21/System-Design-Posts</id>
+   <content type="html">&lt;h3 id=&quot;database&quot;&gt;Database&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.to/danielhe4rt/database-101-twitch-bot-in-a-higher-level-for-beginners-i91&quot;&gt;Database-101-Twitch example&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Linkedlist Primer</title>
+   <link href="http://localhost:4000/myblog/2023/05/08/linkedlist-primer"/>
    <updated>2023-05-08T00:00:00+05:30</updated>
-   <id>http://localhost:4000/2023/05/08/LinkedList</id>
+   <id>http://localhost:4000/2023/05/08/LinkedList-Primer</id>
    <content type="html">&lt;h2 id=&quot;doubly-linked-list&quot;&gt;Doubly Linked List.&lt;/h2&gt;
 
 &lt;blockquote&gt;
@@ -557,7 +732,7 @@ def construct_binary_index_tree(arr):
  </entry>
  
  <entry>
-   <title>String Joiner</title>
+   <title>Java String Joiner</title>
    <link href="http://localhost:4000/myblog/2021/06/07/stringjoiner"/>
    <updated>2021-06-07T00:00:00+05:30</updated>
    <id>http://localhost:4000/2021/06/07/StringJoiner</id>
