@@ -4,13 +4,111 @@
  <title>Kaustubh Deokar</title>
  <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
  <link href="http://localhost:4000/myblog/"/>
- <updated>2023-08-29T23:56:56+05:30</updated>
+ <updated>2023-09-03T20:05:30+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
    <email></email>
  </author>
 
+ 
+ <entry>
+   <title>Websockets</title>
+   <link href="http://localhost:4000/myblog/2023/08/31/websockets"/>
+   <updated>2023-08-31T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/08/31/Websockets</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;2 way connections between client and server which does not rely on multiple http connections.
+Event driven, messaging architecture.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What is WebSocket ?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A layer over TCP.
+Full duplex (both parties sending data at the same time), stateful connection. 
+Stream of messages sent rather than bytes.
+HTTP used only for initial handshake.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ws is the web socket protocol, the use of ws protocol requires client &amp;amp; server to be able to support it.
+sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.
+&lt;img src=&quot;./../../../myblog/assets/img/fallback.png&quot; alt=&quot;fallback options for sockjs&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp;amp; https.&lt;/p&gt;
+
+&lt;p&gt;STOMP.&lt;/p&gt;
+
+&lt;p&gt;Simple protocol for asynchronous messaging.
+Supported by all messaging brokers. (Rabbit MQ, ActiveMQ)&lt;/p&gt;
+
+&lt;p&gt;Client to Server Commands.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Send
+Subscribe
+Unsubscribe&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Server to client Commands.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Message
+Error
+Receipt
+Ack
+Nack&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So in short, STOMP defines the rules for communication over websockets.&lt;/p&gt;
+
+&lt;p&gt;Check the STOMP documentation page.&lt;/p&gt;
+
+&lt;p&gt;STOMP Connect frame has authentication headers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;How does the communication work ?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Pre-configuration&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Registering endpoint via java registry.addEndpoint(“/random-address”)&lt;/li&gt;
+    &lt;li&gt;Enabling simple broker on prefix “/topic”&lt;/li&gt;
+    &lt;li&gt;Application destination prefix “/ws”&lt;/li&gt;
+    &lt;li&gt;Controller defines the mapping and SendTo.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Flow &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I. Client side &lt;br /&gt;&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Starting a sockjs connection on the defined endpoint (random-address)&lt;/li&gt;
+    &lt;li&gt;UI action initiates stomp client to make a SEND call to a destination as follows.
+&lt;img src=&quot;./../../../myblog/../github/myblog/assets/img/fallback.png&quot; alt=&quot;websocket-send-call&quot; /&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;II. Server side &lt;br /&gt;&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;The message is received by the &lt;strong&gt;controller defined for the appropriate destination&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;It is then sent to an address to which the client would have already subscribed as follows:&lt;br /&gt;
+&lt;img src=&quot;/assets/img/subscribed.png&quot; alt=&quot;subscribed-clients&quot; /&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;III. Client side &lt;br /&gt;&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Clients who are subscribed to the specific endpoints, receive the message and display it.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+</content>
+ </entry>
  
  <entry>
    <title>First Open Source Contribution</title>

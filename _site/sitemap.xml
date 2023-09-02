@@ -2,11 +2,11 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://localhost:4000/myblog/about</loc>
-<lastmod>2023-08-29T23:56:56+05:30</lastmod>
+<lastmod>2023-09-03T20:05:30+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/myblog/search</loc>
-<lastmod>2023-08-29T23:56:56+05:30</lastmod>
+<lastmod>2023-09-03T20:05:30+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/myblog/2021/06/07/stringjoiner</loc>
@@ -75,6 +75,10 @@
 <url>
 <loc>http://localhost:4000/myblog/2023/08/22/first-open-source-contribution</loc>
 <lastmod>2023-08-22T00:00:00+05:30</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/myblog/2023/08/31/websockets</loc>
+<lastmod>2023-08-31T00:00:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/myblog/blog/</loc>
