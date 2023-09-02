@@ -2,7 +2,7 @@
 layout: post
 title: Websockets
 categories: 
-    - java
+    - development
 ---
 > 2 way connections between client and server which does not rely on multiple http connections.
 > Event driven, messaging architecture. 
