@@ -15,7 +15,7 @@ What is WebSocket ?
 
 > ws is the web socket protocol, the use of ws protocol requires client & server to be able to support it.
 > sockjs emulates websockets in the sense if the client/server wouldn't support ws it would use any of the fallback mechanisms available.
-![fallback options for sockjs](./../../../myblog/assets/img/fallback.png) 
+![fallback options for sockjs](/assets/img/fallback.png) 
 
 protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http & https.
 
@@ -55,7 +55,7 @@ STOMP Connect frame has authentication headers.
 > I. Client side <br>
 > 1. Starting a sockjs connection on the defined endpoint (random-address)
 > 2. UI action initiates stomp client to make a SEND call to a destination as follows.
-![websocket-send-call](./../../../myblog/../github/myblog/assets/img/fallback.png) 
+![websocket-send-call](/assets/img/fallback.png) 
  
 > II. Server side <br>
 > 1. The message is received by the <strong>controller defined for the appropriate destination</strong>
