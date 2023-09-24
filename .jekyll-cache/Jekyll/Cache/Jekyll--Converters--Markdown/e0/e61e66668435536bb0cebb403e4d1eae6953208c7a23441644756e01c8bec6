@@ -1,0 +1,6 @@
+I"<p>source code (sample.c) -&gt; 
+preprocessor converts to -&gt; expanded source code (sample.i)
+assembler converts to -&gt; assembly code (sample.s)
+compiler -&gt; object file (sample.o) [MACHINE DEPENDABLE CODE]
+linker -&gt; links object code with libraries to produce a.out file.</p>
+:ET

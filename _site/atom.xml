@@ -4,7 +4,7 @@
  <title>Kaustubh Deokar</title>
  <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
  <link href="http://localhost:4000/myblog/"/>
- <updated>2023-09-03T20:05:30+05:30</updated>
+ <updated>2023-09-24T17:57:50+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -33,7 +33,7 @@ HTTP used only for initial handshake.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;ws is the web socket protocol, the use of ws protocol requires client &amp;amp; server to be able to support it.
 sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.
-&lt;img src=&quot;./../../../myblog/assets/img/fallback.png&quot; alt=&quot;fallback options for sockjs&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/img/fallback.png&quot; alt=&quot;fallback options for sockjs&quot; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp;amp; https.&lt;/p&gt;
@@ -88,7 +88,7 @@ Nack&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;Starting a sockjs connection on the defined endpoint (random-address)&lt;/li&gt;
     &lt;li&gt;UI action initiates stomp client to make a SEND call to a destination as follows.
-&lt;img src=&quot;./../../../myblog/../github/myblog/assets/img/fallback.png&quot; alt=&quot;websocket-send-call&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/assets/img/fallback.png&quot; alt=&quot;websocket-send-call&quot; /&gt;&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
 
@@ -107,6 +107,15 @@ Nack&lt;/p&gt;
     &lt;li&gt;Clients who are subscribed to the specific endpoints, receive the message and display it.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Deepdive Websockets</title>
+   <link href="http://localhost:4000/myblog/2023/08/31/deepdive-websockets"/>
+   <updated>2023-08-31T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/08/31/Deepdive-Websockets</id>
+   <content type="html">
 </content>
  </entry>
  
@@ -662,6 +671,15 @@ Using a reverse iterator to find the top k elements.&lt;br /&gt;&lt;/p&gt;
  </entry>
  
  <entry>
+   <title>Authentication in spring.</title>
+   <link href="http://localhost:4000/myblog/2023/01/08/spring-auth"/>
+   <updated>2023-01-08T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/01/08/Spring-Auth</id>
+   <content type="html">&lt;p&gt;password encoder: BcryptPasswordEncoder.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Ubuntu package install</title>
    <link href="http://localhost:4000/myblog/2022/11/15/ubuntu-package-install"/>
    <updated>2022-11-15T00:00:00+05:30</updated>
@@ -826,6 +844,63 @@ def construct_binary_index_tree(arr):
     }
 
 &lt;/code&gt;&lt;/pre&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>C++ Makefile.</title>
+   <link href="http://localhost:4000/myblog/2021/07/07/cplusplus"/>
+   <updated>2021-07-07T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2021/07/07/cPlusPlus</id>
+   <content type="html">&lt;p&gt;source code (sample.c) -&amp;gt; 
+preprocessor converts to -&amp;gt; expanded source code (sample.i)
+assembler converts to -&amp;gt; assembly code (sample.s)
+compiler -&amp;gt; object file (sample.o) [MACHINE DEPENDABLE CODE]
+linker -&amp;gt; links object code with libraries to produce a.out file.&lt;/p&gt;
+
+&lt;p&gt;preprocessor -&amp;gt; expands the #include &amp;amp; #if def. to convert to expanded source code.&lt;/p&gt;
+
+&lt;p&gt;sample.cpp 
+    can be converted 
+        1. (a.out) binary executable 
+        2. (.so) shared object/library (.so) (requires passing of -shared flag)
+        3. (.o) object code (requires passing of -c)
+        4. (.a) static libary (ar rcs) (One or more .o files (object files inside a ))&lt;/p&gt;
+
+&lt;p&gt;Structure
+    libs - dynamic libraries.
+    bins - binaries.&lt;/p&gt;
+
+&lt;p&gt;Make - a tool
+    process’ the makefile and executes intructions inside it.&lt;/p&gt;
+
+&lt;p&gt;Makefile - 
+    automates the build process.
+    needs a target&lt;/p&gt;
+
+&lt;p&gt;makefile defines a target clean which is not actually present. Hence this is called a phony target.&lt;/p&gt;
+
+&lt;p&gt;Makefile may have multiple target.
+make file’s default target is it first defined target.
+Use .DEFAULT_GOAL to override it.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;makefile
+```
+all: make_dir create_files&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;make_dir:
+        mkdir -p d1 d2 d3&lt;/p&gt;
+
+&lt;p&gt;create_files:
+        touch f1.c f2.c f3.c&lt;/p&gt;
+
+&lt;p&gt;clear:
+        -rm &lt;em&gt;.c
+        rm -rf d&lt;/em&gt;
+```&lt;/p&gt;
+
 </content>
  </entry>
  

@@ -1,0 +1,50 @@
+I"k<p>source code (sample.c) -&gt; 
+preprocessor converts to -&gt; expanded source code (sample.i)
+assembler converts to -&gt; assembly code (sample.s)
+compiler -&gt; object file (sample.o) [MACHINE DEPENDABLE CODE]
+linker -&gt; links object code with libraries to produce a.out file.</p>
+
+<p>preprocessor -&gt; expands the #include &amp; #if def. to convert to expanded source code.</p>
+
+<p>sample.cpp 
+    can be converted 
+        1. (a.out) binary executable 
+        2. (.so) shared object/library (.so) (requires passing of -shared flag)
+        3. (.o) object code (requires passing of -c)
+        4. (.a) static libary (ar rcs) (One or more .o files (object files inside a ))</p>
+
+<p>Structure
+    libs - dynamic libraries.
+    bins - binaries.</p>
+
+<p>Make - a tool
+    process’ the makefile and executes intructions inside it.</p>
+
+<p>Makefile - 
+    automates the build process.
+    needs a target</p>
+
+<p>makefile defines a target clean which is not actually present. Hence this is called a phony target.</p>
+
+<p>Makefile may have multiple target.
+make file’s default target is it first defined target.
+Use .DEFAULT_GOAL to override it.</p>
+
+<blockquote>
+  <p>makefile
+```
+all: make_dir create_files</p>
+</blockquote>
+
+<p>make_dir:
+        mkdir -p d1 d2 d3</p>
+
+<p>create_files:
+        touch f1.c f2.c f3.c</p>
+
+<p>clear:
+        -rm <em>.c
+        rm -rf d</em>
+```</p>
+
+:ET

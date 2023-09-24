@@ -1,4 +1,4 @@
-I"Ç
+I"”
 <blockquote>
   <p>2 way connections between client and server which does not rely on multiple http connections.
 Event driven, messaging architecture.</p>
@@ -15,7 +15,7 @@ HTTP used only for initial handshake.</p>
 <blockquote>
   <p>ws is the web socket protocol, the use of ws protocol requires client &amp; server to be able to support it.
 sockjs emulates websockets in the sense if the client/server wouldnâ€™t support ws it would use any of the fallback mechanisms available.
-<img src="./../../../myblog/assets/img/fallback.png" alt="fallback options for sockjs" /></p>
+<img src="/assets/img/fallback.png" alt="fallback options for sockjs" /></p>
 </blockquote>
 
 <p>protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp; https.</p>
@@ -70,7 +70,7 @@ Nack</p>
   <ol>
     <li>Starting a sockjs connection on the defined endpoint (random-address)</li>
     <li>UI action initiates stomp client to make a SEND call to a destination as follows.
-<img src="./../../../myblog/../github/myblog/assets/img/fallback.png" alt="websocket-send-call" /></li>
+<img src="/assets/img/fallback.png" alt="websocket-send-call" /></li>
   </ol>
 </blockquote>
 

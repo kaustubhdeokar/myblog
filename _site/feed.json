@@ -17,8 +17,29 @@
             "title": "Websockets",
             "summary": null,
             "content_text": "  2 way connections between client and server which does not rely on multiple http connections.Event driven, messaging architecture.What is WebSocket ?  A layer over TCP.Full duplex (both parties sending data at the same time), stateful connection. Stream of messages sent rather than bytes.HTTP used only for initial handshake.  ws is the web socket protocol, the use of ws protocol requires client &amp; server to be able to support it.sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp; https.STOMP.Simple protocol for asynchronous messaging.Supported by all messaging brokers. (Rabbit MQ, ActiveMQ)Client to Server Commands.  SendSubscribeUnsubscribeServer to client Commands.  MessageErrorReceiptAckNackSo in short, STOMP defines the rules for communication over websockets.Check the STOMP documentation page.STOMP Connect frame has authentication headers.  How does the communication work ?  Pre-configuration      Registering endpoint via java registry.addEndpoint(“/random-address”)    Enabling simple broker on prefix “/topic”    Application destination prefix “/ws”    Controller defines the mapping and SendTo.    Flow   I. Client side       Starting a sockjs connection on the defined endpoint (random-address)    UI action initiates stomp client to make a SEND call to a destination as follows.    II. Server side       The message is received by the controller defined for the appropriate destination    It is then sent to an address to which the client would have already subscribed as follows:    III. Client side       Clients who are subscribed to the specific endpoints, receive the message and display it.  ",
-            "content_html": "<blockquote>  <p>2 way connections between client and server which does not rely on multiple http connections.Event driven, messaging architecture.</p></blockquote><p>What is WebSocket ?</p><blockquote>  <p>A layer over TCP.Full duplex (both parties sending data at the same time), stateful connection. Stream of messages sent rather than bytes.HTTP used only for initial handshake.</p></blockquote><blockquote>  <p>ws is the web socket protocol, the use of ws protocol requires client &amp; server to be able to support it.sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.<img src=\"./../../../myblog/assets/img/fallback.png\" alt=\"fallback options for sockjs\" /></p></blockquote><p>protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp; https.</p><p>STOMP.</p><p>Simple protocol for asynchronous messaging.Supported by all messaging brokers. (Rabbit MQ, ActiveMQ)</p><p>Client to Server Commands.</p><blockquote>  <p>SendSubscribeUnsubscribe</p></blockquote><p>Server to client Commands.</p><blockquote>  <p>MessageErrorReceiptAckNack</p></blockquote><p>So in short, STOMP defines the rules for communication over websockets.</p><p>Check the STOMP documentation page.</p><p>STOMP Connect frame has authentication headers.</p><blockquote>  <p>How does the communication work ?</p></blockquote><blockquote>  <p>Pre-configuration</p>  <ol>    <li>Registering endpoint via java registry.addEndpoint(“/random-address”)</li>    <li>Enabling simple broker on prefix “/topic”</li>    <li>Application destination prefix “/ws”</li>    <li>Controller defines the mapping and SendTo.</li>  </ol></blockquote><blockquote>  <p>Flow <br /></p></blockquote><blockquote>  <p>I. Client side <br /></p>  <ol>    <li>Starting a sockjs connection on the defined endpoint (random-address)</li>    <li>UI action initiates stomp client to make a SEND call to a destination as follows.<img src=\"./../../../myblog/../github/myblog/assets/img/fallback.png\" alt=\"websocket-send-call\" /></li>  </ol></blockquote><blockquote>  <p>II. Server side <br /></p>  <ol>    <li>The message is received by the <strong>controller defined for the appropriate destination</strong></li>    <li>It is then sent to an address to which the client would have already subscribed as follows:<br /><img src=\"/assets/img/subscribed.png\" alt=\"subscribed-clients\" /></li>  </ol></blockquote><blockquote>  <p>III. Client side <br /></p>  <ol>    <li>Clients who are subscribed to the specific endpoints, receive the message and display it.</li>  </ol></blockquote>",
+            "content_html": "<blockquote>  <p>2 way connections between client and server which does not rely on multiple http connections.Event driven, messaging architecture.</p></blockquote><p>What is WebSocket ?</p><blockquote>  <p>A layer over TCP.Full duplex (both parties sending data at the same time), stateful connection. Stream of messages sent rather than bytes.HTTP used only for initial handshake.</p></blockquote><blockquote>  <p>ws is the web socket protocol, the use of ws protocol requires client &amp; server to be able to support it.sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.<img src=\"/assets/img/fallback.png\" alt=\"fallback options for sockjs\" /></p></blockquote><p>protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp; https.</p><p>STOMP.</p><p>Simple protocol for asynchronous messaging.Supported by all messaging brokers. (Rabbit MQ, ActiveMQ)</p><p>Client to Server Commands.</p><blockquote>  <p>SendSubscribeUnsubscribe</p></blockquote><p>Server to client Commands.</p><blockquote>  <p>MessageErrorReceiptAckNack</p></blockquote><p>So in short, STOMP defines the rules for communication over websockets.</p><p>Check the STOMP documentation page.</p><p>STOMP Connect frame has authentication headers.</p><blockquote>  <p>How does the communication work ?</p></blockquote><blockquote>  <p>Pre-configuration</p>  <ol>    <li>Registering endpoint via java registry.addEndpoint(“/random-address”)</li>    <li>Enabling simple broker on prefix “/topic”</li>    <li>Application destination prefix “/ws”</li>    <li>Controller defines the mapping and SendTo.</li>  </ol></blockquote><blockquote>  <p>Flow <br /></p></blockquote><blockquote>  <p>I. Client side <br /></p>  <ol>    <li>Starting a sockjs connection on the defined endpoint (random-address)</li>    <li>UI action initiates stomp client to make a SEND call to a destination as follows.<img src=\"/assets/img/fallback.png\" alt=\"websocket-send-call\" /></li>  </ol></blockquote><blockquote>  <p>II. Server side <br /></p>  <ol>    <li>The message is received by the <strong>controller defined for the appropriate destination</strong></li>    <li>It is then sent to an address to which the client would have already subscribed as follows:<br /><img src=\"/assets/img/subscribed.png\" alt=\"subscribed-clients\" /></li>  </ol></blockquote><blockquote>  <p>III. Client side <br /></p>  <ol>    <li>Clients who are subscribed to the specific endpoints, receive the message and display it.</li>  </ol></blockquote>",
             "url": "http://localhost:4000/myblog/2023/08/31/websockets",
+            
+            
+            
+            
+            
+            "date_published": "2023-08-31T00:00:00+05:30",
+            "date_modified": "2023-08-31T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2023/08/31/deepdive-websockets",
+            "title": "Deepdive Websockets",
+            "summary": null,
+            "content_text": "",
+            "content_html": "",
+            "url": "http://localhost:4000/myblog/2023/08/31/deepdive-websockets",
             
             
             
@@ -307,6 +328,27 @@
         },
     
         {
+            "id": "http://localhost:4000/myblog/2023/01/08/spring-auth",
+            "title": "Authentication in spring.",
+            "summary": null,
+            "content_text": "password encoder: BcryptPasswordEncoder.",
+            "content_html": "<p>password encoder: BcryptPasswordEncoder.</p>",
+            "url": "http://localhost:4000/myblog/2023/01/08/spring-auth",
+            
+            
+            
+            
+            
+            "date_published": "2023-01-08T00:00:00+05:30",
+            "date_modified": "2023-01-08T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
             "id": "http://localhost:4000/myblog/2022/11/15/ubuntu-package-install",
             "title": "Ubuntu package install",
             "summary": null,
@@ -362,6 +404,27 @@
             
             "date_published": "2022-07-13T00:00:00+05:30",
             "date_modified": "2022-07-13T00:00:00+05:30",
+            
+                "author": 
+                "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"
+                
+            
+        },
+    
+        {
+            "id": "http://localhost:4000/myblog/2021/07/07/cplusplus",
+            "title": "C++ Makefile.",
+            "summary": null,
+            "content_text": "source code (sample.c) -&gt; preprocessor converts to -&gt; expanded source code (sample.i)assembler converts to -&gt; assembly code (sample.s)compiler -&gt; object file (sample.o) [MACHINE DEPENDABLE CODE]linker -&gt; links object code with libraries to produce a.out file.preprocessor -&gt; expands the #include &amp; #if def. to convert to expanded source code.sample.cpp     can be converted         1. (a.out) binary executable         2. (.so) shared object/library (.so) (requires passing of -shared flag)        3. (.o) object code (requires passing of -c)        4. (.a) static libary (ar rcs) (One or more .o files (object files inside a ))Structure    libs - dynamic libraries.    bins - binaries.Make - a tool    process’ the makefile and executes intructions inside it.Makefile -     automates the build process.    needs a targetmakefile defines a target clean which is not actually present. Hence this is called a phony target.Makefile may have multiple target.make file’s default target is it first defined target.Use .DEFAULT_GOAL to override it.  makefile```all: make_dir create_filesmake_dir:        mkdir -p d1 d2 d3create_files:        touch f1.c f2.c f3.cclear:        -rm .c        rm -rf d```",
+            "content_html": "<p>source code (sample.c) -&gt; preprocessor converts to -&gt; expanded source code (sample.i)assembler converts to -&gt; assembly code (sample.s)compiler -&gt; object file (sample.o) [MACHINE DEPENDABLE CODE]linker -&gt; links object code with libraries to produce a.out file.</p><p>preprocessor -&gt; expands the #include &amp; #if def. to convert to expanded source code.</p><p>sample.cpp     can be converted         1. (a.out) binary executable         2. (.so) shared object/library (.so) (requires passing of -shared flag)        3. (.o) object code (requires passing of -c)        4. (.a) static libary (ar rcs) (One or more .o files (object files inside a ))</p><p>Structure    libs - dynamic libraries.    bins - binaries.</p><p>Make - a tool    process’ the makefile and executes intructions inside it.</p><p>Makefile -     automates the build process.    needs a target</p><p>makefile defines a target clean which is not actually present. Hence this is called a phony target.</p><p>Makefile may have multiple target.make file’s default target is it first defined target.Use .DEFAULT_GOAL to override it.</p><blockquote>  <p>makefile```all: make_dir create_files</p></blockquote><p>make_dir:        mkdir -p d1 d2 d3</p><p>create_files:        touch f1.c f2.c f3.c</p><p>clear:        -rm <em>.c        rm -rf d</em>```</p>",
+            "url": "http://localhost:4000/myblog/2021/07/07/cplusplus",
+            
+            
+            
+            
+            
+            "date_published": "2021-07-07T00:00:00+05:30",
+            "date_modified": "2021-07-07T00:00:00+05:30",
             
                 "author": 
                 "{"twitter"=>nil, "name"=>nil, "avatar"=>nil, "email"=>nil, "url"=>nil}"

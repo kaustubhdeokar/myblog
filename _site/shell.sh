@@ -50,5 +50,3 @@ echo    "
 }
 
 export taskkill
-
-echo Aarambhikalama
