@@ -1,0 +1,92 @@
+I"�
+<blockquote>
+  <p>2 way connections between client and server which does not rely on multiple http connections.
+Event driven, messaging architecture.</p>
+</blockquote>
+
+<p>What is WebSocket ?</p>
+<blockquote>
+  <p>A layer over TCP.
+Full duplex (both parties sending data at the same time), stateful connection. 
+Stream of messages sent rather than bytes.
+HTTP used only for initial handshake.</p>
+</blockquote>
+
+<blockquote>
+  <p>ws is the web socket protocol, the use of ws protocol requires client &amp; server to be able to support it.
+sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.
+<img src="/assets/img/fallback.png" alt="fallback options for sockjs" /></p>
+</blockquote>
+
+<p>protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp; https.</p>
+
+<p>STOMP.</p>
+
+<p>Simple protocol for asynchronous messaging.
+Supported by all messaging brokers. (Rabbit MQ, ActiveMQ)</p>
+
+<p>Client to Server Commands.</p>
+<blockquote>
+  <p>Send
+Subscribe
+Unsubscribe</p>
+</blockquote>
+
+<p>Server to client Commands.</p>
+<blockquote>
+  <p>Message
+Error
+Receipt
+Ack
+Nack</p>
+</blockquote>
+
+<p>So in short, STOMP defines the rules for communication over websockets.</p>
+
+<p>Check the STOMP documentation page.</p>
+
+<p>STOMP Connect frame has authentication headers.</p>
+
+<blockquote>
+  <p>How does the communication work ?</p>
+</blockquote>
+
+<blockquote>
+  <p>Pre-configuration</p>
+  <ol>
+    <li>Registering endpoint via java registry.addEndpoint(“/random-address”)</li>
+    <li>Enabling simple broker on prefix “/topic”</li>
+    <li>Application destination prefix “/ws”</li>
+    <li>Controller defines the mapping and SendTo.</li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>Flow <br /></p>
+</blockquote>
+
+<blockquote>
+  <p>I. Client side <br /></p>
+  <ol>
+    <li>Starting a sockjs connection on the defined endpoint (random-address)</li>
+    <li>UI action initiates stomp client to make a SEND call to a destination as follows.
+<img src="/assets/img/fallback.png" alt="websocket-send-call" /></li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>II. Server side <br /></p>
+  <ol>
+    <li>The message is received by the <strong>controller defined for the appropriate destination</strong></li>
+    <li>It is then sent to an address to which the client would have already subscribed as follows:<br />
+<img src="_site/assets/img/subscribed.png" alt="subscribed-clients" /></li>
+  </ol>
+</blockquote>
+
+<blockquote>
+  <p>III. Client side <br /></p>
+  <ol>
+    <li>Clients who are subscribed to the specific endpoints, receive the message and display it.</li>
+  </ol>
+</blockquote>
+:ET

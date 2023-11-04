@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Git Primer.
-categories: 
-    - programming
+image: /assets/img/merge_rebase.jpeg
+categories: programming
 ---
 
 Git is a distributed revision control system.
@@ -47,8 +47,7 @@ branch is just a reference to a commit. Doesn't mean anything else.
 
 > git rebase & git merge - the end goal is the same. rebase copies commits onto the main branch.
     
-![rebase_merge](/assets/img/merge_rebase.jpeg)
-
+![]({{page.image | relative_url}})
 
 Complete git guide:
     [Dev.to link](https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6)

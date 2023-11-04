@@ -1,4 +1,4 @@
-I"”
+I"Ñ
 <blockquote>
   <p>2 way connections between client and server which does not rely on multiple http connections.
 Event driven, messaging architecture.</p>
@@ -73,13 +73,14 @@ Nack</p>
 <img src="/assets/img/fallback.png" alt="websocket-send-call" /></li>
   </ol>
 </blockquote>
+<link rel="shortcut icon" href="/myblog/favicon.png" />
 
 <blockquote>
   <p>II. Server side <br /></p>
   <ol>
     <li>The message is received by the <strong>controller defined for the appropriate destination</strong></li>
     <li>It is then sent to an address to which the client would have already subscribed as follows:<br />
-<img src="/assets/img/subscribed.png" alt="subscribed-clients" /></li>
+<img src="_site/assets/img/subscribed.png" alt="subscribed-clients" /></li>
   </ol>
 </blockquote>
 

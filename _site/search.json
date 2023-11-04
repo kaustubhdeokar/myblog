@@ -13,17 +13,6 @@
   
     {
 
-      "title"    : "Deepdive Websockets",
-      "description" : "",
-      "url"      : "/myblog/2023/08/31/deepdive-websockets",
-      "category" : "",
-      "tags"     : "",
-      "date"     : "2023-08-31 00:00:00 +0530"
-
-    } ,
-  
-    {
-
       "title"    : "First Open Source Contribution",
       "description" : "",
       "url"      : "/myblog/2023/08/22/first-open-source-contribution",
@@ -79,10 +68,10 @@
   
     {
 
-      "title"    : "Useful Git Posts",
+      "title"    : "System Design Posts",
       "description" : "",
-      "url"      : "/myblog/2023/07/21/useful-git-posts",
-      "category" : "programming",
+      "url"      : "/myblog/2023/07/21/system-design-posts",
+      "category" : "systemdesign",
       "tags"     : "",
       "date"     : "2023-07-21 00:00:00 +0530"
 
@@ -90,10 +79,10 @@
   
     {
 
-      "title"    : "System Design Posts",
+      "title"    : "Git Primer.",
       "description" : "",
-      "url"      : "/myblog/2023/07/21/system-design-posts",
-      "category" : "systemdesign",
+      "url"      : "/myblog/2023/07/21/git-primer",
+      "category" : "programming",
       "tags"     : "",
       "date"     : "2023-07-21 00:00:00 +0530"
 

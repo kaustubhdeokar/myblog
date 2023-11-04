@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2023-11-04T23:57:03+05:30</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Kaustubh Deokar</title><subtitle>Portfolio blog</subtitle><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><entry><title type="html">Websockets</title><link href="http://localhost:4000/myblog/2023/08/31/websockets" rel="alternate" type="text/html" title="Websockets" /><published>2023-08-31T00:00:00+05:30</published><updated>2023-08-31T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/08/31/Websockets</id><content type="html" xml:base="http://localhost:4000/myblog/2023/08/31/websockets">&lt;blockquote&gt;
+  &lt;p&gt;2 way connections between client and server which does not rely on multiple http connections.
+Event driven, messaging architecture.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;What is WebSocket ?&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;A layer over TCP.
+Full duplex (both parties sending data at the same time), stateful connection. 
+Stream of messages sent rather than bytes.
+HTTP used only for initial handshake.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ws is the web socket protocol, the use of ws protocol requires client &amp;amp; server to be able to support it.
+sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.
+&lt;img src=&quot;/myblog/assets/img/fallback.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp;amp; https.&lt;/p&gt;
+
+&lt;p&gt;STOMP.&lt;/p&gt;
+
+&lt;p&gt;Simple protocol for asynchronous messaging.
+Supported by all messaging brokers. (Rabbit MQ, ActiveMQ)&lt;/p&gt;
+
+&lt;p&gt;Client to Server Commands.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Send
+Subscribe
+Unsubscribe&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Server to client Commands.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Message
+Error
+Receipt
+Ack
+Nack&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So in short, STOMP defines the rules for communication over websockets.&lt;/p&gt;
+
+&lt;p&gt;Check the STOMP documentation page.&lt;/p&gt;
+
+&lt;p&gt;STOMP Connect frame has authentication headers.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;How does the communication work ?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Pre-configuration&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Registering endpoint via java registry.addEndpoint(“/random-address”)&lt;/li&gt;
+    &lt;li&gt;Enabling simple broker on prefix “/topic”&lt;/li&gt;
+    &lt;li&gt;Application destination prefix “/ws”&lt;/li&gt;
+    &lt;li&gt;Controller defines the mapping and SendTo.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Flow &lt;br /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I. Client side &lt;br /&gt;&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Starting a sockjs connection on the defined endpoint (random-address)&lt;/li&gt;
+    &lt;li&gt;UI action initiates stomp client to make a SEND call to a destination as follows.
+&lt;img src=&quot;/myblog/assets/img/websocket-send.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;II. Server side &lt;br /&gt;&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;The message is received by the &lt;strong&gt;controller defined for the appropriate destination&lt;/strong&gt;&lt;/li&gt;
+    &lt;li&gt;It is then sent to an address to which the client would have already subscribed as follows:&lt;br /&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/subscribed.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;III. Client side &lt;br /&gt;&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Clients who are subscribed to the specific endpoints, receive the message and display it.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="development" /><summary type="html">2 way connections between client and server which does not rely on multiple http connections. Event driven, messaging architecture.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/fallback.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/fallback.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">First Open Source Contribution</title><link href="http://localhost:4000/myblog/2023/08/22/first-open-source-contribution" rel="alternate" type="text/html" title="First Open Source Contribution" /><published>2023-08-22T00:00:00+05:30</published><updated>2023-08-22T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/08/22/First-Open-Source-Contribution</id><content type="html" xml:base="http://localhost:4000/myblog/2023/08/22/first-open-source-contribution">&lt;p&gt;https://github.com/in28minutes/spring-web-services/pull/8#event-10015014094&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><summary type="html"></summary></entry><entry><title type="html">Exceptions in Java.</title><link href="http://localhost:4000/myblog/2023/08/03/java-concepts" rel="alternate" type="text/html" title="Exceptions in Java." /><published>2023-08-03T00:00:00+05:30</published><updated>2023-08-03T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/08/03/Java-Concepts</id><content type="html" xml:base="http://localhost:4000/myblog/2023/08/03/java-concepts">&lt;h2 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Checked - checked at compile time &lt;br /&gt; eg: filenotfound exception. &lt;br /&gt;
+we need to handle them, the program will fail to compile otherwise.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Unchecked - checked at runtime.&lt;br /&gt;
+eg:nullpointer exception, string.length() -&amp;gt; throws nullpointer if string is null.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="programming" /><summary type="html">Exceptions</summary></entry><entry><title type="html">Ubuntu package install</title><link href="http://localhost:4000/myblog/2023/07/26/design-patterns" rel="alternate" type="text/html" title="Ubuntu package install" /><published>2023-07-26T00:00:00+05:30</published><updated>2023-07-26T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/26/Design-Patterns</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/26/design-patterns">&lt;p&gt;Observer
+    - Publisher/Subscriber or observer/client
+    - change pushed by one, observed by it’s clients/subscribers.&lt;/p&gt;
+
+&lt;p&gt;Strategy 
+    - different implementation of an interface.&lt;/p&gt;
+
+&lt;p&gt;Singleton
+    - when only one implementation of anything is required. (logging, configuration).&lt;/p&gt;
+
+&lt;p&gt;Template
+    - look into it.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="programming" /><summary type="html">Observer - Publisher/Subscriber or observer/client - change pushed by one, observed by it’s clients/subscribers.</summary></entry><entry><title type="html">Find Leaves of Trees - Google interview question.</title><link href="http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree" rel="alternate" type="text/html" title="Find Leaves of Trees - Google interview question." /><published>2023-07-26T00:00:00+05:30</published><updated>2023-07-26T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/26/Find-Leaves-Of-Tree</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree">&lt;h3 id=&quot;google-interview-question-lets-gooooo&quot;&gt;Google interview question, let’s gooooo&lt;/h3&gt;
+
+&lt;p&gt;Problem Statement.
+So given a tree, continue the following process until tree is empty. Print out leaves for the wtree &amp;amp; Remove the leaves.&lt;/p&gt;
+
+&lt;p&gt;For example the given tree&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        1
+     /     \
+    2       5
+  /  \
+ 3    4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So for the first level, nodes (3), (4) &amp;amp; (5). Followed by (2). Then (1)&lt;/p&gt;
+
+&lt;p&gt;Output: [[3,4,5],[2],[1]]&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Approach - it&apos;s finding out the maximum height of a node.
+3,4,5 have height of 0.
+2 has height of 1.
+1 has height 2.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; findLeaves(@NotNull TreeNode node) {
+
+    ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
+    heightTraversal(node, list);
+    return list;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;//height traversal.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public int heightTraversal(@Nullable TreeNode node, ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list) {
+
+    if (node == null) {
+        return 0;
+    }
+
+    int left = heightTraversal(node.left, list);
+    int right = heightTraversal(node.right, list); //traversing to find the height.
+
+    int height = Integer.max(left, right);
+    insertIntoList(list, height, node.val);
+    return height + 1;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;//simple insert into a 2-d arraylist.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private void insertIntoList(ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list, int height, int val) {
+    if (list.size() &amp;lt;= height) {
+        for (int i = 0; i &amp;lt;= (height - list.size()); i++) {
+            list.add(new ArrayList&amp;lt;&amp;gt;());
+        }
+    }
+    list.get(height).add(val);
+}
+
+
+public static void main(String[] args) {
+
+    SerializeDeserialize sd = new SerializeDeserialize();
+    Integer[] treeStructure = {1, 2, 3, 4, 5, -1, -1, -1, -1, -1, -1};
+    TreeNode root = sd.createTreeFromArray(treeStructure);
+    FindLeavesOfTree fl = new FindLeavesOfTree();
+    ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+    treeStructure = new Integer[]{1, 2, 3, -1, -1, -1, -1};
+    root = sd.createTreeFromArray(treeStructure);
+    fl = new FindLeavesOfTree();
+    leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+    treeStructure = new Integer[]{1, -1, -1};
+    root = sd.createTreeFromArray(treeStructure);
+    fl = new FindLeavesOfTree();
+    leaves = fl.findLeaves(root);
+    System.out.println(leaves);
+
+
+} ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="competitivecoding" /><summary type="html">Google interview question, let’s gooooo</summary></entry><entry><title type="html">Federer</title><link href="http://localhost:4000/myblog/2023/07/22/federer" rel="alternate" type="text/html" title="Federer" /><published>2023-07-22T00:00:00+05:30</published><updated>2023-07-22T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/22/Federer</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/22/federer">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=cwnj6mCLv9I&quot;&gt;Federer&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="tennis" /><summary type="html">Federer</summary></entry><entry><title type="html">Git Primer.</title><link href="http://localhost:4000/myblog/2023/07/21/git-primer" rel="alternate" type="text/html" title="Git Primer." /><published>2023-07-21T00:00:00+05:30</published><updated>2023-07-21T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/21/Git-Primer</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/21/git-primer">&lt;p&gt;Git is a distributed revision control system.&lt;/p&gt;
+
+&lt;p&gt;Peeling out the distributed layer -&amp;gt; revision control system.&lt;/p&gt;
+
+&lt;p&gt;control system -&amp;gt; content tracker.
+    at it’s core -&amp;gt; persistent map.&lt;/p&gt;
+
+&lt;p&gt;every file has a hash&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;git hash-object &lt;file-name&gt;&lt;/file-name&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To see contents of a file committed for a commit.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git cat-file -p &lt;file-hash-id&gt;&lt;/file-hash-id&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git cat-file -p d3e2cf226d9bc3c33ededec1aedf03723945d602
+
+    All these files had these states during commit.
+
+    040000 tree 6e6c53c7c92049cf68858d6efcc37f7698c4d455	database
+    040000 tree 75100c61e0410021cbd38768bd63cbb9dc853e84	geolocation
+    040000 tree 77d3d0eecb38b13a448555d00f440fef8e004375	logtime .....
+
+
+    Expanding on this , if the same command is carried on just a file (not a folder) it will show the exact contents present during that commit.
+
+git cat-file -p b37e5d65cecb6ce2dcda99f691404463bd28447a
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;git-branches&quot;&gt;Git branches&lt;/h3&gt;
+
+&lt;p&gt;git puts the branches in the folder .git/refs/heads
+branch is just a reference to a commit. Doesn’t mean anything else.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git checkout &lt;branch&gt; 
+    &amp;gt;&amp;gt; this points the HEAD to a commit and sends it in a detached HEAD state.&lt;/branch&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git rebase &amp;amp; git merge - the end goal is the same. rebase copies commits onto the main branch.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/merge_rebase.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Complete git guide:
+    &lt;a href=&quot;https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6&quot;&gt;Dev.to link&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="programming" /><summary type="html">Git is a distributed revision control system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/merge_rebase.jpeg" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/merge_rebase.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">System Design Posts</title><link href="http://localhost:4000/myblog/2023/07/21/system-design-posts" rel="alternate" type="text/html" title="System Design Posts" /><published>2023-07-21T00:00:00+05:30</published><updated>2023-07-21T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/21/System-Design-Posts</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/21/system-design-posts">&lt;h3 id=&quot;database&quot;&gt;Database&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://dev.to/danielhe4rt/database-101-twitch-bot-in-a-higher-level-for-beginners-i91&quot;&gt;Database-101-Twitch example&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="systemdesign" /><summary type="html">Database</summary></entry><entry><title type="html">Linkedlist Primer</title><link href="http://localhost:4000/myblog/2023/05/08/linkedlist-primer" rel="alternate" type="text/html" title="Linkedlist Primer" /><published>2023-05-08T00:00:00+05:30</published><updated>2023-05-08T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/05/08/LinkedList-Primer</id><content type="html" xml:base="http://localhost:4000/myblog/2023/05/08/linkedlist-primer">&lt;h2 id=&quot;doubly-linked-list&quot;&gt;Doubly Linked List.&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Advantages over singly linked list -&amp;gt; insert delete operations performed in O(1) time.
+Disadvantages: extra memory required for prev pointer.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Applications: LRU Cache.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/kaustubhdeokar/interview-cake/blob/main/neetcode75/linkedlist/DoublyLinkedList.java&quot;&gt;Refer for implementation of doubly linked list&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="competitivecoding" /><summary type="html">Doubly Linked List.</summary></entry><entry><title type="html">523 Continuous Subarray Sum</title><link href="http://localhost:4000/myblog/2023/04/17/523-continuous-subarray-sum" rel="alternate" type="text/html" title="523 Continuous Subarray Sum" /><published>2023-04-17T00:00:00+05:30</published><updated>2023-04-17T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/04/17/523-Continuous-Subarray-Sum</id><content type="html" xml:base="http://localhost:4000/myblog/2023/04/17/523-continuous-subarray-sum">&lt;p&gt;Question:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise.
+
+A good subarray is a subarray where:
+
+its length is at least two, and
+the sum of the elements of the subarray is a multiple of k.
+Note that:
+
+A subarray is a contiguous part of the array.
+An integer x is a multiple of k if there exists an integer n such that x = n * k. 0 is always a multiple of k.
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Input: nums = [23,2,4,6,7], k = 6 &lt;br /&gt;
+Output: true &lt;br /&gt;
+Explanation: [2, 4] is a continuous subarray of size 2 whose elements sum up to 6.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Approach:&lt;/p&gt;
+
+&lt;p&gt;The aim is to find any subarray of atleast length 2, which has the sum divisible by k.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Straight forwards approach is to:
+By using prefix sum, we could find all possible subarray sums in O(n2)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Another approach is that, for every index we can note down the remainder of the prefix sum.&lt;br /&gt;
+ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
+    prefix sum: [23,25,29,35, 42] 
+    remainders: [5,1,5]&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;(remainder 5 repeats at index 2. hence we can verify at this point if the length of the subarray is at least 2. and return if true.)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Solution:
+
+        int len = nums.length;
+        int[] prefixSum = new int[nums.length];
+        int sum = 0;
+        HashMap&amp;lt;Integer, Integer&amp;gt; mapRemainderToIndex = new HashMap&amp;lt;&amp;gt;();
+
+        mapRemainderToIndex.put(0,0); // 
+
+        for(int i=0;i&amp;lt;len;i++){
+            sum += nums[i];
+            prefixSum[i] = sum;
+
+            int remainder = prefixSum[i]%k;
+            
+            if(!mapRemainderToIndex.containsKey(remainder)){
+                mapRemainderToIndex.put(remainder, i+1); //storing remainder-&amp;gt;index.
+            } 
+            else if(mapRemainderToIndex.get(remainder)&amp;lt;i){  //previous index if smaller then we have atleast length 2. Hence return true.
+                return true;
+            }
+        }
+
+        return false;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="competitivecoding" /><summary type="html">Question:</summary></entry></feed>

@@ -4,7 +4,7 @@
  <title>Kaustubh Deokar</title>
  <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
  <link href="http://localhost:4000/myblog/"/>
- <updated>2023-09-24T17:57:50+05:30</updated>
+ <updated>2023-11-04T23:57:03+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -33,7 +33,7 @@ HTTP used only for initial handshake.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;ws is the web socket protocol, the use of ws protocol requires client &amp;amp; server to be able to support it.
 sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.
-&lt;img src=&quot;/assets/img/fallback.png&quot; alt=&quot;fallback options for sockjs&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/myblog/assets/img/fallback.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp;amp; https.&lt;/p&gt;
@@ -88,7 +88,7 @@ Nack&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;Starting a sockjs connection on the defined endpoint (random-address)&lt;/li&gt;
     &lt;li&gt;UI action initiates stomp client to make a SEND call to a destination as follows.
-&lt;img src=&quot;/assets/img/fallback.png&quot; alt=&quot;websocket-send-call&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/myblog/assets/img/websocket-send.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
 
@@ -96,10 +96,11 @@ Nack&lt;/p&gt;
   &lt;p&gt;II. Server side &lt;br /&gt;&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;The message is received by the &lt;strong&gt;controller defined for the appropriate destination&lt;/strong&gt;&lt;/li&gt;
-    &lt;li&gt;It is then sent to an address to which the client would have already subscribed as follows:&lt;br /&gt;
-&lt;img src=&quot;/assets/img/subscribed.png&quot; alt=&quot;subscribed-clients&quot; /&gt;&lt;/li&gt;
+    &lt;li&gt;It is then sent to an address to which the client would have already subscribed as follows:&lt;br /&gt;&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/subscribed.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;III. Client side &lt;br /&gt;&lt;/p&gt;
@@ -107,15 +108,6 @@ Nack&lt;/p&gt;
     &lt;li&gt;Clients who are subscribed to the specific endpoints, receive the message and display it.&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Deepdive Websockets</title>
-   <link href="http://localhost:4000/myblog/2023/08/31/deepdive-websockets"/>
-   <updated>2023-08-31T00:00:00+05:30</updated>
-   <id>http://localhost:4000/2023/08/31/Deepdive-Websockets</id>
-   <content type="html">
 </content>
  </entry>
  
@@ -160,36 +152,36 @@ So given a tree, continue the following process until tree is empty. Print out l
 
 &lt;p&gt;For example the given tree&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;        1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        1
      /     \
     2       5
   /  \
  3    4
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;So for the first level, nodes (3), (4) &amp;amp; (5). Followed by (2). Then (1)&lt;/p&gt;
 
 &lt;p&gt;Output: [[3,4,5],[2],[1]]&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Approach - it&apos;s finding out the maximum height of a node.
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Approach - it&apos;s finding out the maximum height of a node.
 3,4,5 have height of 0.
 2 has height of 1.
 1 has height 2.
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;public ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; findLeaves(@NotNull TreeNode node) {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; findLeaves(@NotNull TreeNode node) {
 
     ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
     heightTraversal(node, list);
     return list;
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;//height traversal.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;public int heightTraversal(@Nullable TreeNode node, ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list) {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public int heightTraversal(@Nullable TreeNode node, ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list) {
 
     if (node == null) {
         return 0;
@@ -202,11 +194,11 @@ So given a tree, continue the following process until tree is empty. Print out l
     insertIntoList(list, height, node.val);
     return height + 1;
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;//simple insert into a 2-d arraylist.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;private void insertIntoList(ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list, int height, int val) {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private void insertIntoList(ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list, int height, int val) {
     if (list.size() &amp;lt;= height) {
         for (int i = 0; i &amp;lt;= (height - list.size()); i++) {
             list.add(new ArrayList&amp;lt;&amp;gt;());
@@ -239,7 +231,7 @@ public static void main(String[] args) {
 
 
 } ```
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </content>
  </entry>
@@ -274,16 +266,6 @@ public static void main(String[] args) {
  </entry>
  
  <entry>
-   <title>Useful Git Posts</title>
-   <link href="http://localhost:4000/myblog/2023/07/21/useful-git-posts"/>
-   <updated>2023-07-21T00:00:00+05:30</updated>
-   <id>http://localhost:4000/2023/07/21/Useful-Git-Posts</id>
-   <content type="html">&lt;p&gt;Complete git guide:
-    &lt;a href=&quot;https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6&quot;&gt;Dev.to link&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
    <title>System Design Posts</title>
    <link href="http://localhost:4000/myblog/2023/07/21/system-design-posts"/>
    <updated>2023-07-21T00:00:00+05:30</updated>
@@ -291,6 +273,66 @@ public static void main(String[] args) {
    <content type="html">&lt;h3 id=&quot;database&quot;&gt;Database&lt;/h3&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://dev.to/danielhe4rt/database-101-twitch-bot-in-a-higher-level-for-beginners-i91&quot;&gt;Database-101-Twitch example&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>Git Primer.</title>
+   <link href="http://localhost:4000/myblog/2023/07/21/git-primer"/>
+   <updated>2023-07-21T00:00:00+05:30</updated>
+   <id>http://localhost:4000/2023/07/21/Git-Primer</id>
+   <content type="html">&lt;p&gt;Git is a distributed revision control system.&lt;/p&gt;
+
+&lt;p&gt;Peeling out the distributed layer -&amp;gt; revision control system.&lt;/p&gt;
+
+&lt;p&gt;control system -&amp;gt; content tracker.
+    at it’s core -&amp;gt; persistent map.&lt;/p&gt;
+
+&lt;p&gt;every file has a hash&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;git hash-object &lt;file-name&gt;&lt;/file-name&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To see contents of a file committed for a commit.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git cat-file -p &lt;file-hash-id&gt;&lt;/file-hash-id&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git cat-file -p d3e2cf226d9bc3c33ededec1aedf03723945d602
+
+    All these files had these states during commit.
+
+    040000 tree 6e6c53c7c92049cf68858d6efcc37f7698c4d455	database
+    040000 tree 75100c61e0410021cbd38768bd63cbb9dc853e84	geolocation
+    040000 tree 77d3d0eecb38b13a448555d00f440fef8e004375	logtime .....
+
+
+    Expanding on this , if the same command is carried on just a file (not a folder) it will show the exact contents present during that commit.
+
+git cat-file -p b37e5d65cecb6ce2dcda99f691404463bd28447a
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;git-branches&quot;&gt;Git branches&lt;/h3&gt;
+
+&lt;p&gt;git puts the branches in the folder .git/refs/heads
+branch is just a reference to a commit. Doesn’t mean anything else.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git checkout &lt;branch&gt; 
+    &amp;gt;&amp;gt; this points the HEAD to a commit and sends it in a detached HEAD state.&lt;/branch&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;git rebase &amp;amp; git merge - the end goal is the same. rebase copies commits onto the main branch.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/merge_rebase.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Complete git guide:
+    &lt;a href=&quot;https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6&quot;&gt;Dev.to link&lt;/a&gt;&lt;/p&gt;
+
 </content>
  </entry>
  
@@ -322,7 +364,7 @@ Disadvantages: extra memory required for prev pointer.&lt;/p&gt;
    <id>http://localhost:4000/2023/04/17/523-Continuous-Subarray-Sum</id>
    <content type="html">&lt;p&gt;Question:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise.
 
 A good subarray is a subarray where:
@@ -334,7 +376,7 @@ Note that:
 A subarray is a contiguous part of the array.
 An integer x is a multiple of k if there exists an integer n such that x = n * k. 0 is always a multiple of k.
 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Input: nums = [23,2,4,6,7], k = 6 &lt;br /&gt;
@@ -362,7 +404,7 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
   &lt;p&gt;(remainder 5 repeats at index 2. hence we can verify at this point if the length of the subarray is at least 2. and return if true.)&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;Solution:
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Solution:
 
         int len = nums.length;
         int[] prefixSum = new int[nums.length];
@@ -386,7 +428,7 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
         }
 
         return false;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </content>
  </entry>
@@ -396,7 +438,7 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
    <link href="http://localhost:4000/myblog/2023/03/27/linux-commands"/>
    <updated>2023-03-27T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/03/27/Linux-Commands</id>
-   <content type="html">&lt;pre&gt;&lt;code&gt;&amp;gt; to open `files` in the current path from terminal
+   <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; to open `files` in the current path from terminal
 	&amp;gt;&amp;gt;	xdg-open .
 
 &amp;gt; View entire contents of file
@@ -404,17 +446,17 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
 
 &amp;gt; View line count for file
 	&amp;gt;&amp;gt; cat &amp;lt;filename&amp;gt; | wc -l
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Find&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;gt; Find file recursively in directories
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; Find file recursively in directories
 	&amp;gt;&amp;gt; find . -name &quot;.gitignore&quot;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Grep&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;&amp;gt; To search for a word in a text document &amp;amp; and print EVERY line containing the word.
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; To search for a word in a text document &amp;amp; and print EVERY line containing the word.
 	
 	Command:
 	&amp;gt;	grep &amp;lt;text&amp;gt; &amp;lt;filepath/filename&amp;gt;
@@ -443,7 +485,7 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
 
 &amp;gt; Case insensitive (-i)
 	grep -i &amp;lt;text&amp;gt; &amp;lt;filepath/filename&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </content>
  </entry>
@@ -460,17 +502,17 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
 
 &lt;ol&gt;
   &lt;li&gt;If we have the pointer to the prev node of the target node we want to replace: than simple prev.next = target.next;
-    &lt;pre&gt;&lt;code&gt;example: n = 2
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;example: n = 2
 1   -&amp;gt;  2 -&amp;gt;    3 -&amp;gt;    4   -&amp;gt;  5
            prev    target    
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;When n = size of the list, the previous pointer will be null, hence in that case answer will be &lt;b&gt;target.next&lt;/b&gt;
-    &lt;pre&gt;&lt;code&gt;example: n = 5
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;example: n = 5
 1     -&amp;gt;   2  -&amp;gt;    3 -&amp;gt;    4   -&amp;gt;  5
 target         
 prev=null;     
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
@@ -487,7 +529,7 @@ O(1) constant extra space for some pointers.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;code&quot;&gt;Code&lt;/h1&gt;
-&lt;pre&gt;&lt;code&gt;/**
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;/**
  * Definition for singly-linked list.
  * public class ListNode {
  *     int val;
@@ -529,7 +571,7 @@ class Solution {
         return resultPtr;
     }
 }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
  
@@ -549,19 +591,19 @@ class Solution {
 
 &lt;p&gt;Installing java&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;Downloading the latest java linux x64 compressed archive. 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Downloading the latest java linux x64 compressed archive. 
 nano .profile
 
 JAVA_HOME=/home/kaustubh/Documents/Apps/jdk-17.0.6/
 export JAVA_HOME
 PATH=$JAVA_HOME/bin:$PATH
 export PATH
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Installing vscode.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;python support:	https://code.visualstudio.com/docs/python/python-tutorial	
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python support:	https://code.visualstudio.com/docs/python/python-tutorial	
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Installing a .deb file
 	sudo apt install ./&lt;file&gt;.deb&lt;/file&gt;&lt;/p&gt;
@@ -582,7 +624,7 @@ export PATH
 Priority Queue to maintain top k elements.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;public int[] topKFrequent(int[] arr, int k) {
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public int[] topKFrequent(int[] arr, int k) {
         HashMap&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
 
         for (int i : arr) {
@@ -611,7 +653,7 @@ Priority Queue to maintain top k elements.&lt;/p&gt;
         
     }
 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Approach 2&lt;/p&gt;
 &lt;blockquote&gt;
@@ -621,7 +663,7 @@ Inserting elements into 2-d arraylist according to their occurences. &lt;br /&gt
 Using a reverse iterator to find the top k elements.&lt;br /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
     public int[] topKFrequent(int[] nums, int k) {
 
         HashMap&amp;lt;Integer, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();
@@ -666,7 +708,7 @@ Using a reverse iterator to find the top k elements.&lt;br /&gt;&lt;/p&gt;
         return result;
 
     }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
  
@@ -699,21 +741,21 @@ after that simply install any deb package by sudo gdebi &amp;lt;&amp;gt;.deb &lt
    <link href="http://localhost:4000/myblog/2022/11/11/binaryindexedtree"/>
    <updated>2022-11-11T00:00:00+05:30</updated>
    <id>http://localhost:4000/2022/11/11/BinaryIndexedTree</id>
-   <content type="html">&lt;pre&gt;&lt;code&gt;To do range sum queries in a better time complexity than O(n^2), we use binary indexed tree. 
+   <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;To do range sum queries in a better time complexity than O(n^2), we use binary indexed tree. 
 Comparing to the segment trees, this is faster, easier to implement. 
 It can be used almost for all such range query problem except for some which we will see in the segment tree doc
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3 id=&quot;leetcode-problem307-range-sum-query---mutable&quot;&gt;Leetcode Problem:307. Range Sum Query - Mutable&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;Queries are divided into three types - (instantiation, sum &amp;amp; update)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Queries are divided into three types - (instantiation, sum &amp;amp; update)
 
 [&quot;NumArray&quot;, &quot;sumRange&quot;, &quot;update&quot;, &quot;sumRange&quot;]
 [[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]
 
 Output
 [null, 9, null, 8]
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;Solution using binary indexed tree.&lt;/p&gt;
@@ -730,7 +772,7 @@ We construct the binary indexed tree as [0,n+1] array not using the 0th element.
   &lt;p&gt;i &amp;amp; (-i) is the lowest set bit for the i. For powers of 2 it’s the max bit.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;[1,2,3,4,5,6,7,8]
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[1,2,3,4,5,6,7,8]
 
 index 1: 1 -&amp;gt; 2 -&amp;gt; 4 -&amp;gt; 8
 index 2: 2 -&amp;gt; 4 -&amp;gt; 8
@@ -740,11 +782,11 @@ index 5: 5 -&amp;gt; 6 -&amp;gt; 8
 index 6: 6 -&amp;gt; 8
 index 7: 7 -&amp;gt; 8
 index 8: 8
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;The code for construction goes as follows:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 def update_tree(index, limit, val, tree):
     index += 1
     
@@ -759,13 +801,13 @@ def construct_binary_index_tree(arr):
         update_tree(i, len(arr), arr[i], tree)
     self.tree = tree
     return tree
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;To get the sum uptil i, using the same concept of getting the last set bit, (index &amp;amp; (-index))&lt;/p&gt;
 
 &lt;p&gt;we can find the numbers who have contributed to the ith position, then going down (index &amp;amp; (-index)) until we reach 0.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
   public static int getSum(int[] bTree, int i){
         
         int index = i+1;
@@ -777,7 +819,7 @@ def construct_binary_index_tree(arr):
         return sum;
     }
 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 </content>
  </entry>
@@ -787,7 +829,7 @@ def construct_binary_index_tree(arr):
    <link href="http://localhost:4000/myblog/2022/07/13/job-sequencing"/>
    <updated>2022-07-13T00:00:00+05:30</updated>
    <id>http://localhost:4000/2022/07/13/Job-Sequencing</id>
-   <content type="html">&lt;pre&gt;&lt;code&gt;public int maxProfitByJobSequencing(Job arr[], int n) {
+   <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public int maxProfitByJobSequencing(Job arr[], int n) {
 
         Comparator&amp;lt;Job&amp;gt; compareByDeadlineAndProfit = (Job j1, Job j2) -&amp;gt;
                 Integer.compare(j2.profit, j1.profit);
@@ -843,7 +885,7 @@ def construct_binary_index_tree(arr):
         jobSequencing.maxProfitByJobSequencing(arr, 4);
     }
 
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
  
@@ -914,7 +956,7 @@ all: make_dir create_files&lt;/p&gt;
   one, two, three.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;    @Test
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    @Test
     public void testStringJoiner() {
         StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);
 
@@ -924,12 +966,12 @@ all: make_dir create_files&lt;/p&gt;
 
         Assert.assertEquals(stringJoiner.toString(), &quot;one, two, three&quot;);
     }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Can be done similar to a strinbuilder , as add returns the string joiner object.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;    @Test
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    @Test
     public void testStringJoinerReturnsStringJoiner() {
         StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;);
 
@@ -937,12 +979,12 @@ all: make_dir create_files&lt;/p&gt;
 
         Assert.assertEquals(stringJoiner.toString(), &quot;one, two, three&quot;);
     }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Using starting and ending values.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;pre&gt;&lt;code&gt;    @Test
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    @Test
     public void testStringJoinerWithStartingAndEndingValues() {
         StringJoiner stringJoiner = new StringJoiner(&quot;, &quot;,&quot;Start{&quot;,&quot;}End&quot;);
         stringJoiner.add(&quot;one&quot;);
@@ -951,14 +993,14 @@ all: make_dir create_files&lt;/p&gt;
 
         Assert.assertEquals(stringJoiner.toString(), &quot;Start{one, two, three}End&quot;);
     }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;blockquote&gt;
   &lt;p&gt;To create a pattern as [one], [two], [three]&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;```&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;@Test
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Test
 public void testStringJoinerCreatingSquareBracketPattern() {
     StringJoiner stringJoiner = new StringJoiner(&quot;], [&quot;,&quot;[&quot;,&quot;]&quot;);
     stringJoiner.add(&quot;one&quot;);
@@ -967,7 +1009,7 @@ public void testStringJoinerCreatingSquareBracketPattern() {
 
     Assert.assertEquals(stringJoiner.toString(), &quot;[one], [two], [three]&quot;);
 } }
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 </content>
  </entry>
  
