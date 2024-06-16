@@ -53,4 +53,53 @@ CSRF protection -> a different token on top of the session id. csrf tokens are i
 
 
 AuthenticationEntryPoint
-- 
+- to handle unauthorized access. 
+- In the context of a JWT-based authentication system, the JwtAuthenticationEntryPoint class would implement AuthenticationEntryPoint to return a 401 Unauthorized response when a request without a valid JWT token is made to a secured endpoint.
+
+
+- JWT
+- https://github.com/jwtk/jjwt#js-repo-pjax-container
+
+- Creation of jwt: generateToken - 
+- add claims like issuer, subject, expiration, issued at (time) and sign it with secret key.
+
+  ```
+  private static SecretKey getSecretKey() {
+    byte[] decodedKey = Base64.getDecoder().decode(jwtSecret); //jwtSecret -> injected at runtime.
+    return new SecretKeySpec(decodedKey, 0, decodedKey.length, "HmacSHA256");
+  }
+
+  public String generateToken(String name) {
+
+    String token = Jwts.builder()
+            .subject(name)
+            .issuedAt(new Date())
+            .expiration(expireDate)
+            .signWith(getSecretKey())
+            .compact();
+
+    System.out.println("New token :"+ token);
+    return token;
+  }
+
+
+  ```
+
+- decrypting jwt.
+  ```
+         Jwts.parser()
+        .verifyWith(getSecretKey())
+        .build()
+        .parseSignedClaims(token);
+  ```  
+
+  To extract claims: just adding getPayload()
+  ```
+     Claims claims = Jwts.parser()
+                .verifyWith(getSecretKey())
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
+  ```
+
+  All added claims will be retrieved (username->subject)
