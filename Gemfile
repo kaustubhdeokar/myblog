@@ -5,6 +5,7 @@ gem 'jekyll-seo-tag'
 gem 'jekyll-sitemap'
 gem "webrick", "~> 1.7"
 gem 'jekyll-postfiles'
+gem 'jekyll-feed'
 
 gem "minima", "~> 2.5"
 gem "github-pages", group: :jekyll_plugins

@@ -17,3 +17,6 @@ Singleton
 
 Template
     - look into it. 
+
+Composite
+    - look into it. 

@@ -17,7 +17,7 @@ Any request that comes does not go directly to the controller, it follows some s
     - it returns an object of class Authentication. 
 - The Authentication Manager implements a method authenticate which takes in the above object and passes to an implementation of the Authentication Provider (like DaoAuthenticationProvider) 
 - The Authentication Manager figures out who all are the authentication providers available. By default the authentication manager is the ProviderManager.
-  
+
   ```
     @Autowired
     @Bean public AuthenticationManager authenticationManager(UserDetailsService userDetailsService){
@@ -28,9 +28,9 @@ Any request that comes does not go directly to the controller, it follows some s
 
   ```
 - The authentication provider then requests the implementation of User Details Service to return the actual user. 
-  
+
   ```
-    // Custom implementation of UserDetailsService -> (extending InMemoryUserDetailsManager)
+  // Custom implementation of UserDetailsService -> (extending InMemoryUserDetailsManager)
 
     @Bean
     public UserDetailsService userDetailsService(){
