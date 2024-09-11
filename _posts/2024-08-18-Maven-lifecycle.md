@@ -2,7 +2,7 @@
 layout: post
 title: Maven Lifecycle
 categories: 
-    - todayILearned
+    - TodayILearned
 ---
 
 # Maven Lifecycle
