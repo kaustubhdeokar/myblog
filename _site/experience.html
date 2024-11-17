@@ -102,6 +102,13 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             /* Subtle shadow */
+            display: none;
+            /* Hide content by default */
+        }
+
+        .content.active {
+            display: block;
+            /* Show content when active */
         }
 
         .content h2 {
@@ -123,6 +130,16 @@
             margin: 5px 0;
         }
 
+        .content a {
+            color: #a3c9a8;
+            /* Light green shade */
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -140,6 +157,15 @@
             }
         }
     </style>
+    <script>
+        function showContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
 </head>
 
 <body>
@@ -147,64 +173,63 @@
         <nav>
             <a href="index.html">01. About Me</a>
             <a href="#experience">02. Experience</a>
-            <a href="#projects">03. Projects</a>
-            <a href="#resume">04. Resume</a>
-            <a href="#contact">05. Contact Me</a>
+            <a href="./projects">03. Projects</a>
+            <a href="./cv">04. Resume</a>
+            <a href="./contact">05. Contact Me</a>
         </nav>
     </header>
     <div class="container" id="experience">
         <div class="sidebar">
             <ul>
-                <li><a href="#siemens" class="active">Siemens Digital Industries Software</a></li>
-                <li><a href="#trendzlink" class="">Trendzlink Technologies</a></li>
+                <li><a href="javascript:void(0)" onclick="showContent('siemens')" class="active">Siemens Digital
+                        Industries Software</a></li>
+                <li><a href="javascript:void(0)" onclick="showContent('trendzlink')">Trendzlink Technologies</a></li>
+                <li><a href="javascript:void(0)" onclick="showContent('studyeazy')">StudyEasy.org</a></li>
+                <!-- Add more companies as needed -->
             </ul>
         </div>
-        <div class="content">
-            <div id="siemens">
-                <h2>Siemens Digital Industries Software</h2>
-                <p>Associate Lead Software Engineer (Jan 2023 - Present)</p>
-                <p>Senior Software Engineer (Jan 2022 - Dec 2022)</p>
-                <p>Software Engineer (July 2020 - Dec 2021)</p>
-                <p>Software Engineer - Intern (Dec 2019 - Jun 2020)</p>
-                <br>
-                <p> <u>Background:</u> <br>
-                    I joined Siemens during my last semester after receiving a internship+PPO offer as a SWE intern.
-                    As a background of the company, the main software product that we work is known as Capital, it is
-                    used to design and simulate models for automotive,aerospace,marine etc. customers .
-                    <br>
-                    <u>WorkExp:</u><br>
-                    The team that I work is called as Platform Framework, which is responsible for driving changes in
-                    the core object model which includes high amount of low level design & handling of primary services
-                    such as licensing , auto updates (rolling out automatic updates to users), user auth, project
-                    management, issues related to scalability
-                </p>
-            </div>
-
-            <div id="trendzlink">
-                <h2>Trendzlink Technologies</h2>
-                <p>Computer Vision - Intern (April 2019 - Jun 2019)</p>
-                <br>
-                <p><a href="https://trendzlink.com/"><u>Company website</u></a>
-                    <br>
-                    <u>WorkExp:</u><br>
-                    Developed solution for detecting and classifying various types of dents/faults on the gears 
-                    using image filtering techniques using Opencv, python.
-                </p>
-            </div>
-
-            <div id="studyeazy">
-                <h2>StudyEasy.org</h2>
-                <p>Computer Vision - Intern (April 2019 - Jun 2019)</p>
-                <br>
-                <p><a href="https://trendzlink.com/"><u>Company website</u></a>
-                    <br>
-                    <u>WorkExp:</u><br>
-                    Developed solution for detecting and classifying various types of dents/faults on the gears 
-                    using image filtering techniques using Opencv, python.
-                </p>
-            </div>
-            <!-- Add more content sections for other companies as needed -->
+        <div class="content active" id="siemens">
+            <h2>Siemens Digital Industries Software</h2>
+            <h3>Associate Lead Software Engineer</h3>
+            <p>Jan 2023 - Present</p>
+            <h3>Senior Software Engineer</h3>
+            <p>Jan 2022 - Dec 2022</p>
+            <h3>Software Engineer</h3>
+            <p>July 2020 - Dec 2021</p>
+            <h3>Software Engineer - Intern</h3>
+            <p>Dec 2019 - Jun 2020</p>
+            <p><u>Background:</u><br>
+                I joined Siemens during my last semester after receiving an internship+PPO offer as a SWE intern.
+                As a background of the company, the main software product that we work on is known as Capital, it is
+                used to design and simulate models for automotive, aerospace, marine, etc. customers.
+                <br><u>WorkExp:</u><br>
+                The team that I work with is called Platform Framework, which is responsible for driving changes in
+                the core object model which includes a high amount of low-level design & handling of primary services
+                such as licensing, auto updates (rolling out automatic updates to users), user auth, project
+                management, issues related to scalability.
+            </p>
         </div>
+        <div class="content" id="trendzlink">
+            <h2>Trendzlink Technologies</h2>
+            <h3>Computer Vision - Intern</h3>
+            <p>April 2019 - Jun 2019</p>
+            <p><a href="https://trendzlink.com/"><u>Company website</u></a></p>
+            <p><u>WorkExp:</u><br>
+                Developed a solution for detecting and classifying various types of dents/faults on the gears
+                using image filtering techniques using OpenCV, Python.
+            </p>
+        </div>
+        <div class="content" id="studyeazy">
+            <h2>StudyEasy.org</h2>
+            <h3>Teaching Assistant / Content writer</h3>
+            <p>Feb 2018 - Aug 2018</p>
+            <p><a href="https://studyeasy.org/"><u>Company website</u></a></p>
+            <p><u>WorkExp:</u><br>
+                Assistant for course Java A-Z Master Class on Udemy. 
+                Day to day work consisted of creating lecture notes, creating sample problems & solutions, for Hibernate & Spring series.
+            </p>
+        </div>
+        <!-- Add more content sections for other companies as needed -->
     </div>
 </body>
 

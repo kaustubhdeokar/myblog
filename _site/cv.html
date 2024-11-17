@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaustubh Deokar's CV</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #1b1b1b; /* Dark background */
+            color: #ffffff; /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2e3d34; /* Dark green background */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff; /* White text */
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #a3c9a8; /* Light green shade */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 100px; /* Adjust for fixed header */
+        }
+
+        .cv {
+            background-color: #2e3d34; /* Dark green background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .cv h2 {
+            font-size: 28px;
+            margin: 0 0 20px;
+            color: #ffffff; /* White text */
+        }
+
+        .cv a {
+            color: #a3c9a8; /* Light green shade */
+            text-decoration: none;
+        }
+
+        .cv a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .cv {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">01. About Me</a>
+            <a href="experience.html">02. Experience</a>
+            <a href="projects.html">03. Projects</a>
+            <a href="cv.html">04. Resume</a>
+            <a href="contact">05. Contact Me</a>
+        </nav>
+    </header>
+    <div class="container" id="cv">
+        <div class="cv">
+            <h2>Download My Resume</h2>
+            <p>Please find my resume here: <a href="assets/kaustubh_deokar_2024.pdf" download>Download Resume</a></p>
+        </div>
+        <div class="profile-photo">
+            <img src="assets/img/resume.png" alt="Profile Photo">
+        </div>
+    </div>
+</body>
+
+</html>

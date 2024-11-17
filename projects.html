@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaustubh Deokar's Experience</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #1b1b1b;
+            /* Dark background */
+            color: #ffffff;
+            /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2e3d34;
+            /* Dark green background */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            /* White text */
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #a3c9a8;
+            /* Light green shade */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 100px;
+            /* Adjust for fixed header */
+        }
+
+        .sidebar {
+            flex: 1;
+            max-width: 200px;
+            margin-right: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #a3c9a8;
+            /* Light green shade */
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #a3c9a8;
+            /* Light green shade */
+            color: #2e3d34;
+            /* Dark green background */
+        }
+
+        .content {
+            flex: 3;
+            background-color: #2e3d34;
+            /* Dark green background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+            display: none;
+            /* Hide content by default */
+        }
+
+        .content.active {
+            display: block;
+            /* Show content when active */
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin: 0 0 20px;
+            color: #ffffff;
+            /* White text */
+        }
+
+        .content h3 {
+            font-size: 24px;
+            margin: 10px 0 0;
+            color: #a3c9a8;
+            /* Light green shade */
+        }
+
+        .content p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .content a {
+            color: #a3c9a8;
+            /* Light green shade */
+            text-decoration: none;
+        }
+
+        .content a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sidebar {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+
+        .project-overview {
+            background-color: #2e3d34;
+            /* Dark green background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .project-overview h2,
+        .project-overview h3 {
+            color: #ffffff;
+            /* White text */
+        }
+
+        .project-overview p,
+        .project-overview ul,
+        .project-overview li {
+            color: #a3c9a8;
+            /* Light green shade */
+        }
+
+        .project-overview a {
+            color: #a3c9a8;
+            /* Light green shade */
+            text-decoration: none;
+        }
+
+        .project-overview a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function showContent(id) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function (content) {
+                content.classList.remove('active');
+            });
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">01. About Me</a>
+            <a href="./experience">02. Experience</a>
+            <a href="#projects">03. Projects</a>
+            <a href="./cv">04. Resume</a>
+            <a href="./contact">05. Contact Me</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="project-overview">
+            <h2>Open Source Contribution Hacktoberfest, TechNexus</h2>
+            <p>– Integrated the open-source Leaflet Maps library into a website for discovering tech events. Implemented
+                functionality to search nearest events, filtering using spatial indexing.</p>
+            <p>– Technologies: NodeJs, ReactJS, Postgres, PostGIS</p>
+        </div>
+        <div class="project-overview">
+            <h2>Overview</h2>
+            <h3>A blogging application created using Spring Boot, ReactJS, MySQL DB.</h3>
+            <p>Supports functionality for:</p>
+            <ul>
+                <li>User authentication & authorization via Spring Security using JWT tokens.</li>
+                <li>Supports CRUD operation regarding creation of Topics.</li>
+                <li>Supports CRUD operation regarding creation of posts inside topics.</li>
+                <li>Topics, multiple posts under each topic.</li>
+                <li>User-topic subscription.</li>
+                <li>Comments under posts stored in MongoDB.</li>
+                <li>Votes for each post.</li>
+                <li>Search functionality for topics.</li>
+            </ul>
+            <h3>Note</h3>
+            <ul>
+                <li>Collection of APIs through Postman is found in file <strong>bloApp.postman_collection.json</strong>
+                    (ready to import).</li>
+                <li>Endpoints documented via OpenAPI/Swagger-UI. <a
+                        href="http://localhost:8080/swagger-ui/index.html">http://localhost:8080/swagger-ui/index.html</a>
+                </li>
+                <li>The schema for the same can be found in file <code>schema.sql</code> in the root directory.</li>
+                <li>For running it locally, <strong>setup.md</strong> can be used to download the required additional
+                    applications.</li>
+            </ul>
+            <h3>Changes</h3>
+            <p>Comment Management: The Comment Management service remains as is, but it now interacts with MongoDB
+                instead of MySQL.</p>
+            <b>
+                <li><a href="https://github.com/kaustubhdeokar/Reddit-Clone">Github link</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Ba7ENNN3b3E">Youtube</a></li>
+            </b>
+            <p>Technologies: Spring Boot, React, MySQL, MongoDB, Docker</p>
+        </div>
+
+        <div class="project-overview">
+            <h2>OmniHRM</h2>
+            <p>Provides an end-to-end Human Resource Management tool, providing various features depending upon the
+                access level of the logged in user. Developed by kaustubhdeokar, Lkishor123 & pathave</p>
+            <b>
+                <p><a href="https://www.youtube.com/playlist?list=PLKsneWgsZjdH83nLxyCQcYL4fJ2JXraQ1">Youtube Video
+                        link</a>
+                </p>
+                <p><a href="http://143.110.248.76:5173/">Hosting - Digital Ocean</a></p>
+            </b>
+            <h3>Summary</h3>
+            <h3>Key Features:</h3>
+            <h4>For Company Admins:</h4>
+            <ul>
+                <li>Employee Management: Easily add, delete, and update employee records.</li>
+                <li>Dynamic Forms: Create customizable forms for employees to complete, with the ability to set
+                    deadlines.</li>
+                <li>Work Tracking: Monitor employee productivity by tracking hours worked and tasks completed.</li>
+            </ul>
+            <h4>For Employees:</h4>
+            <ul>
+                <li>Form Management: Update and submit forms assigned by the company admin.</li>
+                <li>Goal & KPI Management: Set and manage goals/KPIs for employees under their supervision.</li>
+                <li>Feedback: Provide feedback on goals set by managers.</li>
+                <li>Timesheet Management: Log time spent on various tasks and activities throughout the day or week.
+                </li>
+                <li>Attendance Tracking: Record daily log-in and log-out times.</li>
+                <li>Employee Summary: Access a summary of employee details and performance.</li>
+                <li>Employee Hierarchy: View the organizational hierarchy and reporting structure.</li>
+            </ul>
+            <p>Technologies: MongoDB, Spring Boot, ReactJS, Docker, GitHub Actions</p>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
