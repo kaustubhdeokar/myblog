@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaustubh Deokar's Experience</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: #1b1b1b;
+            /* Dark background */
+            color: #ffffff;
+            /* White text */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #2e3d34;
+            /* Dark green background */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ffffff;
+            /* White text */
+            font-weight: bold;
+        }
+
+        header nav a:hover {
+            color: #a3c9a8;
+            /* Light green shade */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 100px;
+            /* Adjust for fixed header */
+        }
+
+        .sidebar {
+            flex: 1;
+            max-width: 200px;
+            margin-right: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #a3c9a8;
+            /* Light green shade */
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            background-color: #a3c9a8;
+            /* Light green shade */
+            color: #2e3d34;
+            /* Dark green background */
+        }
+
+        .content {
+            flex: 3;
+            background-color: #2e3d34;
+            /* Dark green background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            /* Subtle shadow */
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin: 0 0 20px;
+            color: #ffffff;
+            /* White text */
+        }
+
+        .content h3 {
+            font-size: 24px;
+            margin: 10px 0 0;
+            color: #a3c9a8;
+            /* Light green shade */
+        }
+
+        .content p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .sidebar {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">01. About Me</a>
+            <a href="#experience">02. Experience</a>
+            <a href="#projects">03. Projects</a>
+            <a href="#resume">04. Resume</a>
+            <a href="#contact">05. Contact Me</a>
+        </nav>
+    </header>
+    <div class="container" id="experience">
+        <div class="sidebar">
+            <ul>
+                <li><a href="#siemens" class="active">Siemens Digital Industries Software</a></li>
+                <li><a href="#trendzlink" class="">Trendzlink Technologies</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="siemens">
+                <h2>Siemens Digital Industries Software</h2>
+                <p>Associate Lead Software Engineer (Jan 2023 - Present)</p>
+                <p>Senior Software Engineer (Jan 2022 - Dec 2022)</p>
+                <p>Software Engineer (July 2020 - Dec 2021)</p>
+                <p>Software Engineer - Intern (Dec 2019 - Jun 2020)</p>
+                <br>
+                <p> <u>Background:</u> <br>
+                    I joined Siemens during my last semester after receiving a internship+PPO offer as a SWE intern.
+                    As a background of the company, the main software product that we work is known as Capital, it is
+                    used to design and simulate models for automotive,aerospace,marine etc. customers .
+                    <br>
+                    <u>WorkExp:</u><br>
+                    The team that I work is called as Platform Framework, which is responsible for driving changes in
+                    the core object model which includes high amount of low level design & handling of primary services
+                    such as licensing , auto updates (rolling out automatic updates to users), user auth, project
+                    management, issues related to scalability
+                </p>
+            </div>
+
+            <div id="trendzlink">
+                <h2>Trendzlink Technologies</h2>
+                <p>Computer Vision - Intern (April 2019 - Jun 2019)</p>
+                <br>
+                <p><a href="https://trendzlink.com/"><u>Company website</u></a>
+                    <br>
+                    <u>WorkExp:</u><br>
+                    Developed solution for detecting and classifying various types of dents/faults on the gears 
+                    using image filtering techniques using Opencv, python.
+                </p>
+            </div>
+
+            <div id="studyeazy">
+                <h2>StudyEasy.org</h2>
+                <p>Computer Vision - Intern (April 2019 - Jun 2019)</p>
+                <br>
+                <p><a href="https://trendzlink.com/"><u>Company website</u></a>
+                    <br>
+                    <u>WorkExp:</u><br>
+                    Developed solution for detecting and classifying various types of dents/faults on the gears 
+                    using image filtering techniques using Opencv, python.
+                </p>
+            </div>
+            <!-- Add more content sections for other companies as needed -->
+        </div>
+    </div>
+</body>
+
+</html>

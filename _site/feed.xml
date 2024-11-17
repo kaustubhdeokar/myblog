@@ -1,327 +1,620 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2023-11-04T23:57:03+05:30</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Kaustubh Deokar</title><subtitle>Portfolio blog</subtitle><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><entry><title type="html">Websockets</title><link href="http://localhost:4000/myblog/2023/08/31/websockets" rel="alternate" type="text/html" title="Websockets" /><published>2023-08-31T00:00:00+05:30</published><updated>2023-08-31T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/08/31/Websockets</id><content type="html" xml:base="http://localhost:4000/myblog/2023/08/31/websockets">&lt;blockquote&gt;
-  &lt;p&gt;2 way connections between client and server which does not rely on multiple http connections.
-Event driven, messaging architecture.&lt;/p&gt;
-&lt;/blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2024-11-17T21:44:10+05:30</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Kaustubh Deokar</title><subtitle>Portfolio blog</subtitle><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><entry><title type="html">Middlewares</title><link href="http://localhost:4000/myblog/2024/10/22/middlewares-node" rel="alternate" type="text/html" title="Middlewares" /><published>2024-10-22T00:00:00+05:30</published><updated>2024-10-22T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/10/22/Middlewares-node</id><content type="html" xml:base="http://localhost:4000/myblog/2024/10/22/middlewares-node">&lt;h1 id=&quot;middlewares&quot;&gt;Middlewares&lt;/h1&gt;
 
-&lt;p&gt;What is WebSocket ?&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;A layer over TCP.
-Full duplex (both parties sending data at the same time), stateful connection. 
-Stream of messages sent rather than bytes.
-HTTP used only for initial handshake.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;A middleware is just a function.
+It has request, response and error object.
+Express or any javascript/backend framework handles middleware stack.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;ws is the web socket protocol, the use of ws protocol requires client &amp;amp; server to be able to support it.
-sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.
-&lt;img src=&quot;/myblog/assets/img/fallback.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;It is in the form of a pipeline.
+It has the following syntax.&lt;/p&gt;
 
-&lt;p&gt;protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp;amp; https.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(err, req, res, next)&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;STOMP.&lt;/p&gt;
+&lt;p&gt;there are different types of middlewares. 
+application level, router level, error handling middleware.&lt;/p&gt;
 
-&lt;p&gt;Simple protocol for asynchronous messaging.
-Supported by all messaging brokers. (Rabbit MQ, ActiveMQ)&lt;/p&gt;
+&lt;p&gt;they can call the next function in the application stack or else can return the response as res.json() or res.send().&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="backend, node" /><summary type="html">Middlewares</summary></entry><entry><title type="html">Mongo id generation</title><link href="http://localhost:4000/myblog/2024/10/03/mongo-spring-default-uid-generation" rel="alternate" type="text/html" title="Mongo id generation" /><published>2024-10-03T00:00:00+05:30</published><updated>2024-10-03T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/10/03/Mongo-Spring-default-uid-generation</id><content type="html" xml:base="http://localhost:4000/myblog/2024/10/03/mongo-spring-default-uid-generation">&lt;p&gt;todo:&lt;/p&gt;
 
-&lt;p&gt;Client to Server Commands.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Send
-Subscribe
-Unsubscribe&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;why is it so difficult to create a id generator for mongo db via spring ?
+ChatGPT said:
+ChatGPT
+Creating an ID generator for MongoDB via Spring can be challenging due to a few inherent complexities:&lt;/p&gt;
 
-&lt;p&gt;Server to client Commands.&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Message
-Error
-Receipt
-Ack
-Nack&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;MongoDB’s Default ID Generation: MongoDB already provides a default mechanism for generating unique IDs using the ObjectId type. These IDs are 12-byte hexadecimal values, ensuring uniqueness across collections. If you’re trying to override or customize this behavior, it adds complexity since MongoDB isn’t designed to rely on sequential or user-defined IDs by default.&lt;/p&gt;
 
-&lt;p&gt;So in short, STOMP defines the rules for communication over websockets.&lt;/p&gt;
+&lt;p&gt;Lack of Atomic Increment: In relational databases, it’s common to use auto-incrementing fields for IDs. MongoDB does not natively support this feature. To simulate auto-incrementing IDs, developers must create a custom sequence collection or counter, which involves using a separate document to track the current sequence number and update it atomically. This introduces additional overhead in ensuring consistency and atomicity when multiple instances of your service are running.&lt;/p&gt;
 
-&lt;p&gt;Check the STOMP documentation page.&lt;/p&gt;
+&lt;p&gt;Concurrency and Performance: Handling concurrent requests for ID generation in a distributed environment is another challenge. Using a sequence collection requires careful locking or atomic updates (such as findAndModify) to prevent race conditions, which can reduce performance and scalability. When scaling the application, ensuring the atomic update mechanism doesn’t become a bottleneck adds further complexity.&lt;/p&gt;
 
-&lt;p&gt;STOMP Connect frame has authentication headers.&lt;/p&gt;
+&lt;p&gt;Distributed Systems: If your application is distributed across multiple servers, ensuring that IDs are unique without collision across instances becomes more challenging. Solutions like UUIDs are often used in distributed systems to avoid this problem, but custom ID generation mechanisms like sequential IDs need careful handling of state synchronization across nodes.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;How does the communication work ?&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Custom Solutions: Implementing your own ID generator requires careful handling of error cases (e.g., retries, handling failures in incrementing the sequence, etc.) and involves extra logic. The typical pattern of a sequence document is often unfamiliar to those coming from relational database backgrounds.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Pre-configuration&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Registering endpoint via java registry.addEndpoint(“/random-address”)&lt;/li&gt;
-    &lt;li&gt;Enabling simple broker on prefix “/topic”&lt;/li&gt;
-    &lt;li&gt;Application destination prefix “/ws”&lt;/li&gt;
-    &lt;li&gt;Controller defines the mapping and SendTo.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;To implement a custom ID generator in Spring for MongoDB, you would typically use a collection to store sequence counters, and for each insert, increment the counter atomically. You can use MongoOperations with a method like findAndModify to safely update and return the next sequence number.&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Flow &lt;br /&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;Here’s a basic approach for implementing a custom sequence generator:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;I. Client side &lt;br /&gt;&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Starting a sockjs connection on the defined endpoint (random-address)&lt;/li&gt;
-    &lt;li&gt;UI action initiates stomp client to make a SEND call to a destination as follows.
-&lt;img src=&quot;/myblog/assets/img/websocket-send.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;java
+Copy code
+public class SequenceGeneratorService {&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;II. Server side &lt;br /&gt;&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;The message is received by the &lt;strong&gt;controller defined for the appropriate destination&lt;/strong&gt;&lt;/li&gt;
-    &lt;li&gt;It is then sent to an address to which the client would have already subscribed as follows:&lt;br /&gt;&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@Autowired
+private MongoOperations mongoOperations;
 
-&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/subscribed.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;III. Client side &lt;br /&gt;&lt;/p&gt;
-  &lt;ol&gt;
-    &lt;li&gt;Clients who are subscribed to the specific endpoints, receive the message and display it.&lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/blockquote&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="development" /><summary type="html">2 way connections between client and server which does not rely on multiple http connections. Event driven, messaging architecture.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/fallback.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/fallback.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">First Open Source Contribution</title><link href="http://localhost:4000/myblog/2023/08/22/first-open-source-contribution" rel="alternate" type="text/html" title="First Open Source Contribution" /><published>2023-08-22T00:00:00+05:30</published><updated>2023-08-22T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/08/22/First-Open-Source-Contribution</id><content type="html" xml:base="http://localhost:4000/myblog/2023/08/22/first-open-source-contribution">&lt;p&gt;https://github.com/in28minutes/spring-web-services/pull/8#event-10015014094&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><summary type="html"></summary></entry><entry><title type="html">Exceptions in Java.</title><link href="http://localhost:4000/myblog/2023/08/03/java-concepts" rel="alternate" type="text/html" title="Exceptions in Java." /><published>2023-08-03T00:00:00+05:30</published><updated>2023-08-03T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/08/03/Java-Concepts</id><content type="html" xml:base="http://localhost:4000/myblog/2023/08/03/java-concepts">&lt;h2 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Checked - checked at compile time &lt;br /&gt; eg: filenotfound exception. &lt;br /&gt;
-we need to handle them, the program will fail to compile otherwise.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Unchecked - checked at runtime.&lt;br /&gt;
-eg:nullpointer exception, string.length() -&amp;gt; throws nullpointer if string is null.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="programming" /><summary type="html">Exceptions</summary></entry><entry><title type="html">Ubuntu package install</title><link href="http://localhost:4000/myblog/2023/07/26/design-patterns" rel="alternate" type="text/html" title="Ubuntu package install" /><published>2023-07-26T00:00:00+05:30</published><updated>2023-07-26T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/26/Design-Patterns</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/26/design-patterns">&lt;p&gt;Observer
-    - Publisher/Subscriber or observer/client
-    - change pushed by one, observed by it’s clients/subscribers.&lt;/p&gt;
-
-&lt;p&gt;Strategy 
-    - different implementation of an interface.&lt;/p&gt;
-
-&lt;p&gt;Singleton
-    - when only one implementation of anything is required. (logging, configuration).&lt;/p&gt;
-
-&lt;p&gt;Template
-    - look into it.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="programming" /><summary type="html">Observer - Publisher/Subscriber or observer/client - change pushed by one, observed by it’s clients/subscribers.</summary></entry><entry><title type="html">Find Leaves of Trees - Google interview question.</title><link href="http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree" rel="alternate" type="text/html" title="Find Leaves of Trees - Google interview question." /><published>2023-07-26T00:00:00+05:30</published><updated>2023-07-26T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/26/Find-Leaves-Of-Tree</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree">&lt;h3 id=&quot;google-interview-question-lets-gooooo&quot;&gt;Google interview question, let’s gooooo&lt;/h3&gt;
-
-&lt;p&gt;Problem Statement.
-So given a tree, continue the following process until tree is empty. Print out leaves for the wtree &amp;amp; Remove the leaves.&lt;/p&gt;
-
-&lt;p&gt;For example the given tree&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;        1
-     /     \
-    2       5
-  /  \
- 3    4
+public long generateSequence(String seqName) {
+    DatabaseSequence counter = mongoOperations.findAndModify(
+        Query.query(Criteria.where(&quot;_id&quot;).is(seqName)),
+        new Update().inc(&quot;seq&quot;, 1),
+        FindAndModifyOptions.options().returnNew(true).upsert(true),
+        DatabaseSequence.class);
+    return !Objects.isNull(counter) ? counter.getSeq() : 1;
+} } In this example:
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;So for the first level, nodes (3), (4) &amp;amp; (5). Followed by (2). Then (1)&lt;/p&gt;
+&lt;p&gt;The DatabaseSequence document tracks the sequence for a given collection.
+findAndModify is used to increment and retrieve the current sequence in one atomic operation.
+In conclusion, the difficulty mainly stems from MongoDB’s nature of not having native support for sequential IDs, concurrency concerns, and the need for atomic updates to maintain consistency.&lt;/p&gt;
 
-&lt;p&gt;Output: [[3,4,5],[2],[1]]&lt;/p&gt;
+&lt;p&gt;mongo db and springs default id generation technique&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Approach - it&apos;s finding out the maximum height of a node.
-3,4,5 have height of 0.
-2 has height of 1.
-1 has height 2.
+&lt;p&gt;ChatGPT said:
+ChatGPT&lt;/p&gt;
+
+&lt;p&gt;In Spring Data MongoDB, when working with MongoDB, the framework provides a built-in mechanism for generating unique identifiers for documents, typically using the ObjectId class. Here’s how it works:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Default ID Generation Using ObjectId:
+By default, if no ID is specified when saving a document, MongoDB automatically generates a 12-byte ObjectId for the _id field. This object includes information such as the timestamp, machine identifier, process identifier, and an incrementing counter, which ensures global uniqueness.
+In Spring Data MongoDB, if you annotate an entity’s ID field with @Id, the framework automatically uses MongoDB’s default ObjectId generation strategy if no custom value is provided.
+Example:
+java
+Copy code
+@Document(collection = “myCollection”)
+public class MyEntity {
+ @Id
+ private String id;  // MongoDB will auto-generate an ObjectId&lt;/p&gt;
+
+    &lt;p&gt;private String name;
+}
+In this case, MongoDB will generate an ObjectId for id unless a value is provided explicitly.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Custom ID Generation:
+Spring allows for custom ID generation strategies if you don’t want to use ObjectId. You can implement your own sequence-based generator or use a UUID, depending on your use case.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;UUID as ID: You can replace the default ObjectId with a UUID by manually setting it in your application code.
+java
+Copy code
+@Document(collection = “myCollection”)
+public class MyEntity {
+    @Id
+    private String id = UUID.randomUUID().toString();&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private String name; } Custom Sequence Generator: As mentioned before, you can also create a sequence generator to generate sequential IDs if needed. This requires maintaining a separate collection that tracks sequence numbers. Why Use ObjectId? Uniqueness: The ObjectId is guaranteed to be unique across collections, processes, and even different machines, making it ideal for distributed systems. Timestamp Information: The ObjectId contains a timestamp, which allows sorting documents by creation time without needing an explicit timestamp field. Compactness: The 12-byte size of ObjectId is compact and offers better space efficiency compared to using other types like UUID (which are 16 bytes). In summary, MongoDB&apos;s default ID generation using ObjectId is typically sufficient for most use cases, and Spring Data MongoDB embraces this by automatically using ObjectId for the _id field unless otherwise specified. If a custom ID strategy is needed, you can implement one using UUIDs or custom sequences.
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;My code sample:&lt;/p&gt;
+
+&lt;p&gt;Comment class.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public class Comment {
+    @org.springframework.data.annotation.Transient
+    public static final String ID_VAL = &quot;sequence_generator&quot;;
+    @org.springframework.data.annotation.Transient
+    public static final String GENERATED_ID = &quot;commentId&quot;;
+    @org.springframework.data.annotation.Transient
+    public static final String ID_KEY = &quot;id&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Generate comment id:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public Long generateCommentId() {
+    return idGeneratorService.getCommentsId(Comment.ID_KEY, Comment.ID_VAL, Comment.GENERATED_ID);
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;fetch comment id from db:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    public Long getCommentsId(String collectionId, String collectionIdVal, String generatedIdValue) {
+
+        Query query = new Query(Criteria.where(collectionId).is(collectionIdVal));
+        //update the sequence no
+        Update update = new Update().inc(generatedIdValue, 1);
+        //modify in document
+
+        IdSequence counter = mongoOperations
+                .findAndModify(query,
+                        update, options().returnNew(true).upsert(true),
+                        IdSequence.class);
+
+        return Objects.isNull(counter) ? 1 : counter.getCommentId();
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="database,systemdesign" /><summary type="html">todo:</summary></entry><entry><title type="html">Range Sum Query - Mutable</title><link href="http://localhost:4000/myblog/2024/09/11/bloom-filters" rel="alternate" type="text/html" title="Range Sum Query - Mutable" /><published>2024-09-11T00:00:00+05:30</published><updated>2024-09-11T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/09/11/Bloom-filters</id><content type="html" xml:base="http://localhost:4000/myblog/2024/09/11/bloom-filters">&lt;p&gt;Bloom filters&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/false-pos-false-neg.png&quot; alt=&quot;false-pos-false-neg.png&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;-&amp;gt; can report false positives, but can never report false negative.&lt;/p&gt;
+
+&lt;p&gt;User likes ribeye and potato and doesn’t like pork chop.
+This case gives us correct result.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/bloom-filter-true-negative.png&quot; alt=&quot;Bloom filter true negative&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;User doesn’t like lemon but the bloom filter denotes it likes lemon.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/bloom-filter-false-positive.png&quot; alt=&quot;Bloom filter false positive&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;But the case can never happen where user likes something and it doesn’t return the result as negative.&lt;/p&gt;
+
+&lt;p&gt;Hence false negatives cannot happen.&lt;/p&gt;
+
+&lt;p&gt;That’s why for searching in a large data we can use bloom filters.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="systemdesign" /><summary type="html">Bloom filters</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/false-pos-false-neg.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/false-pos-false-neg.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Maven Lifecycle</title><link href="http://localhost:4000/myblog/2024/08/18/maven-lifecycle" rel="alternate" type="text/html" title="Maven Lifecycle" /><published>2024-08-18T00:00:00+05:30</published><updated>2024-08-18T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/08/18/Maven-lifecycle</id><content type="html" xml:base="http://localhost:4000/myblog/2024/08/18/maven-lifecycle">&lt;h1 id=&quot;maven-lifecycle&quot;&gt;Maven Lifecycle&lt;/h1&gt;
+
+&lt;h3 id=&quot;categories&quot;&gt;Categories:&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;todayILearned&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+
+&lt;p&gt;Maven operates with three primary built-in lifecycles:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Default Lifecycle&lt;/strong&gt;: The main lifecycle responsible for project deployment. It consists of a series of phases executed in order.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Clean Lifecycle&lt;/strong&gt;: Manages project cleaning, such as removing files generated in previous builds.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Site Lifecycle&lt;/strong&gt;: Generates project documentation.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;default-lifecycle-phases&quot;&gt;Default Lifecycle Phases&lt;/h2&gt;
+
+&lt;p&gt;The default lifecycle consists of several phases, each performing a specific task:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;validate&lt;/strong&gt;: Validates the project structure and configuration.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;compile&lt;/strong&gt;: Compiles the source code of the project.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;test&lt;/strong&gt;: Runs unit tests using a suitable testing framework.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;package&lt;/strong&gt;: Packages the compiled code into a distributable format (e.g., JAR, WAR).&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;verify&lt;/strong&gt;: Runs checks on the results of integration tests to ensure quality criteria are met.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;install&lt;/strong&gt;: Installs the package into the local repository for use as a dependency in other projects.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;deploy&lt;/strong&gt;: Deploys the package to a remote repository for sharing with other developers and projects.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;site-lifecycle-phases&quot;&gt;Site Lifecycle Phases&lt;/h2&gt;
+
+&lt;p&gt;The site lifecycle is responsible for creating project documentation. To generate the site, run the following command:&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn site
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Executing Maven Phases
+You can execute a specific phase by running the following command:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;mvn &amp;lt;phase&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;goal-binding&quot;&gt;Goal Binding&lt;/h2&gt;
+
+&lt;p&gt;Each phase in a lifecycle is bound to one or more plugin goals. For example, in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;compile&lt;/code&gt; phase, the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maven-compiler-plugin:compile&lt;/code&gt; goal is executed.&lt;/p&gt;
+
+&lt;h3 id=&quot;example-integrating-maven-checkstyle-plugin&quot;&gt;Example: Integrating &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;maven-checkstyle-plugin&lt;/code&gt;&lt;/h3&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;project&amp;gt;&lt;/span&gt;
+    ...
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;build&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugins&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.apache.maven.plugins&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;maven-checkstyle-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.2.2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Use the latest version available --&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;executions&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;execution&amp;gt;&lt;/span&gt;
+                        &lt;span class=&quot;nt&quot;&gt;&amp;lt;phase&amp;gt;&lt;/span&gt;validate&lt;span class=&quot;nt&quot;&gt;&amp;lt;/phase&amp;gt;&lt;/span&gt;
+                        &lt;span class=&quot;nt&quot;&gt;&amp;lt;goals&amp;gt;&lt;/span&gt;
+                            &lt;span class=&quot;nt&quot;&gt;&amp;lt;goal&amp;gt;&lt;/span&gt;check&lt;span class=&quot;nt&quot;&gt;&amp;lt;/goal&amp;gt;&lt;/span&gt;
+                        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/goals&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/execution&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;/executions&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;configLocation&amp;gt;&lt;/span&gt;checkstyle.xml&lt;span class=&quot;nt&quot;&gt;&amp;lt;/configLocation&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;encoding&amp;gt;&lt;/span&gt;UTF-8&lt;span class=&quot;nt&quot;&gt;&amp;lt;/encoding&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;consoleOutput&amp;gt;&lt;/span&gt;true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/consoleOutput&amp;gt;&lt;/span&gt;
+                    &lt;span class=&quot;nt&quot;&gt;&amp;lt;failsOnError&amp;gt;&lt;/span&gt;true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/failsOnError&amp;gt;&lt;/span&gt;
+                &lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugins&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/build&amp;gt;&lt;/span&gt;
+    ...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/project&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;creating-a-checkstyle-configuration-file&quot;&gt;Creating a Checkstyle Configuration File&lt;/h3&gt;
+
+&lt;p&gt;You need to create a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;checkstyle.xml&lt;/code&gt; configuration file:&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE module PUBLIC
+    &quot;-//Checkstyle//DTD Checkstyle Configuration 1.3//EN&quot;
+    &quot;https://checkstyle.org/dtds/configuration_1_3.dtd&quot;&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;module&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Checker&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;module&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;TreeWalker&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;module&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;JavadocMethod&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;module&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MagicNumber&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;module&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;IllegalImport&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;module&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;LineLength&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class=&quot;nt&quot;&gt;&amp;lt;property&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;max&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;120&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;/module&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;module&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;WhitespaceAround&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;/module&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/module&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The complete list of configurations can be found here: https://checkstyle.org/index.html&lt;/p&gt;
+
+&lt;p&gt;This file can be placed in your project’s root directory or in the src/main/resources directory.&lt;/p&gt;
+
+&lt;p&gt;To run the checkstyle plugin, use:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn checkstyle:check&lt;/code&gt;
+or it will run during:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn validate&lt;/code&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="TodayILearned" /><summary type="html">Maven Lifecycle</summary></entry><entry><title type="html">Spring</title><link href="http://localhost:4000/myblog/2024/08/18/spring-dependency-injection" rel="alternate" type="text/html" title="Spring" /><published>2024-08-18T00:00:00+05:30</published><updated>2024-08-18T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/08/18/Spring-Dependency-Injection</id><content type="html" xml:base="http://localhost:4000/myblog/2024/08/18/spring-dependency-injection">&lt;p&gt;Spring&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Why to avoid the field injection:
+    &lt;ul&gt;
+      &lt;li&gt;Testability of the application is easier when using constructor injection.&lt;/li&gt;
+      &lt;li&gt;Fields are not immutable. States can be changed after initialization.&lt;/li&gt;
+      &lt;li&gt;Constructor injection makes it apparant that the depdendencies are growing and that there’s a need for refactoring.&lt;/li&gt;
+      &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="TodayILearned" /><summary type="html">Spring Why to avoid the field injection: Testability of the application is easier when using constructor injection. Fields are not immutable. States can be changed after initialization. Constructor injection makes it apparant that the depdendencies are growing and that there’s a need for refactoring.</summary></entry><entry><title type="html">Token Storage</title><link href="http://localhost:4000/myblog/2024/08/01/token-storage" rel="alternate" type="text/html" title="Token Storage" /><published>2024-08-01T00:00:00+05:30</published><updated>2024-08-01T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/08/01/Token-Storage</id><content type="html" xml:base="http://localhost:4000/myblog/2024/08/01/token-storage">&lt;p&gt;When storing JWT token or any sensitive user information, where should it be stored ?&lt;/p&gt;
+
+&lt;h3 id=&quot;local-storage&quot;&gt;Local storage:&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;It’s simple and easy, but not secure, as it is prone to *XSS attacks. It is not deleted automatically and has to be explicitly deleted. Hence, not recommended.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;http-only-cookies&quot;&gt;HTTP Only Cookies:&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Not accessible by Javascript, hence XSS issue is mitigated. Cookies are included in every request. Can be marked as secure, have specific expiration times. 
+May lead to CSRF attacks if not implemented proper protection mechanisms.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;* XSS attack - cross side scripting.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;User injecting malicious content on website.&lt;/li&gt;
+  &lt;li&gt;Like finding a way to add some &amp;lt;script&amp;gt; element extracting sensitive information.&lt;/li&gt;
+  &lt;li&gt;Hence user input should be encoded before being displayed.&lt;/li&gt;
+  &lt;li&gt;Using security headers, which limit the content that can be loaded and executed on site.&lt;/li&gt;
+  &lt;li&gt;When inserting user input, escape special characters.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="info" /><summary type="html">When storing JWT token or any sensitive user information, where should it be stored ?</summary></entry><entry><title type="html">GRPC</title><link href="http://localhost:4000/myblog/2024/06/05/grpc-101" rel="alternate" type="text/html" title="GRPC" /><published>2024-06-05T00:00:00+05:30</published><updated>2024-06-05T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/06/05/grpc-101</id><content type="html" xml:base="http://localhost:4000/myblog/2024/06/05/grpc-101">&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
+
+&lt;h4 id=&quot;need-for-grpc-&quot;&gt;Need for grpc ?&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SOAP, REST or GraphQL do not solve the problem of bidirectional communication.&lt;/li&gt;
+  &lt;li&gt;Any communication protocol needs client library to work. (When communication is done through the web, web browser is the client library)&lt;/li&gt;
+  &lt;li&gt;If the user uses any client library, it has to be maintained, which is not ideal.&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/grpcvslibrary.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;why-to-use-it-&quot;&gt;Why to use it ?&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;High performance - HTTP/2.&lt;/li&gt;
+  &lt;li&gt;gRPC uses Protocol Buffers for compact and fast serialization, ensuring efficient data exchange.&lt;/li&gt;
+  &lt;li&gt;Good support for various programming languages.&lt;/li&gt;
+  &lt;li&gt;gRPC simplifies implementing secure and scalable microservices. With built-in support for authentication, load balancing, and service discovery,&lt;/li&gt;
+  &lt;li&gt;Lastly, its rich ecosystem and active community provide extensive resources, tools, and ongoing improvements.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;workingflow-of-grpc&quot;&gt;Working/Flow of grpc.&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/grpc-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;implementation-theory&quot;&gt;Implementation theory&lt;/h3&gt;
+
+&lt;p&gt;How to implement 
+you start with a proto file.&lt;/p&gt;
+
+&lt;p&gt;each language has library/plugin support to generate classes based on the proto file.
+These classes are known as stubs.&lt;/p&gt;
+
+&lt;p&gt;Server side implements a service class which contains the actual business logic.
+Client side - writes a client to invoke methods on server based upon it’s local stub.&lt;/p&gt;
+
+&lt;p&gt;client and server communicate with each other through http 2.&lt;/p&gt;
 
 &lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/kaustubhdeokar/Backend-mini-project-implementations&quot;&gt;Github link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="implementation-blogs" /><summary type="html">Background</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/grpcvslibrary.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/grpcvslibrary.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Terminologies/How-to’s</title><link href="http://localhost:4000/myblog/2024/06/02/what-is" rel="alternate" type="text/html" title="Terminologies/How-to’s" /><published>2024-06-02T00:00:00+05:30</published><updated>2024-06-02T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/06/02/What-is</id><content type="html" xml:base="http://localhost:4000/myblog/2024/06/02/what-is">&lt;p&gt;Object stores - Collection of html, css, js, resource files which can be&lt;/p&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; findLeaves(@NotNull TreeNode node) {
+&lt;h2 id=&quot;mysql-dump&quot;&gt;Mysql dump&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;mysqldump -u &lt;username&gt; -p &lt;database-name&gt; &lt;local-sql-file&gt;
+mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;/database-name&gt;&lt;/username&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 
-    ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list = new ArrayList&amp;lt;&amp;gt;();
-    heightTraversal(node, list);
-    return list;
-}
+&lt;h2 id=&quot;s&quot;&gt;S&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Strongly typed language - variable types is pre-declared.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="info" /><summary type="html">Object stores - Collection of html, css, js, resource files which can be</summary></entry><entry><title type="html">Javascript Concepts.</title><link href="http://localhost:4000/myblog/2024/06/01/javascript-concepts" rel="alternate" type="text/html" title="Javascript Concepts." /><published>2024-06-01T00:00:00+05:30</published><updated>2024-06-01T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/06/01/Javascript-Concepts</id><content type="html" xml:base="http://localhost:4000/myblog/2024/06/01/javascript-concepts">&lt;h1 id=&quot;javascript-concepts&quot;&gt;JavaScript Concepts&lt;/h1&gt;
+
+&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#javascript-concepts&quot;&gt;JavaScript Concepts&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#table-of-contents&quot;&gt;Table of Contents&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#execution-context&quot;&gt;Execution Context&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#call-stack&quot;&gt;Call Stack&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#scope&quot;&gt;Scope&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#variable-declarations&quot;&gt;Variable Declarations&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#shadowing&quot;&gt;Shadowing&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#closure&quot;&gt;Closure&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#function-statement--function-declaration&quot;&gt;Function Statement \&amp;amp; Function Declaration&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#function-expression&quot;&gt;Function Expression&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#first-class-functions&quot;&gt;First Class Functions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#callback-functions&quot;&gt;Callback Functions&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#event-loop&quot;&gt;Event Loop&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#javascript-runtime-environment&quot;&gt;JavaScript Runtime Environment&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#tasks-done-by-runtime-environment&quot;&gt;Tasks Done by Runtime Environment&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#set-timeout&quot;&gt;Set Timeout&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;execution-context&quot;&gt;Execution Context&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Everything happens inside an execution context.&lt;/li&gt;
+  &lt;li&gt;Execution context has a memory component and a code component.&lt;/li&gt;
+  &lt;li&gt;It is single-threaded and synchronous.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;call-stack&quot;&gt;Call Stack&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Execution contexts are managed by call stacks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;scope&quot;&gt;Scope&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Directly related to lexical environment.
+    &lt;ul&gt;
+      &lt;li&gt;Lexical - in hierarchy.&lt;/li&gt;
+      &lt;li&gt;Lexical environment of a function: its local memory plus the lexical environment of its parent.&lt;/li&gt;
+      &lt;li&gt;In simple terms, a child will be able to access things locally declared, plus the things declared by its parents.&lt;/li&gt;
+      &lt;li&gt;This hierarchical searching in the functions, starting from the child to its parent, is known as &lt;strong&gt;SCOPE CHAIN&lt;/strong&gt;.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;variable-declarations&quot;&gt;Variable Declarations&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Types of variable declarations in JavaScript.
+    &lt;ul&gt;
+      &lt;li&gt;We can access variables declared with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;var&lt;/code&gt; keyword before they are declared as they are declared in the global scope.&lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt; are hoisted but they cannot be used unless assigned because they are not declared in the global scope but a separate scope &lt;strong&gt;(SCRIPT/BLOCK)&lt;/strong&gt;. They are put in something called as temporal dead zone.&lt;/li&gt;
+      &lt;li&gt;If a user tries to fetch the variable declared by &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;let&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;const&lt;/code&gt; before it is assigned, we get a &lt;strong&gt;reference error&lt;/strong&gt;.&lt;/li&gt;
+      &lt;li&gt;We will also get a reference error if a variable which is not declared is tried to be accessed during the program.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;shadowing&quot;&gt;Shadowing&lt;/h2&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// a shadows the global &apos;a&apos;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;c&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;//height traversal.&lt;/p&gt;
+&lt;h2 id=&quot;closure&quot;&gt;Closure&lt;/h2&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public int heightTraversal(@Nullable TreeNode node, ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list) {
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-    if (node == null) {
-        return 0;
-    }
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;z&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Even though function y is done execution, it still has access to the variable &apos;a&apos; from function x.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// This is known as closure.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;Function bundled with its lexical environment.&lt;/li&gt;
+  &lt;li&gt;Whenever the function is returned, even if it’s vanished in execution context, it still remembers the reference it was pointing to. Please note, the reference, not the value!&lt;/li&gt;
+&lt;/ul&gt;
 
-    int left = heightTraversal(node.left, list);
-    int right = heightTraversal(node.right, list); //traversing to find the height.
+&lt;h2 id=&quot;function-statement--function-declaration&quot;&gt;Function Statement &amp;amp; Function Declaration&lt;/h2&gt;
 
-    int height = Integer.max(left, right);
-    insertIntoList(list, height, node.val);
-    return height + 1;
-}
+&lt;ul&gt;
+  &lt;li&gt;Function statements and function declarations are used interchangeably.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Function statement -&amp;gt; function declaration&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello y&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;//simple insert into a 2-d arraylist.&lt;/p&gt;
+&lt;h2 id=&quot;function-expression&quot;&gt;Function Expression&lt;/h2&gt;
 
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;private void insertIntoList(ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; list, int height, int val) {
-    if (list.size() &amp;lt;= height) {
-        for (int i = 0; i &amp;lt;= (height - list.size()); i++) {
-            list.add(new ArrayList&amp;lt;&amp;gt;());
-        }
-    }
-    list.get(height).add(val);
-}
-
-
-public static void main(String[] args) {
-
-    SerializeDeserialize sd = new SerializeDeserialize();
-    Integer[] treeStructure = {1, 2, 3, 4, 5, -1, -1, -1, -1, -1, -1};
-    TreeNode root = sd.createTreeFromArray(treeStructure);
-    FindLeavesOfTree fl = new FindLeavesOfTree();
-    ArrayList&amp;lt;ArrayList&amp;lt;Integer&amp;gt;&amp;gt; leaves = fl.findLeaves(root);
-    System.out.println(leaves);
-
-    treeStructure = new Integer[]{1, 2, 3, -1, -1, -1, -1};
-    root = sd.createTreeFromArray(treeStructure);
-    fl = new FindLeavesOfTree();
-    leaves = fl.findLeaves(root);
-    System.out.println(leaves);
-
-    treeStructure = new Integer[]{1, -1, -1};
-    root = sd.createTreeFromArray(treeStructure);
-    fl = new FindLeavesOfTree();
-    leaves = fl.findLeaves(root);
-    System.out.println(leaves);
-
-
-} ```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="competitivecoding" /><summary type="html">Google interview question, let’s gooooo</summary></entry><entry><title type="html">Federer</title><link href="http://localhost:4000/myblog/2023/07/22/federer" rel="alternate" type="text/html" title="Federer" /><published>2023-07-22T00:00:00+05:30</published><updated>2023-07-22T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/22/Federer</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/22/federer">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=cwnj6mCLv9I&quot;&gt;Federer&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="tennis" /><summary type="html">Federer</summary></entry><entry><title type="html">Git Primer.</title><link href="http://localhost:4000/myblog/2023/07/21/git-primer" rel="alternate" type="text/html" title="Git Primer." /><published>2023-07-21T00:00:00+05:30</published><updated>2023-07-21T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/21/Git-Primer</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/21/git-primer">&lt;p&gt;Git is a distributed revision control system.&lt;/p&gt;
-
-&lt;p&gt;Peeling out the distributed layer -&amp;gt; revision control system.&lt;/p&gt;
-
-&lt;p&gt;control system -&amp;gt; content tracker.
-    at it’s core -&amp;gt; persistent map.&lt;/p&gt;
-
-&lt;p&gt;every file has a hash&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;git hash-object &lt;file-name&gt;&lt;/file-name&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;To see contents of a file committed for a commit.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;git cat-file -p &lt;file-hash-id&gt;&lt;/file-hash-id&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git cat-file -p d3e2cf226d9bc3c33ededec1aedf03723945d602
-
-    All these files had these states during commit.
-
-    040000 tree 6e6c53c7c92049cf68858d6efcc37f7698c4d455	database
-    040000 tree 75100c61e0410021cbd38768bd63cbb9dc853e84	geolocation
-    040000 tree 77d3d0eecb38b13a448555d00f440fef8e004375	logtime .....
-
-
-    Expanding on this , if the same command is carried on just a file (not a folder) it will show the exact contents present during that commit.
-
-git cat-file -p b37e5d65cecb6ce2dcda99f691404463bd28447a
-
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;hello b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;git-branches&quot;&gt;Git branches&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;The difference between function statement and function expression is hoisting.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We can access &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;y&lt;/code&gt; before declaring but &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;b&lt;/code&gt; will give us an error if accessed before declaring.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;params -&amp;gt; function parameters&lt;/li&gt;
+  &lt;li&gt;args -&amp;gt; with which a function is called.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;git puts the branches in the folder .git/refs/heads
-branch is just a reference to a commit. Doesn’t mean anything else.&lt;/p&gt;
+&lt;h2 id=&quot;first-class-functions&quot;&gt;First Class Functions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The ability to use functions as values, arguments, can be executed inside a closed function, and can be taken as return form.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;callback-functions&quot;&gt;Callback Functions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Functions attached to some event, like on click or setTimeout when time expired, where the code executes after the time countdown is done.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getElementById&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;clickhere&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;xyz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Element not found&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Above is a callback function with a closure.&lt;/p&gt;
+
+&lt;h2 id=&quot;event-loop&quot;&gt;Event Loop&lt;/h2&gt;
+
+&lt;p&gt;When the timer gets expired for a callback function, the web APIs (browser context) or C++ APIs in the Node context put the callback function in the callback queue. Then the EVENT loop puts them into the execution stack.&lt;/p&gt;
+
+&lt;p&gt;The same is the case with addEventListener -&amp;gt; when some functionality has to be executed on click. When the respective button is clicked, the callback function is put in the callback queue, and then the event loop puts it on the execution stack.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;img src=&quot;/myblog/assets/img/event_loop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mutation observer -&amp;gt; if there is some mutation in the DOM tree, it might run some callback functions. So it also populates the microtask queue.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In the above example, there are 3 things happening:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Code execution&lt;/li&gt;
+  &lt;li&gt;Fetch call&lt;/li&gt;
+  &lt;li&gt;Callback function with a timer.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Browser has superpowers that are lent to JS engine to execute some tasks. These superpowers include web APIs such as console, location, DOM API, setTimeout, fetch, local storage.&lt;/li&gt;
+  &lt;li&gt;Callback functions and event handlers are first stored in the Web API environment and then transferred to the callback queue.&lt;/li&gt;
+  &lt;li&gt;Promises and mutation observers are stored in the API environment and then transferred to the microtask queue.&lt;/li&gt;
+  &lt;li&gt;Event loop continuously observes call stack and when it is empty, it transfers task to call stack.&lt;/li&gt;
+  &lt;li&gt;Microtasks are given priority over callback tasks.&lt;/li&gt;
+  &lt;li&gt;Too many microtasks generated can cause starvation (not giving time to callback tasks to execute).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;javascript-runtime-environment&quot;&gt;JavaScript Runtime Environment&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We need one to execute JS.&lt;/li&gt;
+  &lt;li&gt;Browsers have it built-in. Another example is Node.js.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tasks-done-by-runtime-environment&quot;&gt;Tasks Done by Runtime Environment&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Parsing the JavaScript code to form an AST (Abstract Syntax Tree).&lt;/li&gt;
+  &lt;li&gt;JavaScript can execute code using an interpreter or compiler both. Most modern browsers now support a JIT compilation which has the ability to interpret and compile the code.&lt;/li&gt;
+  &lt;li&gt;After parsing, the interpreter starts interpreting the code line by line. The compiler also helps to optimize it. The algorithm to do so may differ from engine to engine.&lt;/li&gt;
+  &lt;li&gt;After which they go for execution, and where the memory heap and execution stack come into the picture.&lt;/li&gt;
+  &lt;li&gt;Garbage collector - mark and sweep algorithm.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;set-timeout&quot;&gt;Set Timeout&lt;/h2&gt;
+
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;setTimeout&lt;/code&gt; will be put in the execution stack only after IT IS EMPTY. So, in short, it is guaranteed to run after AT LEAST 2 seconds as per the below example.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;after 2 seconds&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;startTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;endTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;endTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;startTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10000&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;endTime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;getTime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="frontend," /><category term="Javascript" /><summary type="html">JavaScript Concepts</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/event_loop.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/event_loop.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Mathematics</title><link href="http://localhost:4000/myblog/2024/02/11/mathematics" rel="alternate" type="text/html" title="Mathematics" /><published>2024-02-11T00:00:00+05:30</published><updated>2024-02-11T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/02/11/Mathematics</id><content type="html" xml:base="http://localhost:4000/myblog/2024/02/11/mathematics">&lt;h3 id=&quot;mathematics&quot;&gt;Mathematics.&lt;/h3&gt;
+
+&lt;p&gt;Modular exponentiation&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Problem statement. Calculate x^n % m&lt;/li&gt;
+  &lt;li&gt;For large n , like 10^18, could be time consuming even for O(n).&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;Using following method.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;blockquote&gt;
-  &lt;p&gt;git checkout &lt;branch&gt; 
-    &amp;gt;&amp;gt; this points the HEAD to a commit and sends it in a detached HEAD state.&lt;/branch&gt;&lt;/p&gt;
+  &lt;p&gt;How it works.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;git rebase &amp;amp; git merge - the end goal is the same. rebase copies commits onto the main branch.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    To calculate 2^10 % x
+    on even powers, like 10 -&amp;gt; (2^2)^5 =&amp;gt; 4^5 //straightaway halving the power. 
+    for odd powers, 4 * (4^4) , power-=1, store the result of first part of operation and continue process.
 
-&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/merge_rebase.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Complete git guide:
-    &lt;a href=&quot;https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6&quot;&gt;Dev.to link&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="programming" /><summary type="html">Git is a distributed revision control system.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/merge_rebase.jpeg" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/merge_rebase.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">System Design Posts</title><link href="http://localhost:4000/myblog/2023/07/21/system-design-posts" rel="alternate" type="text/html" title="System Design Posts" /><published>2023-07-21T00:00:00+05:30</published><updated>2023-07-21T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/07/21/System-Design-Posts</id><content type="html" xml:base="http://localhost:4000/myblog/2023/07/21/system-design-posts">&lt;h3 id=&quot;database&quot;&gt;Database&lt;/h3&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://dev.to/danielhe4rt/database-101-twitch-bot-in-a-higher-level-for-beginners-i91&quot;&gt;Database-101-Twitch example&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="systemdesign" /><summary type="html">Database</summary></entry><entry><title type="html">Linkedlist Primer</title><link href="http://localhost:4000/myblog/2023/05/08/linkedlist-primer" rel="alternate" type="text/html" title="Linkedlist Primer" /><published>2023-05-08T00:00:00+05:30</published><updated>2023-05-08T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/05/08/LinkedList-Primer</id><content type="html" xml:base="http://localhost:4000/myblog/2023/05/08/linkedlist-primer">&lt;h2 id=&quot;doubly-linked-list&quot;&gt;Doubly Linked List.&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Advantages over singly linked list -&amp;gt; insert delete operations performed in O(1) time.
-Disadvantages: extra memory required for prev pointer.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Applications: LRU Cache.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/kaustubhdeokar/interview-cake/blob/main/neetcode75/linkedlist/DoublyLinkedList.java&quot;&gt;Refer for implementation of doubly linked list&lt;/a&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="competitivecoding" /><summary type="html">Doubly Linked List.</summary></entry><entry><title type="html">523 Continuous Subarray Sum</title><link href="http://localhost:4000/myblog/2023/04/17/523-continuous-subarray-sum" rel="alternate" type="text/html" title="523 Continuous Subarray Sum" /><published>2023-04-17T00:00:00+05:30</published><updated>2023-04-17T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2023/04/17/523-Continuous-Subarray-Sum</id><content type="html" xml:base="http://localhost:4000/myblog/2023/04/17/523-continuous-subarray-sum">&lt;p&gt;Question:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-Given an integer array nums and an integer k, return true if nums has a good subarray or false otherwise.
-
-A good subarray is a subarray where:
-
-its length is at least two, and
-the sum of the elements of the subarray is a multiple of k.
-Note that:
-
-A subarray is a contiguous part of the array.
-An integer x is a multiple of k if there exists an integer n such that x = n * k. 0 is always a multiple of k.
+        // 2^10      oddPowMultiplier=1    evenPowMultiplier=2   p=10
+        // (4)^5     oddPowMultiplier=1    evenPowMultiplier=4   p=5
+        // 4*(4^4)   oddPowMultiplier=4    evenPowMultiplier=4   p=4
+        // 4*(16^2)  oddPowMultiplier=4    evenPowMultiplier=16  p=2
+        // 4*(256^1) oddPowMultiplier=4    evenPowMultiplier=256 p=1
+        // 4*256     oddPowMultiplier=1024 evenPowMultiplier=256 p=0
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
 &lt;blockquote&gt;
-  &lt;p&gt;Input: nums = [23,2,4,6,7], k = 6 &lt;br /&gt;
-Output: true &lt;br /&gt;
-Explanation: [2, 4] is a continuous subarray of size 2 whose elements sum up to 6.&lt;/p&gt;
+  &lt;p&gt;Code&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Approach:&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public static int exponential(int number, int power, int mod) {
 
-&lt;p&gt;The aim is to find any subarray of atleast length 2, which has the sum divisible by k.&lt;/p&gt;
+        
 
-&lt;blockquote&gt;
-  &lt;p&gt;Straight forwards approach is to:
-By using prefix sum, we could find all possible subarray sums in O(n2)&lt;/p&gt;
-&lt;/blockquote&gt;
+        int evenPowMultiplier = number;
+        int oddPowMultiplier = 1;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Another approach is that, for every index we can note down the remainder of the prefix sum.&lt;br /&gt;
-ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
-    prefix sum: [23,25,29,35, 42] 
-    remainders: [5,1,5]&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;(remainder 5 repeats at index 2. hence we can verify at this point if the length of the subarray is at least 2. and return if true.)&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Solution:
-
-        int len = nums.length;
-        int[] prefixSum = new int[nums.length];
-        int sum = 0;
-        HashMap&amp;lt;Integer, Integer&amp;gt; mapRemainderToIndex = new HashMap&amp;lt;&amp;gt;();
-
-        mapRemainderToIndex.put(0,0); // 
-
-        for(int i=0;i&amp;lt;len;i++){
-            sum += nums[i];
-            prefixSum[i] = sum;
-
-            int remainder = prefixSum[i]%k;
-            
-            if(!mapRemainderToIndex.containsKey(remainder)){
-                mapRemainderToIndex.put(remainder, i+1); //storing remainder-&amp;gt;index.
-            } 
-            else if(mapRemainderToIndex.get(remainder)&amp;lt;i){  //previous index if smaller then we have atleast length 2. Hence return true.
-                return true;
+        while (power &amp;gt; 0) {
+            if (power % 2 == 0) {
+                evenPowMultiplier *= evenPowMultiplier;
+                power /= 2;
+            } else {
+                oddPowMultiplier *= evenPowMultiplier;
+                power -= 1;
             }
+            //modulo should be done here to for evenPowMul &amp;amp; oddPowMul
+            System.out.print(&quot;oddPowMultiplier:&quot; + oddPowMultiplier);
+            System.out.println(&quot; evenPowMultiplier:&quot; + evenPowMultiplier);
         }
-
-        return false;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="competitivecoding" /><summary type="html">Question:</summary></entry></feed>
+        return oddPowMultiplier % mod;
+    }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="competitivecoding" /><summary type="html">Mathematics.</summary></entry></feed>

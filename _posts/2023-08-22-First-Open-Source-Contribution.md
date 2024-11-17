@@ -1,3 +1,0 @@
-
-
-https://github.com/in28minutes/spring-web-services/pull/8#event-10015014094
