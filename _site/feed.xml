@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/myblog/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/myblog/" rel="alternate" type="text/html" /><updated>2024-11-18T00:35:30+05:30</updated><id>http://localhost:4000/myblog/feed.xml</id><title type="html">Kaustubh Deokar</title><subtitle>Portfolio blog</subtitle><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><entry><title type="html">Middlewares</title><link href="http://localhost:4000/myblog/2024/10/22/middlewares-node" rel="alternate" type="text/html" title="Middlewares" /><published>2024-10-22T00:00:00+05:30</published><updated>2024-10-22T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/10/22/Middlewares-node</id><content type="html" xml:base="http://localhost:4000/myblog/2024/10/22/middlewares-node">&lt;h1 id=&quot;middlewares&quot;&gt;Middlewares&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-11-18T22:25:10+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Kaustubh Deokar</title><subtitle>Portfolio blog</subtitle><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><entry><title type="html">Middlewares</title><link href="http://localhost:4000/2024/10/22/middlewares-node" rel="alternate" type="text/html" title="Middlewares" /><published>2024-10-22T00:00:00+05:30</published><updated>2024-10-22T00:00:00+05:30</updated><id>http://localhost:4000/2024/10/22/Middlewares-node</id><content type="html" xml:base="http://localhost:4000/2024/10/22/middlewares-node">&lt;h1 id=&quot;middlewares&quot;&gt;Middlewares&lt;/h1&gt;
 
 &lt;p&gt;A middleware is just a function.
 It has request, response and error object.
@@ -12,7 +12,7 @@ It has the following syntax.&lt;/p&gt;
 &lt;p&gt;there are different types of middlewares. 
 application level, router level, error handling middleware.&lt;/p&gt;
 
-&lt;p&gt;they can call the next function in the application stack or else can return the response as res.json() or res.send().&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="backend, node" /><summary type="html">Middlewares</summary></entry><entry><title type="html">Mongo id generation</title><link href="http://localhost:4000/myblog/2024/10/03/mongo-spring-default-uid-generation" rel="alternate" type="text/html" title="Mongo id generation" /><published>2024-10-03T00:00:00+05:30</published><updated>2024-10-03T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/10/03/Mongo-Spring-default-uid-generation</id><content type="html" xml:base="http://localhost:4000/myblog/2024/10/03/mongo-spring-default-uid-generation">&lt;p&gt;todo:&lt;/p&gt;
+&lt;p&gt;they can call the next function in the application stack or else can return the response as res.json() or res.send().&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="backend, node" /><summary type="html">Middlewares</summary></entry><entry><title type="html">Mongo id generation</title><link href="http://localhost:4000/2024/10/03/mongo-spring-default-uid-generation" rel="alternate" type="text/html" title="Mongo id generation" /><published>2024-10-03T00:00:00+05:30</published><updated>2024-10-03T00:00:00+05:30</updated><id>http://localhost:4000/2024/10/03/Mongo-Spring-default-uid-generation</id><content type="html" xml:base="http://localhost:4000/2024/10/03/mongo-spring-default-uid-generation">&lt;p&gt;todo:&lt;/p&gt;
 
 &lt;p&gt;why is it so difficult to create a id generator for mongo db via spring ?
 ChatGPT said:
@@ -128,10 +128,10 @@ public class MyEntity {
 
         return Objects.isNull(counter) ? 1 : counter.getCommentId();
     }
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="database,systemdesign" /><summary type="html">todo:</summary></entry><entry><title type="html">Range Sum Query - Mutable</title><link href="http://localhost:4000/myblog/2024/09/11/bloom-filters" rel="alternate" type="text/html" title="Range Sum Query - Mutable" /><published>2024-09-11T00:00:00+05:30</published><updated>2024-09-11T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/09/11/Bloom-filters</id><content type="html" xml:base="http://localhost:4000/myblog/2024/09/11/bloom-filters">&lt;p&gt;Bloom filters&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="database,systemdesign" /><summary type="html">todo:</summary></entry><entry><title type="html">Range Sum Query - Mutable</title><link href="http://localhost:4000/2024/09/11/bloom-filters" rel="alternate" type="text/html" title="Range Sum Query - Mutable" /><published>2024-09-11T00:00:00+05:30</published><updated>2024-09-11T00:00:00+05:30</updated><id>http://localhost:4000/2024/09/11/Bloom-filters</id><content type="html" xml:base="http://localhost:4000/2024/09/11/bloom-filters">&lt;p&gt;Bloom filters&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/false-pos-false-neg.png&quot; alt=&quot;false-pos-false-neg.png&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/false-pos-false-neg.png&quot; alt=&quot;false-pos-false-neg.png&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;-&amp;gt; can report false positives, but can never report false negative.&lt;/p&gt;
@@ -139,19 +139,19 @@ public class MyEntity {
 &lt;p&gt;User likes ribeye and potato and doesn’t like pork chop.
 This case gives us correct result.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/bloom-filter-true-negative.png&quot; alt=&quot;Bloom filter true negative&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/bloom-filter-true-negative.png&quot; alt=&quot;Bloom filter true negative&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;User doesn’t like lemon but the bloom filter denotes it likes lemon.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/bloom-filter-false-positive.png&quot; alt=&quot;Bloom filter false positive&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/bloom-filter-false-positive.png&quot; alt=&quot;Bloom filter false positive&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;But the case can never happen where user likes something and it doesn’t return the result as negative.&lt;/p&gt;
 
 &lt;p&gt;Hence false negatives cannot happen.&lt;/p&gt;
 
-&lt;p&gt;That’s why for searching in a large data we can use bloom filters.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="systemdesign" /><summary type="html">Bloom filters</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/false-pos-false-neg.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/false-pos-false-neg.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Maven Lifecycle</title><link href="http://localhost:4000/myblog/2024/08/18/maven-lifecycle" rel="alternate" type="text/html" title="Maven Lifecycle" /><published>2024-08-18T00:00:00+05:30</published><updated>2024-08-18T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/08/18/Maven-lifecycle</id><content type="html" xml:base="http://localhost:4000/myblog/2024/08/18/maven-lifecycle">&lt;h1 id=&quot;maven-lifecycle&quot;&gt;Maven Lifecycle&lt;/h1&gt;
+&lt;p&gt;That’s why for searching in a large data we can use bloom filters.&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="systemdesign" /><summary type="html">Bloom filters</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/false-pos-false-neg.png" /><media:content medium="image" url="http://localhost:4000/assets/img/false-pos-false-neg.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Maven Lifecycle</title><link href="http://localhost:4000/2024/08/18/maven-lifecycle" rel="alternate" type="text/html" title="Maven Lifecycle" /><published>2024-08-18T00:00:00+05:30</published><updated>2024-08-18T00:00:00+05:30</updated><id>http://localhost:4000/2024/08/18/Maven-lifecycle</id><content type="html" xml:base="http://localhost:4000/2024/08/18/maven-lifecycle">&lt;h1 id=&quot;maven-lifecycle&quot;&gt;Maven Lifecycle&lt;/h1&gt;
 
 &lt;h3 id=&quot;categories&quot;&gt;Categories:&lt;/h3&gt;
 &lt;ul&gt;
@@ -263,7 +263,7 @@ You can execute a specific phase by running the following command:&lt;/p&gt;
 &lt;p&gt;To run the checkstyle plugin, use:
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn checkstyle:check&lt;/code&gt;
 or it will run during:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn validate&lt;/code&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="TodayILearned" /><summary type="html">Maven Lifecycle</summary></entry><entry><title type="html">Spring</title><link href="http://localhost:4000/myblog/2024/08/18/spring-dependency-injection" rel="alternate" type="text/html" title="Spring" /><published>2024-08-18T00:00:00+05:30</published><updated>2024-08-18T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/08/18/Spring-Dependency-Injection</id><content type="html" xml:base="http://localhost:4000/myblog/2024/08/18/spring-dependency-injection">&lt;p&gt;Spring&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn validate&lt;/code&gt;&lt;/p&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="TodayILearned" /><summary type="html">Maven Lifecycle</summary></entry><entry><title type="html">Spring</title><link href="http://localhost:4000/2024/08/18/spring-dependency-injection" rel="alternate" type="text/html" title="Spring" /><published>2024-08-18T00:00:00+05:30</published><updated>2024-08-18T00:00:00+05:30</updated><id>http://localhost:4000/2024/08/18/Spring-Dependency-Injection</id><content type="html" xml:base="http://localhost:4000/2024/08/18/spring-dependency-injection">&lt;p&gt;Spring&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Why to avoid the field injection:
     &lt;ul&gt;
@@ -273,7 +273,7 @@ or it will run during:
       &lt;li&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="TodayILearned" /><summary type="html">Spring Why to avoid the field injection: Testability of the application is easier when using constructor injection. Fields are not immutable. States can be changed after initialization. Constructor injection makes it apparant that the depdendencies are growing and that there’s a need for refactoring.</summary></entry><entry><title type="html">Token Storage</title><link href="http://localhost:4000/myblog/2024/08/01/token-storage" rel="alternate" type="text/html" title="Token Storage" /><published>2024-08-01T00:00:00+05:30</published><updated>2024-08-01T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/08/01/Token-Storage</id><content type="html" xml:base="http://localhost:4000/myblog/2024/08/01/token-storage">&lt;p&gt;When storing JWT token or any sensitive user information, where should it be stored ?&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="TodayILearned" /><summary type="html">Spring Why to avoid the field injection: Testability of the application is easier when using constructor injection. Fields are not immutable. States can be changed after initialization. Constructor injection makes it apparant that the depdendencies are growing and that there’s a need for refactoring.</summary></entry><entry><title type="html">Token Storage</title><link href="http://localhost:4000/2024/08/01/token-storage" rel="alternate" type="text/html" title="Token Storage" /><published>2024-08-01T00:00:00+05:30</published><updated>2024-08-01T00:00:00+05:30</updated><id>http://localhost:4000/2024/08/01/Token-Storage</id><content type="html" xml:base="http://localhost:4000/2024/08/01/token-storage">&lt;p&gt;When storing JWT token or any sensitive user information, where should it be stored ?&lt;/p&gt;
 
 &lt;h3 id=&quot;local-storage&quot;&gt;Local storage:&lt;/h3&gt;
 &lt;blockquote&gt;
@@ -293,7 +293,7 @@ May lead to CSRF attacks if not implemented proper protection mechanisms.&lt;/p&
   &lt;li&gt;Hence user input should be encoded before being displayed.&lt;/li&gt;
   &lt;li&gt;Using security headers, which limit the content that can be loaded and executed on site.&lt;/li&gt;
   &lt;li&gt;When inserting user input, escape special characters.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="info" /><summary type="html">When storing JWT token or any sensitive user information, where should it be stored ?</summary></entry><entry><title type="html">GRPC</title><link href="http://localhost:4000/myblog/2024/06/05/grpc-101" rel="alternate" type="text/html" title="GRPC" /><published>2024-06-05T00:00:00+05:30</published><updated>2024-06-05T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/06/05/grpc-101</id><content type="html" xml:base="http://localhost:4000/myblog/2024/06/05/grpc-101">&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="info" /><summary type="html">When storing JWT token or any sensitive user information, where should it be stored ?</summary></entry><entry><title type="html">GRPC</title><link href="http://localhost:4000/2024/06/05/grpc-101" rel="alternate" type="text/html" title="GRPC" /><published>2024-06-05T00:00:00+05:30</published><updated>2024-06-05T00:00:00+05:30</updated><id>http://localhost:4000/2024/06/05/grpc-101</id><content type="html" xml:base="http://localhost:4000/2024/06/05/grpc-101">&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
 
 &lt;h4 id=&quot;need-for-grpc-&quot;&gt;Need for grpc ?&lt;/h4&gt;
 
@@ -301,7 +301,7 @@ May lead to CSRF attacks if not implemented proper protection mechanisms.&lt;/p&
   &lt;li&gt;SOAP, REST or GraphQL do not solve the problem of bidirectional communication.&lt;/li&gt;
   &lt;li&gt;Any communication protocol needs client library to work. (When communication is done through the web, web browser is the client library)&lt;/li&gt;
   &lt;li&gt;If the user uses any client library, it has to be maintained, which is not ideal.&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/grpcvslibrary.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/grpcvslibrary.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;why-to-use-it-&quot;&gt;Why to use it ?&lt;/h4&gt;
@@ -315,7 +315,7 @@ May lead to CSRF attacks if not implemented proper protection mechanisms.&lt;/p&
 
 &lt;h3 id=&quot;workingflow-of-grpc&quot;&gt;Working/Flow of grpc.&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/grpc-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/grpc-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;implementation-theory&quot;&gt;Implementation theory&lt;/h3&gt;
@@ -334,7 +334,7 @@ Client side - writes a client to invoke methods on server based upon it’s loca
 &lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/kaustubhdeokar/Backend-mini-project-implementations&quot;&gt;Github link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="implementation-blogs" /><summary type="html">Background</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/grpcvslibrary.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/grpcvslibrary.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Terminologies/How-to’s</title><link href="http://localhost:4000/myblog/2024/06/02/what-is" rel="alternate" type="text/html" title="Terminologies/How-to’s" /><published>2024-06-02T00:00:00+05:30</published><updated>2024-06-02T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/06/02/What-is</id><content type="html" xml:base="http://localhost:4000/myblog/2024/06/02/what-is">&lt;p&gt;Object stores - Collection of html, css, js, resource files which can be&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="implementation-blogs" /><summary type="html">Background</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/grpcvslibrary.png" /><media:content medium="image" url="http://localhost:4000/assets/img/grpcvslibrary.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Terminologies/How-to’s</title><link href="http://localhost:4000/2024/06/02/what-is" rel="alternate" type="text/html" title="Terminologies/How-to’s" /><published>2024-06-02T00:00:00+05:30</published><updated>2024-06-02T00:00:00+05:30</updated><id>http://localhost:4000/2024/06/02/What-is</id><content type="html" xml:base="http://localhost:4000/2024/06/02/what-is">&lt;p&gt;Object stores - Collection of html, css, js, resource files which can be&lt;/p&gt;
 
 &lt;h2 id=&quot;mysql-dump&quot;&gt;Mysql dump&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -345,7 +345,7 @@ mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;
 &lt;h2 id=&quot;s&quot;&gt;S&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Strongly typed language - variable types is pre-declared.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="info" /><summary type="html">Object stores - Collection of html, css, js, resource files which can be</summary></entry><entry><title type="html">Javascript Concepts.</title><link href="http://localhost:4000/myblog/2024/06/01/javascript-concepts" rel="alternate" type="text/html" title="Javascript Concepts." /><published>2024-06-01T00:00:00+05:30</published><updated>2024-06-01T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/06/01/Javascript-Concepts</id><content type="html" xml:base="http://localhost:4000/myblog/2024/06/01/javascript-concepts">&lt;h1 id=&quot;javascript-concepts&quot;&gt;JavaScript Concepts&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="info" /><summary type="html">Object stores - Collection of html, css, js, resource files which can be</summary></entry><entry><title type="html">Javascript Concepts.</title><link href="http://localhost:4000/2024/06/01/javascript-concepts" rel="alternate" type="text/html" title="Javascript Concepts." /><published>2024-06-01T00:00:00+05:30</published><updated>2024-06-01T00:00:00+05:30</updated><id>http://localhost:4000/2024/06/01/Javascript-Concepts</id><content type="html" xml:base="http://localhost:4000/2024/06/01/javascript-concepts">&lt;h1 id=&quot;javascript-concepts&quot;&gt;JavaScript Concepts&lt;/h1&gt;
 
 &lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
 &lt;ul&gt;
@@ -509,7 +509,7 @@ mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;img src=&quot;/myblog/assets/img/event_loop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/img/event_loop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Mutation observer -&amp;gt; if there is some mutation in the DOM tree, it might run some callback functions. So it also populates the microtask queue.&lt;/p&gt;
@@ -566,7 +566,7 @@ mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="frontend," /><category term="Javascript" /><summary type="html">JavaScript Concepts</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/myblog/assets/img/event_loop.png" /><media:content medium="image" url="http://localhost:4000/myblog/assets/img/event_loop.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Mathematics</title><link href="http://localhost:4000/myblog/2024/02/11/mathematics" rel="alternate" type="text/html" title="Mathematics" /><published>2024-02-11T00:00:00+05:30</published><updated>2024-02-11T00:00:00+05:30</updated><id>http://localhost:4000/myblog/2024/02/11/Mathematics</id><content type="html" xml:base="http://localhost:4000/myblog/2024/02/11/mathematics">&lt;h3 id=&quot;mathematics&quot;&gt;Mathematics.&lt;/h3&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>{&quot;twitter&quot;=&gt;nil, &quot;name&quot;=&gt;nil, &quot;avatar&quot;=&gt;nil, &quot;email&quot;=&gt;nil, &quot;url&quot;=&gt;nil}</name></author><category term="frontend," /><category term="Javascript" /><summary type="html">JavaScript Concepts</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/event_loop.png" /><media:content medium="image" url="http://localhost:4000/assets/img/event_loop.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Mathematics</title><link href="http://localhost:4000/2024/02/11/mathematics" rel="alternate" type="text/html" title="Mathematics" /><published>2024-02-11T00:00:00+05:30</published><updated>2024-02-11T00:00:00+05:30</updated><id>http://localhost:4000/2024/02/11/Mathematics</id><content type="html" xml:base="http://localhost:4000/2024/02/11/mathematics">&lt;h3 id=&quot;mathematics&quot;&gt;Mathematics.&lt;/h3&gt;
 
 &lt;p&gt;Modular exponentiation&lt;/p&gt;
 

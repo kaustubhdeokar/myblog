@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Kaustubh Deokar</title>
- <link href="http://localhost:4000/myblog/atom.xml" rel="self"/>
- <link href="http://localhost:4000/myblog/"/>
- <updated>2024-11-18T00:35:30+05:30</updated>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <link href="http://localhost:4000/"/>
+ <updated>2024-11-18T22:25:10+05:30</updated>
  <id>http://localhost:4000</id>
  <author>
    <name></name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Middlewares</title>
-   <link href="http://localhost:4000/myblog/2024/10/22/middlewares-node"/>
+   <link href="http://localhost:4000/2024/10/22/middlewares-node"/>
    <updated>2024-10-22T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/10/22/Middlewares-node</id>
    <content type="html">&lt;h1 id=&quot;middlewares&quot;&gt;Middlewares&lt;/h1&gt;
@@ -38,7 +38,7 @@ application level, router level, error handling middleware.&lt;/p&gt;
  
  <entry>
    <title>Mongo id generation</title>
-   <link href="http://localhost:4000/myblog/2024/10/03/mongo-spring-default-uid-generation"/>
+   <link href="http://localhost:4000/2024/10/03/mongo-spring-default-uid-generation"/>
    <updated>2024-10-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/10/03/Mongo-Spring-default-uid-generation</id>
    <content type="html">&lt;p&gt;todo:&lt;/p&gt;
@@ -164,13 +164,13 @@ public class MyEntity {
  
  <entry>
    <title>Range Sum Query - Mutable</title>
-   <link href="http://localhost:4000/myblog/2024/09/11/bloom-filters"/>
+   <link href="http://localhost:4000/2024/09/11/bloom-filters"/>
    <updated>2024-09-11T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/09/11/Bloom-filters</id>
    <content type="html">&lt;p&gt;Bloom filters&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/false-pos-false-neg.png&quot; alt=&quot;false-pos-false-neg.png&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/false-pos-false-neg.png&quot; alt=&quot;false-pos-false-neg.png&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;-&amp;gt; can report false positives, but can never report false negative.&lt;/p&gt;
@@ -178,12 +178,12 @@ public class MyEntity {
 &lt;p&gt;User likes ribeye and potato and doesn’t like pork chop.
 This case gives us correct result.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/bloom-filter-true-negative.png&quot; alt=&quot;Bloom filter true negative&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/bloom-filter-true-negative.png&quot; alt=&quot;Bloom filter true negative&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;User doesn’t like lemon but the bloom filter denotes it likes lemon.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/bloom-filter-false-positive.png&quot; alt=&quot;Bloom filter false positive&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/bloom-filter-false-positive.png&quot; alt=&quot;Bloom filter false positive&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;But the case can never happen where user likes something and it doesn’t return the result as negative.&lt;/p&gt;
@@ -196,7 +196,7 @@ This case gives us correct result.&lt;/p&gt;
  
  <entry>
    <title>Spring</title>
-   <link href="http://localhost:4000/myblog/2024/08/18/spring-dependency-injection"/>
+   <link href="http://localhost:4000/2024/08/18/spring-dependency-injection"/>
    <updated>2024-08-18T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/08/18/Spring-Dependency-Injection</id>
    <content type="html">&lt;p&gt;Spring&lt;/p&gt;
@@ -215,7 +215,7 @@ This case gives us correct result.&lt;/p&gt;
  
  <entry>
    <title>Maven Lifecycle</title>
-   <link href="http://localhost:4000/myblog/2024/08/18/maven-lifecycle"/>
+   <link href="http://localhost:4000/2024/08/18/maven-lifecycle"/>
    <updated>2024-08-18T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/08/18/Maven-lifecycle</id>
    <content type="html">&lt;h1 id=&quot;maven-lifecycle&quot;&gt;Maven Lifecycle&lt;/h1&gt;
@@ -336,7 +336,7 @@ or it will run during:
  
  <entry>
    <title>Token Storage</title>
-   <link href="http://localhost:4000/myblog/2024/08/01/token-storage"/>
+   <link href="http://localhost:4000/2024/08/01/token-storage"/>
    <updated>2024-08-01T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/08/01/Token-Storage</id>
    <content type="html">&lt;p&gt;When storing JWT token or any sensitive user information, where should it be stored ?&lt;/p&gt;
@@ -365,7 +365,7 @@ May lead to CSRF attacks if not implemented proper protection mechanisms.&lt;/p&
  
  <entry>
    <title>GRPC</title>
-   <link href="http://localhost:4000/myblog/2024/06/05/grpc-101"/>
+   <link href="http://localhost:4000/2024/06/05/grpc-101"/>
    <updated>2024-06-05T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/06/05/grpc-101</id>
    <content type="html">&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
@@ -376,7 +376,7 @@ May lead to CSRF attacks if not implemented proper protection mechanisms.&lt;/p&
   &lt;li&gt;SOAP, REST or GraphQL do not solve the problem of bidirectional communication.&lt;/li&gt;
   &lt;li&gt;Any communication protocol needs client library to work. (When communication is done through the web, web browser is the client library)&lt;/li&gt;
   &lt;li&gt;If the user uses any client library, it has to be maintained, which is not ideal.&lt;/li&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/grpcvslibrary.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/grpcvslibrary.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;why-to-use-it-&quot;&gt;Why to use it ?&lt;/h4&gt;
@@ -390,7 +390,7 @@ May lead to CSRF attacks if not implemented proper protection mechanisms.&lt;/p&
 
 &lt;h3 id=&quot;workingflow-of-grpc&quot;&gt;Working/Flow of grpc.&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/grpc-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/grpc-architecture.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;implementation-theory&quot;&gt;Implementation theory&lt;/h3&gt;
@@ -416,7 +416,7 @@ Client side - writes a client to invoke methods on server based upon it’s loca
  
  <entry>
    <title>Terminologies/How-to&apos;s</title>
-   <link href="http://localhost:4000/myblog/2024/06/02/what-is"/>
+   <link href="http://localhost:4000/2024/06/02/what-is"/>
    <updated>2024-06-02T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/06/02/What-is</id>
    <content type="html">&lt;p&gt;Object stores - Collection of html, css, js, resource files which can be&lt;/p&gt;
@@ -436,7 +436,7 @@ mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;
  
  <entry>
    <title>Javascript Concepts.</title>
-   <link href="http://localhost:4000/myblog/2024/06/01/javascript-concepts"/>
+   <link href="http://localhost:4000/2024/06/01/javascript-concepts"/>
    <updated>2024-06-01T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/06/01/Javascript-Concepts</id>
    <content type="html">&lt;h1 id=&quot;javascript-concepts&quot;&gt;JavaScript Concepts&lt;/h1&gt;
@@ -603,7 +603,7 @@ mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;img src=&quot;/myblog/assets/img/event_loop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/img/event_loop.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Mutation observer -&amp;gt; if there is some mutation in the DOM tree, it might run some callback functions. So it also populates the microtask queue.&lt;/p&gt;
@@ -666,7 +666,7 @@ mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;
  
  <entry>
    <title>Mathematics</title>
-   <link href="http://localhost:4000/myblog/2024/02/11/mathematics"/>
+   <link href="http://localhost:4000/2024/02/11/mathematics"/>
    <updated>2024-02-11T00:00:00+05:30</updated>
    <id>http://localhost:4000/2024/02/11/Mathematics</id>
    <content type="html">&lt;h3 id=&quot;mathematics&quot;&gt;Mathematics.&lt;/h3&gt;
@@ -726,7 +726,7 @@ mysqldump -u root -p dealsplus &amp;gt; db-schema.sql&lt;/local-sql-file&gt;&lt;
  
  <entry>
    <title>Exceptions in Java.</title>
-   <link href="http://localhost:4000/myblog/2023/08/03/java-concepts"/>
+   <link href="http://localhost:4000/2023/08/03/java-concepts"/>
    <updated>2023-08-03T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/08/03/Java-Concepts</id>
    <content type="html">&lt;h2 id=&quot;exceptions&quot;&gt;Exceptions&lt;/h2&gt;
@@ -745,7 +745,7 @@ eg:nullpointer exception, string.length() -&amp;gt; throws nullpointer if string
  
  <entry>
    <title>Find Leaves of Trees - Google interview question.</title>
-   <link href="http://localhost:4000/myblog/2023/07/26/find-leaves-of-tree"/>
+   <link href="http://localhost:4000/2023/07/26/find-leaves-of-tree"/>
    <updated>2023-07-26T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/07/26/Find-Leaves-Of-Tree</id>
    <content type="html">&lt;h3 id=&quot;google-interview-question-lets-gooooo&quot;&gt;Google interview question, let’s gooooo&lt;/h3&gt;
@@ -841,7 +841,7 @@ public static void main(String[] args) {
  
  <entry>
    <title>Ubuntu package install</title>
-   <link href="http://localhost:4000/myblog/2023/07/26/design-patterns"/>
+   <link href="http://localhost:4000/2023/07/26/design-patterns"/>
    <updated>2023-07-26T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/07/26/Design-Patterns</id>
    <content type="html">&lt;p&gt;Observer
@@ -864,7 +864,7 @@ public static void main(String[] args) {
  
  <entry>
    <title>Federer</title>
-   <link href="http://localhost:4000/myblog/2023/07/22/federer"/>
+   <link href="http://localhost:4000/2023/07/22/federer"/>
    <updated>2023-07-22T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/07/22/Federer</id>
    <content type="html">&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=cwnj6mCLv9I&quot;&gt;Federer&lt;/a&gt;&lt;/p&gt;
@@ -873,7 +873,7 @@ public static void main(String[] args) {
  
  <entry>
    <title>System Design Posts</title>
-   <link href="http://localhost:4000/myblog/2023/07/21/system-design-posts"/>
+   <link href="http://localhost:4000/2023/07/21/system-design-posts"/>
    <updated>2023-07-21T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/07/21/System-Design-Posts</id>
    <content type="html">&lt;h3 id=&quot;database&quot;&gt;Database&lt;/h3&gt;
@@ -884,7 +884,7 @@ public static void main(String[] args) {
  
  <entry>
    <title>Git Primer.</title>
-   <link href="http://localhost:4000/myblog/2023/07/21/git-primer"/>
+   <link href="http://localhost:4000/2023/07/21/git-primer"/>
    <updated>2023-07-21T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/07/21/Git-Primer</id>
    <content type="html">&lt;p&gt;Git is a distributed revision control system.&lt;/p&gt;
@@ -934,7 +934,7 @@ branch is just a reference to a commit. Doesn’t mean anything else.&lt;/p&gt;
   &lt;p&gt;git rebase &amp;amp; git merge - the end goal is the same. rebase copies commits onto the main branch.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/merge_rebase.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/merge_rebase.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Complete git guide:
     &lt;a href=&quot;https://dev.to/opensauced/the-power-of-git-a-guide-to-collaborative-version-control-dl6&quot;&gt;Dev.to link&lt;/a&gt;&lt;/p&gt;
@@ -944,7 +944,7 @@ branch is just a reference to a commit. Doesn’t mean anything else.&lt;/p&gt;
  
  <entry>
    <title>Kafka</title>
-   <link href="http://localhost:4000/myblog/2023/06/09/kafka"/>
+   <link href="http://localhost:4000/2023/06/09/kafka"/>
    <updated>2023-06-09T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/06/09/Kafka</id>
    <content type="html">&lt;h1 id=&quot;kafka&quot;&gt;Kafka&lt;/h1&gt;
@@ -1043,7 +1043,7 @@ connect to&amp;gt;                              (deprecated) is specified. The s
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/consumer-group.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/consumer-group.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;consumer-offset-management&quot;&gt;Consumer offset management.&lt;/h3&gt;
@@ -1058,7 +1058,7 @@ the partitions are split - where the deliver message to only one consumer in the
 
 &lt;ul&gt;
   &lt;li&gt;
-    &lt;p&gt;&lt;img src=&quot;/myblog/assets/img/consumer-groups-implementation.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/img/consumer-groups-implementation.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Each consumer group receives all the messages from the topic it is subscribed to&lt;/p&gt;
@@ -1109,7 +1109,7 @@ the partitions are split - where the deliver message to only one consumer in the
     - active controller writes all metadata to __cluster_metadata topic.
     - other brokers and controllers read from this topic and update in-memory copies.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/kafka-cluster-controller.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/kafka-cluster-controller.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Kafka Replication
@@ -1121,7 +1121,7 @@ the partitions are split - where the deliver message to only one consumer in the
     - follower replicas are distributed to brokers, which are not leaders for same partition.
     - replication factors &amp;lt;= no. of brokers.&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/replication-in-cluster.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/replication-in-cluster.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Kafka security
@@ -1165,7 +1165,7 @@ the partitions are split - where the deliver message to only one consumer in the
  
  <entry>
    <title>Linkedlist Primer</title>
-   <link href="http://localhost:4000/myblog/2023/05/08/linkedlist-primer"/>
+   <link href="http://localhost:4000/2023/05/08/linkedlist-primer"/>
    <updated>2023-05-08T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/05/08/LinkedList-Primer</id>
    <content type="html">&lt;h2 id=&quot;doubly-linked-list&quot;&gt;Doubly Linked List.&lt;/h2&gt;
@@ -1186,7 +1186,7 @@ Disadvantages: extra memory required for prev pointer.&lt;/p&gt;
  
  <entry>
    <title>523 Continuous Subarray Sum</title>
-   <link href="http://localhost:4000/myblog/2023/04/17/523-continuous-subarray-sum"/>
+   <link href="http://localhost:4000/2023/04/17/523-continuous-subarray-sum"/>
    <updated>2023-04-17T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/04/17/523-Continuous-Subarray-Sum</id>
    <content type="html">&lt;p&gt;Question:&lt;/p&gt;
@@ -1262,7 +1262,7 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
  
  <entry>
    <title>Linux Commands</title>
-   <link href="http://localhost:4000/myblog/2023/03/27/linux-commands"/>
+   <link href="http://localhost:4000/2023/03/27/linux-commands"/>
    <updated>2023-03-27T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/03/27/Linux-Commands</id>
    <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; to open `files` in the current path from terminal
@@ -1319,7 +1319,7 @@ ex: [23,2 ,4, 6 ,7]&lt;br /&gt;
  
  <entry>
    <title>Delete Nth Node From End Linkedlist</title>
-   <link href="http://localhost:4000/myblog/2023/02/26/nth-node-from-end-linkedlist"/>
+   <link href="http://localhost:4000/2023/02/26/nth-node-from-end-linkedlist"/>
    <updated>2023-02-26T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/02/26/Nth-Node-From-End-Linkedlist</id>
    <content type="html">&lt;h1 id=&quot;intuition&quot;&gt;Intuition&lt;/h1&gt;
@@ -1404,7 +1404,7 @@ class Solution {
  
  <entry>
    <title>Ubuntu Linux Setup</title>
-   <link href="http://localhost:4000/myblog/2023/02/24/linux-setup"/>
+   <link href="http://localhost:4000/2023/02/24/linux-setup"/>
    <updated>2023-02-24T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/02/24/Linux-setup</id>
    <content type="html">&lt;p&gt;Installing Brave browser
@@ -1439,7 +1439,7 @@ export PATH
  
  <entry>
    <title>Top K Frequent Elements</title>
-   <link href="http://localhost:4000/myblog/2023/02/13/top-k-frequent-elements"/>
+   <link href="http://localhost:4000/2023/02/13/top-k-frequent-elements"/>
    <updated>2023-02-13T00:00:00+05:30</updated>
    <id>http://localhost:4000/2023/02/13/Top-K-Frequent-Elements</id>
    <content type="html">&lt;p&gt;Link to problem : https://leetcode.com/problems/top-k-frequent-elements/description/&lt;/p&gt;
@@ -1541,7 +1541,7 @@ Using a reverse iterator to find the top k elements.&lt;br /&gt;&lt;/p&gt;
  
  <entry>
    <title>Ubuntu package install</title>
-   <link href="http://localhost:4000/myblog/2022/11/15/ubuntu-package-install"/>
+   <link href="http://localhost:4000/2022/11/15/ubuntu-package-install"/>
    <updated>2022-11-15T00:00:00+05:30</updated>
    <id>http://localhost:4000/2022/11/15/ubuntu-package-install</id>
    <content type="html">&lt;blockquote&gt;
@@ -1556,7 +1556,7 @@ after that simply install any deb package by sudo gdebi &amp;lt;&amp;gt;.deb &lt
  
  <entry>
    <title>Range Sum Query - Mutable</title>
-   <link href="http://localhost:4000/myblog/2022/11/11/binaryindexedtree"/>
+   <link href="http://localhost:4000/2022/11/11/binaryindexedtree"/>
    <updated>2022-11-11T00:00:00+05:30</updated>
    <id>http://localhost:4000/2022/11/11/BinaryIndexedTree</id>
    <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;To do range sum queries in a better time complexity than O(n^2), we use binary indexed tree. 
@@ -1644,7 +1644,7 @@ def construct_binary_index_tree(arr):
  
  <entry>
    <title>Websockets</title>
-   <link href="http://localhost:4000/myblog/2022/08/31/websockets"/>
+   <link href="http://localhost:4000/2022/08/31/websockets"/>
    <updated>2022-08-31T00:00:00+05:30</updated>
    <id>http://localhost:4000/2022/08/31/Websockets</id>
    <content type="html">&lt;blockquote&gt;
@@ -1663,7 +1663,7 @@ HTTP used only for initial handshake.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;ws is the web socket protocol, the use of ws protocol requires client &amp;amp; server to be able to support it.
 sockjs emulates websockets in the sense if the client/server wouldn’t support ws it would use any of the fallback mechanisms available.
-&lt;img src=&quot;/myblog/assets/img/fallback.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;img src=&quot;/assets/img/fallback.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;protocol wss is preferred and should be used over ws. (wss stands for secure web socket) is similar to http &amp;amp; https.&lt;/p&gt;
@@ -1718,7 +1718,7 @@ Nack&lt;/p&gt;
   &lt;ol&gt;
     &lt;li&gt;Starting a sockjs connection on the defined endpoint (random-address)&lt;/li&gt;
     &lt;li&gt;UI action initiates stomp client to make a SEND call to a destination as follows.
-&lt;img src=&quot;/myblog/assets/img/websocket-send.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;/assets/img/websocket-send.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
 
@@ -1730,7 +1730,7 @@ Nack&lt;/p&gt;
   &lt;/ol&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;&lt;img src=&quot;/myblog/assets/img/subscribed.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/subscribed.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;III. Client side &lt;br /&gt;&lt;/p&gt;
@@ -1743,7 +1743,7 @@ Nack&lt;/p&gt;
  
  <entry>
    <title>Job Sequencing Problem</title>
-   <link href="http://localhost:4000/myblog/2022/07/13/job-sequencing"/>
+   <link href="http://localhost:4000/2022/07/13/job-sequencing"/>
    <updated>2022-07-13T00:00:00+05:30</updated>
    <id>http://localhost:4000/2022/07/13/Job-Sequencing</id>
    <content type="html">&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;public int maxProfitByJobSequencing(Job arr[], int n) {
@@ -1808,14 +1808,14 @@ Nack&lt;/p&gt;
  
  <entry>
    <title>Spring Security</title>
-   <link href="http://localhost:4000/myblog/2022/06/12/spring-security"/>
+   <link href="http://localhost:4000/2022/06/12/spring-security"/>
    <updated>2022-06-12T00:00:00+05:30</updated>
    <id>http://localhost:4000/2022/06/12/Spring-Security</id>
    <content type="html">&lt;p&gt;Spring security,&lt;/p&gt;
 
 &lt;p&gt;Follows a structure:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;img src=&quot;/myblog/assets/img/spring-auth.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;img src=&quot;/assets/img/spring-auth.png&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;Any request that comes does not go directly to the controller, it follows some steps:&lt;/p&gt;
   &lt;/li&gt;
@@ -1922,7 +1922,7 @@ public String generateToken(String name) {
  
  <entry>
    <title>Java String Joiner</title>
-   <link href="http://localhost:4000/myblog/2021/06/07/stringjoiner"/>
+   <link href="http://localhost:4000/2021/06/07/stringjoiner"/>
    <updated>2021-06-07T00:00:00+05:30</updated>
    <id>http://localhost:4000/2021/06/07/StringJoiner</id>
    <content type="html">&lt;blockquote&gt;
@@ -1989,7 +1989,7 @@ public void testStringJoinerCreatingSquareBracketPattern() {
  
  <entry>
    <title>C++ Makefile.</title>
-   <link href="http://localhost:4000/myblog/2019/07/07/cplusplus"/>
+   <link href="http://localhost:4000/2019/07/07/cplusplus"/>
    <updated>2019-07-07T00:00:00+05:30</updated>
    <id>http://localhost:4000/2019/07/07/cPlusPlus</id>
    <content type="html">&lt;p&gt;source code (sample.c) -&amp;gt; 

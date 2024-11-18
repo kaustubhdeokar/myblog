@@ -4,7 +4,7 @@
 
       "title"    : "Middlewares",
       "description" : "",
-      "url"      : "/myblog/2024/10/22/middlewares-node",
+      "url"      : "/2024/10/22/middlewares-node",
       "category" : "backend, node",
       "tags"     : "",
       "date"     : "2024-10-22 00:00:00 +0530"
@@ -15,7 +15,7 @@
 
       "title"    : "Mongo id generation",
       "description" : "",
-      "url"      : "/myblog/2024/10/03/mongo-spring-default-uid-generation",
+      "url"      : "/2024/10/03/mongo-spring-default-uid-generation",
       "category" : "database,systemdesign",
       "tags"     : "",
       "date"     : "2024-10-03 00:00:00 +0530"
@@ -26,7 +26,7 @@
 
       "title"    : "Range Sum Query - Mutable",
       "description" : "",
-      "url"      : "/myblog/2024/09/11/bloom-filters",
+      "url"      : "/2024/09/11/bloom-filters",
       "category" : "systemdesign",
       "tags"     : "",
       "date"     : "2024-09-11 00:00:00 +0530"
@@ -37,7 +37,7 @@
 
       "title"    : "Spring",
       "description" : "",
-      "url"      : "/myblog/2024/08/18/spring-dependency-injection",
+      "url"      : "/2024/08/18/spring-dependency-injection",
       "category" : "TodayILearned",
       "tags"     : "",
       "date"     : "2024-08-18 00:00:00 +0530"
@@ -48,7 +48,7 @@
 
       "title"    : "Maven Lifecycle",
       "description" : "",
-      "url"      : "/myblog/2024/08/18/maven-lifecycle",
+      "url"      : "/2024/08/18/maven-lifecycle",
       "category" : "TodayILearned",
       "tags"     : "",
       "date"     : "2024-08-18 00:00:00 +0530"
@@ -59,7 +59,7 @@
 
       "title"    : "Token Storage",
       "description" : "",
-      "url"      : "/myblog/2024/08/01/token-storage",
+      "url"      : "/2024/08/01/token-storage",
       "category" : "info",
       "tags"     : "",
       "date"     : "2024-08-01 00:00:00 +0530"
@@ -70,7 +70,7 @@
 
       "title"    : "GRPC",
       "description" : "",
-      "url"      : "/myblog/2024/06/05/grpc-101",
+      "url"      : "/2024/06/05/grpc-101",
       "category" : "implementation-blogs",
       "tags"     : "",
       "date"     : "2024-06-05 00:00:00 +0530"
@@ -81,7 +81,7 @@
 
       "title"    : "Terminologies/How-to&#39;s",
       "description" : "",
-      "url"      : "/myblog/2024/06/02/what-is",
+      "url"      : "/2024/06/02/what-is",
       "category" : "info",
       "tags"     : "",
       "date"     : "2024-06-02 00:00:00 +0530"
@@ -92,7 +92,7 @@
 
       "title"    : "Javascript Concepts.",
       "description" : "",
-      "url"      : "/myblog/2024/06/01/javascript-concepts",
+      "url"      : "/2024/06/01/javascript-concepts",
       "category" : "frontend,, Javascript",
       "tags"     : "",
       "date"     : "2024-06-01 00:00:00 +0530"
@@ -103,7 +103,7 @@
 
       "title"    : "Mathematics",
       "description" : "",
-      "url"      : "/myblog/2024/02/11/mathematics",
+      "url"      : "/2024/02/11/mathematics",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2024-02-11 00:00:00 +0530"
@@ -114,7 +114,7 @@
 
       "title"    : "Exceptions in Java.",
       "description" : "",
-      "url"      : "/myblog/2023/08/03/java-concepts",
+      "url"      : "/2023/08/03/java-concepts",
       "category" : "programming",
       "tags"     : "",
       "date"     : "2023-08-03 00:00:00 +0530"
@@ -125,7 +125,7 @@
 
       "title"    : "Find Leaves of Trees - Google interview question.",
       "description" : "",
-      "url"      : "/myblog/2023/07/26/find-leaves-of-tree",
+      "url"      : "/2023/07/26/find-leaves-of-tree",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-07-26 00:00:00 +0530"
@@ -136,7 +136,7 @@
 
       "title"    : "Ubuntu package install",
       "description" : "",
-      "url"      : "/myblog/2023/07/26/design-patterns",
+      "url"      : "/2023/07/26/design-patterns",
       "category" : "programming",
       "tags"     : "",
       "date"     : "2023-07-26 00:00:00 +0530"
@@ -147,7 +147,7 @@
 
       "title"    : "Federer",
       "description" : "",
-      "url"      : "/myblog/2023/07/22/federer",
+      "url"      : "/2023/07/22/federer",
       "category" : "tennis",
       "tags"     : "",
       "date"     : "2023-07-22 00:00:00 +0530"
@@ -158,7 +158,7 @@
 
       "title"    : "System Design Posts",
       "description" : "",
-      "url"      : "/myblog/2023/07/21/system-design-posts",
+      "url"      : "/2023/07/21/system-design-posts",
       "category" : "systemdesign",
       "tags"     : "",
       "date"     : "2023-07-21 00:00:00 +0530"
@@ -169,7 +169,7 @@
 
       "title"    : "Git Primer.",
       "description" : "",
-      "url"      : "/myblog/2023/07/21/git-primer",
+      "url"      : "/2023/07/21/git-primer",
       "category" : "programming",
       "tags"     : "",
       "date"     : "2023-07-21 00:00:00 +0530"
@@ -180,7 +180,7 @@
 
       "title"    : "Kafka",
       "description" : "",
-      "url"      : "/myblog/2023/06/09/kafka",
+      "url"      : "/2023/06/09/kafka",
       "category" : "implementation-blogs",
       "tags"     : "",
       "date"     : "2023-06-09 00:00:00 +0530"
@@ -191,7 +191,7 @@
 
       "title"    : "Linkedlist Primer",
       "description" : "",
-      "url"      : "/myblog/2023/05/08/linkedlist-primer",
+      "url"      : "/2023/05/08/linkedlist-primer",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-05-08 00:00:00 +0530"
@@ -202,7 +202,7 @@
 
       "title"    : "523 Continuous Subarray Sum",
       "description" : "",
-      "url"      : "/myblog/2023/04/17/523-continuous-subarray-sum",
+      "url"      : "/2023/04/17/523-continuous-subarray-sum",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-04-17 00:00:00 +0530"
@@ -213,7 +213,7 @@
 
       "title"    : "Linux Commands",
       "description" : "",
-      "url"      : "/myblog/2023/03/27/linux-commands",
+      "url"      : "/2023/03/27/linux-commands",
       "category" : "linux",
       "tags"     : "",
       "date"     : "2023-03-27 00:00:00 +0530"
@@ -224,7 +224,7 @@
 
       "title"    : "Delete Nth Node From End Linkedlist",
       "description" : "",
-      "url"      : "/myblog/2023/02/26/nth-node-from-end-linkedlist",
+      "url"      : "/2023/02/26/nth-node-from-end-linkedlist",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-02-26 00:00:00 +0530"
@@ -235,7 +235,7 @@
 
       "title"    : "Ubuntu Linux Setup",
       "description" : "",
-      "url"      : "/myblog/2023/02/24/linux-setup",
+      "url"      : "/2023/02/24/linux-setup",
       "category" : "linux",
       "tags"     : "",
       "date"     : "2023-02-24 00:00:00 +0530"
@@ -246,7 +246,7 @@
 
       "title"    : "Top K Frequent Elements",
       "description" : "",
-      "url"      : "/myblog/2023/02/13/top-k-frequent-elements",
+      "url"      : "/2023/02/13/top-k-frequent-elements",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2023-02-13 00:00:00 +0530"
@@ -257,7 +257,7 @@
 
       "title"    : "Ubuntu package install",
       "description" : "",
-      "url"      : "/myblog/2022/11/15/ubuntu-package-install",
+      "url"      : "/2022/11/15/ubuntu-package-install",
       "category" : "linux",
       "tags"     : "",
       "date"     : "2022-11-15 00:00:00 +0530"
@@ -268,7 +268,7 @@
 
       "title"    : "Range Sum Query - Mutable",
       "description" : "",
-      "url"      : "/myblog/2022/11/11/binaryindexedtree",
+      "url"      : "/2022/11/11/binaryindexedtree",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2022-11-11 00:00:00 +0530"
@@ -279,7 +279,7 @@
 
       "title"    : "Websockets",
       "description" : "",
-      "url"      : "/myblog/2022/08/31/websockets",
+      "url"      : "/2022/08/31/websockets",
       "category" : "development",
       "tags"     : "",
       "date"     : "2022-08-31 00:00:00 +0530"
@@ -290,7 +290,7 @@
 
       "title"    : "Job Sequencing Problem",
       "description" : "",
-      "url"      : "/myblog/2022/07/13/job-sequencing",
+      "url"      : "/2022/07/13/job-sequencing",
       "category" : "competitivecoding",
       "tags"     : "",
       "date"     : "2022-07-13 00:00:00 +0530"
@@ -301,7 +301,7 @@
 
       "title"    : "Spring Security",
       "description" : "",
-      "url"      : "/myblog/2022/06/12/spring-security",
+      "url"      : "/2022/06/12/spring-security",
       "category" : "development",
       "tags"     : "",
       "date"     : "2022-06-12 00:00:00 +0530"
@@ -312,7 +312,7 @@
 
       "title"    : "Java String Joiner",
       "description" : "",
-      "url"      : "/myblog/2021/06/07/stringjoiner",
+      "url"      : "/2021/06/07/stringjoiner",
       "category" : "programming",
       "tags"     : "",
       "date"     : "2021-06-07 00:00:00 +0530"
@@ -323,7 +323,7 @@
 
       "title"    : "C++ Makefile.",
       "description" : "",
-      "url"      : "/myblog/2019/07/07/cplusplus",
+      "url"      : "/2019/07/07/cplusplus",
       "category" : "programming",
       "tags"     : "",
       "date"     : "2019-07-07 00:00:00 +0530"
